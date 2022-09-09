@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorEditText">#9FFFFFFF</color>
+    <color name="purple">#6C63FF</color>
+    <color name="green">#22C62E</color>
+    <color name="trans">#00000000</color>
+
+    <color name="gray">#888</color>
+    <color name="blue">#0000FF</color>
+
+    <color name="darkGray">#FF161716</color>
+    <color name="lightGray">#EEE</color>
+
+
+    <color name="primary">#1B023B</color>
+    <color name="secondary">#FF03DAC5</color>
+
+
+    <color name="night_mode">#6124B1</color>
+    <color name="notifications">#13B2c3</color>
+    <color name="private_acc">#E6A326</color>
+    <color name="security">#D95F69</color>
+
+    <color name="warn">#FF1313</color>
+    <color name="halfwarn">#483FC8</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="mygreen">#00ce44</color>
+    <color name="tab_down">#37aaa9</color>
+    <color name="tab">#46dad8</color>
+    <color name="inside_progress">#ff6c4d70</color>
+    <color name="inside_progress2">#35824e</color>
+    <color name="external_progress">#9C27B0</color>
+    <color name="external_progress2">#18eb5e</color>
+    <color name="bottom_velocimeter">#e515171d</color>
+    <color name="internal_velocimeter">#ffb4b4b4</color>
+    <color name="needle">#6200EA</color>
+    <color name="needle2">#18e9eb</color>
+    <color name="digital_number">#ffdcefff</color>
+    <color name="fullblack">#111111</color>
+</resources>

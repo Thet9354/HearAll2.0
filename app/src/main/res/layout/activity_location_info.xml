@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/standard_background"
+    tools:context=".Settings.SecurityAndPrivacy.LocationInfo_Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="14dp"
+            android:src="@drawable/back_btn"/>
+
+        <TextView
+            android:id="@+id/txtView_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Location information"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtView_Done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="70dp"
+            android:layout_toRightOf="@id/txtView_settings"
+            android:text="Done"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage the location information NS Nitro uses to personalize your experience."
+                android:gravity="left"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/darkGray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white10_20"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--Location Information-->
+                <RelativeLayout
+                    android:id="@+id/rel_locationInformation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_rel_locationInformation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Personalized base on places you've been "
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_rel_locationInformation"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@id/locationInformation_switch"
+                        android:text="NS Nitro uses some information, like where you signed up and your current location, to help show you more relevant content. When this setting is enabled, NS Nitro may also personalize your experience based on other places you've been."
+                        android:textSize="12dp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/locationInformation_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/greenSwitch"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_back_white10_20"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <!--Precise location-->
+                <RelativeLayout
+                    android:id="@+id/rel_preciseLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_preciseLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Precise location"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_preciseLocation"
+                        android:layout_marginTop="10dp"
+                        android:layout_toLeftOf="@id/preciseLocation_switch"
+                        android:text="If enabled, NS Nitro will collect, store, and use your device's precise location, such as GPS information. This lets NS Nitro improve your experience - for example, showing you more local content, ads, and recommendations."
+                        android:textSize="12dp"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/preciseLocation_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="false"
+                        android:switchMinWidth="50dp"
+                        android:theme="@style/greenSwitch"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

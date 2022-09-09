@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings.SecurityAndPrivacy.PrivacyPolicy_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp"
+        android:id="@+id/scrollView_privacyPolicy">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="91dp" />
+
+            <TextView
+                android:id="@+id/txtView_privacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline51"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.792" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtView_privacyPolicy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtView_privacyPolicy"
+                app:srcCompat="@drawable/back_btn" />
+
+            <RelativeLayout
+                android:id="@+id/relLayout_privacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline51">
+
+                <TextView
+                    android:id="@+id/txtView_privacyPolicy_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last update: 4/9/22 \n\n
+This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the app.\n\n
+We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information
+in accordance with this policy."
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_infoCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_privacyPolicy">
+
+
+                <TextView
+                    android:id="@+id/txtView_infoCollection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Information Collection And Use"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_infoCollection_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_infoCollection"
+                    android:layout_marginTop="10dp"
+                    android:text="While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to
+             contact or identify you. Personally identifiable information will include your name, contact information." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_logData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_infoCollection">
+
+
+                <TextView
+                    android:id="@+id/txtView_logData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log Data"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_logData_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_logData"
+                    android:layout_marginTop="10dp"
+                    android:text="Like many app operators, we collect information that your browser sends whenever you visit our App.\n\nThis
+Log Data may include information such as your computer's Internet Protocol (IP) address, browser type,
+browser version, the pages of our app that you visit, the time and date of your visit, the time spent on
+those pages and other statistics." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_communications"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_logData">
+
+
+                <TextView
+                    android:id="@+id/txtView_communications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Communication"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_communications_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_communications"
+                    android:layout_marginTop="10dp"
+                    android:text="We will not use your Personal Information to contact you with newsletter, marketing or promotional materials
+and other information. We will only be contacting you through email with regards to new updates of the app and replies to our user's feedback." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_communications"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <TextView
+                    android:id="@+id/txtView_security"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Security"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_security_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_security"
+                    android:layout_marginTop="10dp"
+                    android:text="The security of your Personal Information is important to us, but remember that no method of transmission over the Internet,
+or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee
+its absolute security." />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_privacyPolicy_changes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_security"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <TextView
+                    android:id="@+id/txtView_privacyPolicy_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Changes To This Privacy Policy"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_privacyPolicy_changes_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_privacyPolicy_changes"
+                    android:layout_marginTop="10dp"
+                    android:text="This Privacy Policy is effective as of (add date) and will remain in effect except with respect to any changes in its
+provisions in the future, which will be in effect immediately after being posted on this page.\n\nWe reserve the right to update or change our Privacy
+Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy
+Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.
+\n\nIf we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our app." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relLayout_contactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/relLayout_privacyPolicy_changes"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <TextView
+                    android:id="@+id/txtView_contactUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView_contactUs_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtView_contactUs"
+                    android:layout_marginTop="10dp"
+                    android:text="If you have any questions about this Privacy Policy, please contact us." />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
