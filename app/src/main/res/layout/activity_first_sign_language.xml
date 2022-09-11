@@ -18,16 +18,17 @@
         android:layout_marginTop="10dp"
         android:text="@string/knowmore"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#2B60DE"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="25sp" />
 
     <Button
         android:id="@+id/fuw"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/alphabets"
+        android:layout_below="@+id/numbers"
         android:backgroundTint="@color/purple_500"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/round_btn"
         android:textColor="@color/white"
@@ -40,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/alphabets"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/round_btn"
         android:backgroundTint="@color/purple_500"
         android:text="@string/Numbers"
@@ -62,18 +63,22 @@
 
     <ImageView
         android:id="@+id/backbutton_sign"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/back_btn" />
 
     <ImageView
         android:id="@+id/homebutton_sign"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/home_icon" />
 
 

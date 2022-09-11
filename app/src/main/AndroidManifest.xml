@@ -27,6 +27,9 @@
         android:theme="@style/Theme.HearlAll"
         tools:targetApi="31">
         <activity
+            android:name=".EditProfile_Activity"
+            android:exported="false" />
+        <activity
             android:name=".SignLanguage.SearchText_Activity"
             android:exported="false" />
         <activity

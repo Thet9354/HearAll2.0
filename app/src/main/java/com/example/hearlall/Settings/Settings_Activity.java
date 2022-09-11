@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hearlall.EditProfile_Activity;
 import com.example.hearlall.MainActivity;
 import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
@@ -231,7 +232,9 @@ public class Settings_Activity extends AppCompatActivity {
         btn_editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Add the intent leading to the Edit Profile page
+                Intent intent = new Intent(getApplicationContext(), EditProfile_Activity.class);
+                intent.putExtra("PhoneNumber", mPhoneNumber);
+                startActivity(intent);
             }
         });
 

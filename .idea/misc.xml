@@ -19,6 +19,7 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/round_back_white10_20.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/round_btn.xml" value="0.535" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_btn.xml" value="0.535" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_editbox.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/font/font.xml" value="1.3166666666666667" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/font/fonts.xml" value="0.4388888888888889" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_about_us.xml" value="0.5494791666666666" />
@@ -27,6 +28,7 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_contact_list.xml" value="0.35958254269449713" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_data_sharing.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_display.xml" value="0.5458333333333333" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_edit_profile.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_feedback.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_first_sign_language.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_language.xml" value="0.5494791666666666" />
@@ -52,6 +54,7 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/item_contact.xml" value="0.45" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/item_country.xml" value="0.5484375" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/item_textsize.xml" value="0.5484375" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/phone_number_verification.xml" value="0.5484375" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/row_grid.xml" value="0.5447916666666667" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/transparent_btn.xml" value="0.5484375" />
       </map>

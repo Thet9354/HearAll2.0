@@ -53,6 +53,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
                 activity.startActivity(intent);
             }
         });
+
+        holder.txtView_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + model.getName()));
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
