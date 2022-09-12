@@ -218,6 +218,7 @@ public class SignInPage_Activity extends AppCompatActivity {
                             Toast.makeText(SignInPage_Activity.this, "Successfully Logged In", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
                             intent.putExtra("editTxt_mobileNumber", phoneNumber);
+                            intent.putExtra("Username", Username);
                             startActivity(intent);
                             finish();
                         }

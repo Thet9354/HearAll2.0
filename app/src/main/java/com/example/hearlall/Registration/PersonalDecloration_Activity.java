@@ -219,6 +219,7 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
                             Toast.makeText(PersonalDecloration_Activity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
                             intent.putExtra("editTxt_mobileNumber", mPhoneNumber);
+                            intent.putExtra("Username", mUsername);
                             startActivity(intent);
                         }
                     }).addOnFailureListener(new OnFailureListener() {

@@ -1,12 +1,17 @@
 package com.example.hearlall;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Patterns;
 import android.view.View;
@@ -14,6 +19,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hearlall.Registration.PersonalDecloration_Activity;
@@ -29,22 +35,40 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.UUID;
 import java.util.regex.Pattern;
 
 public class EditProfile_Activity extends AppCompatActivity {
 
-    private ImageView img_PFP, btn_back;
+    private ImageView btn_back;
+
+    private de.hdodenhof.circleimageview.CircleImageView img_PFP;
 
     private EditText editTxt_updateProfileName, editTxt_updateEmail, editTxt_updateProfileMobile, editTxt_updateUsername;
+
+    private TextView txtView_done;
 
     private DatePicker datePicker_DOB;
 
     private Button btn_uploadPFP, btn_updateProfile;
 
     private String newFullName, newEmail, newDOB, newMobileNumber, newUsername;
+
+    private Uri imageUri;
+
+    private String myUri = "a";
+
+    private StorageTask uploadTask;
+
+    private StorageReference storageProfilePicsRef;
 
     private String phoneNumber;
 
@@ -61,6 +85,8 @@ public class EditProfile_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+
+        storageProfilePicsRef = FirebaseStorage.getInstance().getReference().child("Profile Pic");
 
         intent = getIntent();
         phoneNumber = intent.getStringExtra("Phone Number");
@@ -96,10 +122,63 @@ public class EditProfile_Activity extends AppCompatActivity {
             }
         });
 
+        img_PFP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(EditProfile_Activity.this);
+                builder.setTitle("SPACED");
+                builder.setMessage("DO you wish to edit your profile picture?");
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent photoIntent = new Intent(Intent.ACTION_PICK);
+                        photoIntent.setType("image/*");
+                        startActivityForResult(photoIntent, 1);
+                    }
+                });
+                builder.create().show();
+            }
+        });
+
         btn_uploadPFP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Update the user's profile pic
+                AlertDialog.Builder builder = new AlertDialog.Builder(EditProfile_Activity.this);
+                builder.setTitle("SPACED");
+                builder.setMessage("DO you wish to save changes to your profile picture?");
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        FirebaseStorage.getInstance().getReference("images/" + myUri)
+                                .putFile(imageUri)
+                                .addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                                        if (task.isSuccessful())
+                                        {
+                                            Toast.makeText(EditProfile_Activity.this, "Image Uploaded", Toast.LENGTH_SHORT).show();
+                                        }
+                                        else
+                                        {
+                                            Toast.makeText(EditProfile_Activity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
+                    }
+                });
+                builder.create().show();
             }
         });
 
@@ -136,6 +215,19 @@ public class EditProfile_Activity extends AppCompatActivity {
                 builder.create().show();
             }
         });
+
+        txtView_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Settings_Activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .putExtra("Username", newUsername)
+                                .putExtra("PFP", myUri);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private boolean validateUsername() {
@@ -169,7 +261,7 @@ public class EditProfile_Activity extends AppCompatActivity {
     private void addData() {
         if (!validateFullName() | !validateEmail() | !validateMobileNumber() | !validateDOB() | !validateUsername())
         {
-            return;
+            System.out.println("Shitttttt");
         }
         else
         {
@@ -202,6 +294,7 @@ public class EditProfile_Activity extends AppCompatActivity {
                         //--->Updating data in firebase
                         HashMap user = new HashMap();
                         user.put("Phone Number", newMobileNumber);
+                        user.put("Username", newUsername);
                         user.put("Email", newEmail);
                         user.put("Full Name", newFullName);
                         user.put("Date Of Birth", newDOB);
@@ -231,11 +324,7 @@ public class EditProfile_Activity extends AppCompatActivity {
                                                                         .addOnSuccessListener(new OnSuccessListener() {
                                                                             @Override
                                                                             public void onSuccess(Object o) {
-                                                                                Intent intent = new Intent(getApplicationContext(), Settings_Activity.class)
-                                                                                        .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                                                                                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                                                                startActivity(intent);
-                                                                                finish();
+                                                                                Toast.makeText(EditProfile_Activity.this, "Successfully updated", Toast.LENGTH_SHORT).show();
                                                                             }
                                                                         }).addOnFailureListener(new OnFailureListener() {
                                                                             @Override
@@ -256,6 +345,7 @@ public class EditProfile_Activity extends AppCompatActivity {
                     }
                 }
             });
+            builder.setView(view).create().show();
         }
     }
 
@@ -359,11 +449,35 @@ public class EditProfile_Activity extends AppCompatActivity {
         editTxt_updateProfileMobile = findViewById(R.id.editTxt_updateProfileMobile);
         editTxt_updateUsername = findViewById(R.id.editTxt_updateUsername);
 
+        //TextView
+        txtView_done = findViewById(R.id.txtView_done);
+
         //DatePicker
         datePicker_DOB = findViewById(R.id.datePicker_DOB);
 
         //Button
         btn_uploadPFP = findViewById(R.id.btn_uploadPFP);
         btn_updateProfile = findViewById(R.id.btn_updateProfile);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1 && resultCode == RESULT_OK && data!=null)
+        {
+            imageUri = data.getData();
+            getImageInImageView();
+        }
+    }
+
+    private void getImageInImageView() {
+        Bitmap bitmap = null;
+        try {
+            bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        img_PFP.setImageBitmap(bitmap);
     }
 }

@@ -3,6 +3,7 @@ package com.example.hearlall;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,12 +24,13 @@ public class MainMenuPage_Activity extends AppCompatActivity {
     private TextView txtView_username, txtView_speechToText, txtView_signLanguage, txtView_call, txtView_soundMeter,
             txtView_volumeAmplification, txtView_setting;
 
+
     private androidx.cardview.widget.CardView cardView_speechToText, cardView_signLanguage, cardView_call,
             cardView_soundMeter, cardView_volumeAmplification, cardView_setting;
 
     private Intent intent;
 
-    private String mPhoneNumber;
+    private String mPhoneNumber, mUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +40,16 @@ public class MainMenuPage_Activity extends AppCompatActivity {
         intent = getIntent();
 
         mPhoneNumber = intent.getStringExtra("editTxt_mobileNumber");
+        mUsername = intent.getStringExtra("Username");
         System.out.println(mPhoneNumber);
+        System.out.println(mUsername);
 
         initWidget();
 
         pageDirectories();
     }
+
+
 
     private void pageDirectories() {
         //--->Speech To Text

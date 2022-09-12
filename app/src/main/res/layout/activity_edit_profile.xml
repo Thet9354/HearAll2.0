@@ -24,12 +24,24 @@
                 android:layout_height="30dp"
                 android:src="@drawable/back_btn" />
 
-            <ImageView
+            <TextView
+                android:id="@+id/txtView_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_PFP"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
+                android:background="@drawable/profileimg"
                 android:src="@drawable/profile_pic_icon"
                 android:text="You can update your profile details now!"
                 android:textAlignment="center"

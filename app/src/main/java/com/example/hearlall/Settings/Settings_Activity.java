@@ -9,8 +9,11 @@ import androidx.core.content.ContextCompat;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -44,7 +47,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class Settings_Activity extends AppCompatActivity {
@@ -58,12 +66,14 @@ public class Settings_Activity extends AppCompatActivity {
 
     private androidx.appcompat.widget.AppCompatButton btn_editProfile;
 
+    private de.hdodenhof.circleimageview.CircleImageView img_PFP;
+
     private LinearLayout parentView;
 
     private androidx.appcompat.widget.SwitchCompat nightMode_switch, notifications_Switch, privateAcc_switch;
 
     private TextView txtView_security, txtView_textSize, txtView_languages, txtView_feedback, txtView_aboutUs, txtView_additionalResources, txtView_logOut,
-            txtView_nightMode, txtView_notification, txtView_privateAccount, txtView_settings, txtView_FullName, txtView_done;
+            txtView_nightMode, txtView_notification, txtView_privateAccount, txtView_settings, txtView_userName, txtView_done;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://hearall-3017f-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference databaseReference  = database.getReference().child("users");
@@ -81,9 +91,15 @@ public class Settings_Activity extends AppCompatActivity {
 
     private SharedPreferences.Editor editor;
 
-    private Intent intent;
+    private Intent intent, intent2;
 
-    private String mPhoneNumber, nightMode, notification, privateAcc;
+    private Uri imageUri;
+
+    StorageReference firebaseStorage;
+
+    private String uri;
+
+    private String mPhoneNumber, nightMode, notification, privateAcc, mUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,17 +113,49 @@ public class Settings_Activity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         intent = getIntent();
-
         mPhoneNumber = intent.getStringExtra("PhoneNumber");
+        mUsername = intent.getStringExtra("Username");
         System.out.println(mPhoneNumber);
+
+        intent2 = getIntent();
+        mUsername = intent2.getStringExtra("Username");
+        uri = intent2.getStringExtra("PFP");
+        System.out.println(mUsername);
+        System.out.println(uri);
 
         settingModel = new userSettingModel();
 
         initWidget();
 
+        setUpPFP();
+
         loadSharedPreferences();
 
         pageDirectories();
+    }
+
+    private void setUpPFP() {
+        firebaseStorage = FirebaseStorage.getInstance().getReference("images/" + uri);
+
+        try {
+            File localfile = File.createTempFile("tempfile", null);
+            firebaseStorage.getFile(localfile)
+                    .addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                            Bitmap bitmap = BitmapFactory.decodeFile(localfile.getAbsolutePath());
+                            img_PFP.setImageBitmap(bitmap);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Settings_Activity.this, "Failed to retrieve", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        }
     }
 
     private void pageDirectories() {
@@ -676,6 +724,7 @@ public class Settings_Activity extends AppCompatActivity {
         logOutIcon = findViewById(R.id.logOutIcon);
         btn_logOut = findViewById(R.id.btn_logOut);
         btn_editProfile = findViewById(R.id.btn_editProfile);
+        img_PFP = findViewById(R.id.img_PFP);
 
         //--->RelativeLayout
         rel_security = findViewById(R.id.rel_security);
@@ -703,7 +752,7 @@ public class Settings_Activity extends AppCompatActivity {
         txtView_notification = findViewById(R.id.txtView_notification);
         txtView_privateAccount = findViewById(R.id.txtView_privateAccount);
         txtView_settings = findViewById(R.id.txtView_settings);
-        txtView_FullName = findViewById(R.id.txtView_FullName);
+        txtView_userName = findViewById(R.id.txtView_userName);
         txtView_done = findViewById(R.id.txtView_done);
 
         //--->LinearLayout
@@ -714,5 +763,7 @@ public class Settings_Activity extends AppCompatActivity {
 
         //--->ParentView
         parentView = findViewById(R.id.parentView);
+
+        txtView_userName.setText(mUsername);
     }
 }
