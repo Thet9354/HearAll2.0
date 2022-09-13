@@ -102,33 +102,21 @@ public class Display_Activity extends AppCompatActivity implements View.OnClickL
         // TODO Auto-generated method stub
         if (v.getId() == R.id.Gobackbutton) {
             Intent intent = new Intent(getApplicationContext(), First_SignLanguage_Activity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
             finish();
         }
 
         if (v.getId() == R.id.Exit_button) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle(R.string.exit_application);
-            alertDialogBuilder
-                    .setMessage("Click yes to exit!")
-                    .setCancelable(false)
-                    .setPositiveButton(R.string.yes,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    moveTaskToBack(true);
-                                    Process.killProcess(Process.myPid());
-                                    System.exit(1);
-                                }
-                            })
-                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-
-                            dialog.cancel();
-                        }
-                    });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
+            Intent intent = new Intent(getApplicationContext(), SearchText_Activity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
     }
 }

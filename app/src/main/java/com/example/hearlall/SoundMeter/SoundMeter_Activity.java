@@ -104,13 +104,14 @@ public class SoundMeter_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_sound_meter);
 
-        getSupportActionBar().hide();
+        initWidget();
 
-        minVal=(TextView)findViewById(R.id.minval);
-        mmVal=(TextView)findViewById(R.id.mmval);
-        maxVal=(TextView)findViewById(R.id.maxval);
-        curVal=(TextView)findViewById(R.id.curval);
-        infoButton=(ImageButton)findViewById(R.id.infobutton);
+        pageDirectories();
+
+        mRecorder = new MyMediaRecorder();
+    }
+
+    private void pageDirectories() {
         infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,7 +127,7 @@ public class SoundMeter_Activity extends AppCompatActivity {
                 builder.create().show();
             }
         });
-        refreshButton=(ImageButton)findViewById(R.id.refreshbutton);
+
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,9 +139,21 @@ public class SoundMeter_Activity extends AppCompatActivity {
                 initChart();
             }
         });
+    }
 
+    private void initWidget() {
+        //TextView
+        minVal=(TextView)findViewById(R.id.minval);
+        mmVal=(TextView)findViewById(R.id.mmval);
+        maxVal=(TextView)findViewById(R.id.maxval);
+        curVal=(TextView)findViewById(R.id.curval);
+
+        //ImageButton
+        infoButton=(ImageButton)findViewById(R.id.infobutton);
+        refreshButton=(ImageButton)findViewById(R.id.refreshbutton);
+
+        //Speedometer
         speedometer=(Speedometer)findViewById(R.id.speed);
-        mRecorder = new MyMediaRecorder();
     }
 
     private void updateData(float val, long time) {
@@ -163,6 +176,7 @@ public class SoundMeter_Activity extends AppCompatActivity {
             savedTime++;
         }
     }
+
     private void initChart() {
         if(mChart!=null){
             if (mChart.getData() != null &&

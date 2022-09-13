@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
 
 import org.jsoup.Jsoup;
@@ -38,8 +39,8 @@ public class SearchText_Activity extends AppCompatActivity implements View.OnCli
 
     private static final int REQUEST_CODE = 1234;
     private EditText entertext;
-    private ImageView imagev;
-    private ImageButton searchbtn, vsearchbtn, exitbtn, signbtn;
+    private ImageView imagev, img_close, btn_back;
+    private ImageButton searchbtn, vsearchbtn;
 
     private SpeechRecognizer sr;
     private Bitmap bitmap;
@@ -52,21 +53,26 @@ public class SearchText_Activity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_text);
 
+        initWidget();
+
+        initSpeechRecognizer();
+    }
+
+    private void initWidget() {
         searchbtn = (ImageButton) findViewById(R.id.search_txt);
         vsearchbtn = (ImageButton) findViewById(R.id.VoiceConvert);
-        signbtn = (ImageButton) findViewById(R.id.SignBible);
-        exitbtn = (ImageButton) findViewById(R.id.TouchToExit);
+        btn_back = (ImageView) findViewById(R.id.btn_back);
+        img_close = (ImageView) findViewById(R.id.img_close);
         entertext = (EditText) findViewById(R.id.entert);
         imagev = (ImageView) findViewById(R.id.imageView1);
 
         imagev.setOnClickListener(this);
         searchbtn.setOnClickListener(this);
         vsearchbtn.setOnClickListener(this);
-        signbtn.setOnClickListener(this);
-        exitbtn.setOnClickListener(this);
-
-        initSpeechRecognizer();
+        btn_back.setOnClickListener(this);
+        img_close.setOnClickListener(this);
     }
+
     /*
      * Onclick handlers for buttons on the Sign Language Conversion Activity
      */
@@ -141,7 +147,7 @@ public class SearchText_Activity extends AppCompatActivity implements View.OnCli
         }
 
         /* Open the Sign Language dictionary with a Toast message */
-        if (v.getId() == R.id.SignBible) {
+        if (v.getId() == R.id.btn_back) {
             Toast.makeText(getApplicationContext(), "Moving to sign language dictionary!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getApplicationContext(), First_SignLanguage_Activity.class);
             startActivity(intent);
@@ -149,29 +155,13 @@ public class SearchText_Activity extends AppCompatActivity implements View.OnCli
         }
 
         /* Exit button handler */
-        if (v.getId() == R.id.TouchToExit) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            alertDialogBuilder.setTitle("Exit Application?");
-            alertDialogBuilder
-                    .setMessage("Click yes to exit!")
-                    .setCancelable(false)
-                    .setPositiveButton("Yes",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    moveTaskToBack(true);
-                                    android.os.Process.killProcess(android.os.Process.myPid());
-                                    System.exit(1);
-                                }
-                            })
-
-                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int id) {
-                            dialog.cancel();
-                        }
-                    });
-
-            AlertDialog alertDialog = alertDialogBuilder.create();
-            alertDialog.show();
+        if (v.getId() == R.id.img_close) {
+            Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
 
     }
@@ -196,7 +186,7 @@ public class SearchText_Activity extends AppCompatActivity implements View.OnCli
             sr = SpeechRecognizer.createSpeechRecognizer(this);
             /* Disable the voice translation button if speech recognition is not available in the phone */
             if (!SpeechRecognizer.isRecognitionAvailable(getApplicationContext())) {
-                Toast.makeText(getApplicationContext(), "Speech Recognition is not available in your phone,You have to enter text in edit box next to you", Toast.LENGTH_LONG).show();
+                System.out.println("Speech Recognition is not available in your phone,You have to enter text in edit box next to you");
                 vsearchbtn.setEnabled(false);
             }
         }

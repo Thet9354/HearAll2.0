@@ -22,8 +22,8 @@
                 android:id="@+id/Gobackbutton"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
                 android:src="@drawable/back_btn" />
 
             <ImageButton
@@ -40,8 +40,8 @@
             android:id="@+id/imagedisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/frame_001"
-            android:layout_centerInParent="true" />
+            android:layout_centerInParent="true"
+            android:src="@drawable/frame_001" />
 
     </RelativeLayout>
 

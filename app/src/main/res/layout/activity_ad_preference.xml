@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manage your ads experience on NS Nitro."
+                android:text="Manage your ads experience on HearAll."
                 android:gravity="left"
                 android:layout_marginTop="80dp"
                 android:textColor="@color/white"/>
@@ -97,7 +97,7 @@
                         android:layout_below="@+id/txtView_ad_preferences"
                         android:layout_marginTop="10dp"
                         android:layout_toLeftOf="@id/ad_preference_switch"
-                        android:text="You will always see ads on NS Nitro based on your app activity. When this setting is enabled. NS Nitro may further personalize ads from NS Nitro advertisers, on and off NS Nitro, by combining your app activity with other online activity and information from our partners."
+                        android:text="You will always see ads on HearAll based on your app activity. When this setting is enabled. HearAll may further personalize ads from HearAll advertisers, on and off HearAll, by combining your app activity with other online activity and information from our partners."
                         android:textSize="12dp" />
 
                     <androidx.appcompat.widget.SwitchCompat

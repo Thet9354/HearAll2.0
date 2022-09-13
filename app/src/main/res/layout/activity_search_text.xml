@@ -9,15 +9,14 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        >
+        android:layout_alignParentBottom="true">
 
         <ImageButton
             android:id="@+id/VoiceConvert"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:clickable="true"
             android:layout_alignParentLeft="true"
+            android:clickable="true"
             android:src="@drawable/micblue" />
 
         <EditText
@@ -44,23 +43,25 @@
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:layout_alignParentTop="true" >
+        android:layout_alignParentTop="true">
 
-        <ImageButton
-            android:id="@+id/SignBible"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:clickable="true"
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/bookblue" />
-
-        <ImageButton
-            android:id="@+id/TouchToExit"
-            android:layout_height="50dp"
-            android:layout_width="50dp"
+            android:layout_centerVertical="true"
             android:clickable="true"
+            android:src="@drawable/back_btn" />
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/closeblue" />
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/close_icon" />
     </RelativeLayout>
 
     <LinearLayout
@@ -69,8 +70,7 @@
         android:layout_below="@+id/linearLayout1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="@drawable/borderforlayout"
-        >
+        android:background="@drawable/borderforlayout">
 
         <ImageView
             android:id="@+id/imageView1"

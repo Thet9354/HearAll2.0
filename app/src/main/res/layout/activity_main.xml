@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtView_HearAll"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="400dp"
         android:background="@drawable/transparent_btn"
         android:text="SIGN IN"
         android:textColor="@color/white"/>

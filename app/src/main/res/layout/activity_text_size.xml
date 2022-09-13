@@ -55,7 +55,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manage the text you see and share on NS Nitro."
+                android:text="Manage the text you see and share on HearAll."
                 android:gravity="center"
                 android:layout_marginTop="80dp"
                 android:textColor="@color/white"/>

@@ -20,6 +20,8 @@ import com.example.hearlall.Country.CountryData;
 import com.example.hearlall.Country.CustomSpinner;
 import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
+import com.example.hearlall.SQLiteDatabase.UserDataBaseHelper;
+import com.example.hearlall.SQLiteDatabase.UserModel;
 import com.example.hearlall.SignIn.SignInPage_Activity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,11 +46,11 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
     private TextView txtView_welcomeMsg;
     private androidx.appcompat.widget.AppCompatButton btn_register;
 
+    private UserModel userModel;
+
+    private UserDataBaseHelper dataBaseHelper;
+
     private CountryAdapter countryAdapter;
-
-    //private UserModel userModel;
-
-    //private UserDataBaseHelper dataBaseHelper;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://hearall-3017f-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference databaseReference  = database.getReference().child("users");
@@ -116,6 +118,18 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
         }
         else
         {
+            try {
+                userModel = new UserModel(-1, mUsername, mEmail, mPhoneNumber, mPassword, mFullname, mCountry, mDOB);
+                Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e)
+            {
+                Toast.makeText(this, "Error creating account, please try again", Toast.LENGTH_SHORT).show();
+                userModel = new UserModel(-1, "error", "error", "error", "error", "error", "error", "error");
+            }
+
+            dataBaseHelper = new UserDataBaseHelper(PersonalDecloration_Activity.this);
+            boolean success = dataBaseHelper.addOneUser(userModel);
 
             //Adding data into google realtime database
             databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -202,7 +216,6 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
             user.put("Information Sharing", "ON");
             user.put("Personalized Place", "ON");
             user.put("Precised Location", "OFF");
-
 
             user.put("Default Text Size preference", "ON");
             user.put("Customize Text Size", "OFF");

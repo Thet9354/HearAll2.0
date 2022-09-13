@@ -149,7 +149,7 @@ public class Settings_Activity extends AppCompatActivity {
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Settings_Activity.this, "Failed to retrieve", Toast.LENGTH_SHORT).show();
+
                         }
                     });
         } catch (IOException e)

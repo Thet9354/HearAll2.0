@@ -49,8 +49,6 @@ public class MainMenuPage_Activity extends AppCompatActivity {
         pageDirectories();
     }
 
-
-
     private void pageDirectories() {
         //--->Speech To Text
         cardView_speechToText.setOnClickListener(new View.OnClickListener() {

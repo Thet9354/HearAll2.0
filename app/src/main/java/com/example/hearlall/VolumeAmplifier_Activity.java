@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hearlall.messages.QueryReplyPing;
@@ -33,6 +34,8 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
 
     private ImageView btn_back;
 
+    private TextView txtView_done;
+
     private boolean serviceRunning = false;
     private SharedPreferences sharedPreferences;
 
@@ -44,6 +47,7 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         btn_back = findViewById(R.id.btn_back);
+        txtView_done = findViewById(R.id.txtView_done);
 
         enableService = findViewById(R.id.enableServiceSwitch);
 
