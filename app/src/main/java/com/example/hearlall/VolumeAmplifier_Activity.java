@@ -34,10 +34,16 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
 
     private ImageView btn_back;
 
+    private EditText editTxt_volumeAmplifier;
+
     private TextView txtView_done;
+
+    private Button setLoudnessButton;
 
     private boolean serviceRunning = false;
     private SharedPreferences sharedPreferences;
+
+    LoudnessEnhancer enhancer = new LoudnessEnhancer(27721);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,35 +52,40 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
         NotificationChannelHelper.createNotificationChannel(this);
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        btn_back = findViewById(R.id.btn_back);
-        txtView_done = findViewById(R.id.txtView_done);
+        initWidget();
 
-        enableService = findViewById(R.id.enableServiceSwitch);
+        initUI();
 
-        enableService.setChecked(false);
+        pageDirectories();
 
+    }
+
+    private void pageDirectories() {
         enableService.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (enableServiceManualCheck) return;
             if (isChecked) ServiceDispatcher.startService(this);
             else ServiceDispatcher.stopService(this);
         });
 
-        LoudnessEnhancer enhancer = new LoudnessEnhancer(27721);
-
-        EditText editTextNumber = findViewById(R.id.editTextNumber);
-        Button setLoudnessButton = findViewById(R.id.setLoudnessButton);
-
-        editTextNumber.setText(Objects.toString(sharedPreferences.getInt(GlobalVars.SP_LOUDNESS, 0) / 10.0));
-
         setLoudnessButton.setOnClickListener(v -> {
-            try {
+            dbValidation();
+            
+            if (!dbValidation())
+            {
+                return;
+            }
+            else
+            {
+                try {
 
-                double loudness = Double.parseDouble(editTextNumber.getText().toString());
-                int intLoudness = (int) (loudness * 10);
-                sharedPreferences.edit().putInt(GlobalVars.SP_LOUDNESS, intLoudness).commit();
-                EventBus.getDefault().post(ServiceCommand.UPDATE);
-            } catch (NumberFormatException ignored) {
-                Toast.makeText(this, "Invalid loudness number", Toast.LENGTH_SHORT).show();
+                    double loudness = Double.parseDouble(editTxt_volumeAmplifier.getText().toString());
+                    int intLoudness = (int) (loudness * 10);
+                    sharedPreferences.edit().putInt(GlobalVars.SP_LOUDNESS, intLoudness).commit();
+                    EventBus.getDefault().post(ServiceCommand.UPDATE);
+                    Toast.makeText(this, " ", Toast.LENGTH_SHORT).show();
+                } catch (NumberFormatException ignored) {
+                    Toast.makeText(this, "Invalid loudness number", Toast.LENGTH_SHORT).show();
+                }   
             }
         });
         enhancer.setEnabled(true);
@@ -85,7 +96,45 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
                 onBackPressed();
             }
         });
+    }
 
+    private boolean dbValidation() {
+        int db = Integer.parseInt(editTxt_volumeAmplifier.getText().toString());
+        if (db > 30)
+        {
+            editTxt_volumeAmplifier.setError("Woah that's a bit too much don't you think?");
+            return false;
+        }
+        else if (db < 0)
+        {
+            editTxt_volumeAmplifier.setError("This is a volume amplifier, not a reducer");
+            return false;
+        }
+        else if (editTxt_volumeAmplifier.getText().toString().isEmpty())
+        {
+            editTxt_volumeAmplifier.setError("Field cannot be empty to proceed");
+            return false;
+        }
+        else 
+            return true;
+    }
+
+    private void initUI() {
+        enableService.setChecked(false);
+        editTxt_volumeAmplifier.setText(Objects.toString(sharedPreferences.getInt(GlobalVars.SP_LOUDNESS, 0) / 10.0));
+
+    }
+
+    private void initWidget() {
+        btn_back = findViewById(R.id.btn_back);
+
+        editTxt_volumeAmplifier = findViewById(R.id.editTxt_volumeAmplifier);
+
+        txtView_done = findViewById(R.id.txtView_done);
+
+        setLoudnessButton = findViewById(R.id.setLoudnessButton);
+
+        enableService = findViewById(R.id.enableServiceSwitch);
     }
 
     @Override

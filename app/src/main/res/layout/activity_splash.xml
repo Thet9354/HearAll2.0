@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Call.ContactList_Activity"
-    android:background="@color/black">
+    tools:context=".Splash_Activity"
+    android:background="@color/darkGray">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rc_contactList"
-        tools:listitem="@layout/item_contact"/>
+        android:src="@drawable/herall"/>
 
 </RelativeLayout>

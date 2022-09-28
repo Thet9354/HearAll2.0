@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuPage_Activity"
-    android:backgroundTint="@color/black"
-    android:background="@color/black">
+    android:background="@drawable/second_bg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -55,80 +54,83 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="130dp"
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <!-- Speech To Text -->
+
+                    <!-- Sign Language -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView_speechToText"
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_speechToText"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/speech_to_text"/>
+                                android:background="@drawable/speech_to_text" />
 
                             <TextView
                                 android:id="@+id/txtView_speechToText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Speech To Text"
+                                android:textColor="#AD00FF"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Sign Language -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView_signLanguage"
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_signLanguage"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/sign_language"/>
+                                android:background="@drawable/sign_language" />
 
                             <TextView
                                 android:id="@+id/txtView_signLanguage"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Sign Language"
+                                android:textColor="#E6A326"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -137,11 +139,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <!-- Call -->
                     <androidx.cardview.widget.CardView
@@ -149,29 +151,30 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_call"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/call"/>
+                                android:background="@drawable/call" />
 
                             <TextView
                                 android:id="@+id/txtView_call"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Call"
+                                android:textColor="@color/green"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -183,29 +186,30 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_soundMeter"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/noise_suppressor"/>
+                                android:background="@drawable/noise_suppressor" />
 
                             <TextView
                                 android:id="@+id/txtView_soundMeter"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Sound Meter"
+                                android:textColor="@color/needle"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -214,11 +218,11 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_weight="1">
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
                     <!-- Volume amplification -->
                     <androidx.cardview.widget.CardView
@@ -226,29 +230,30 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_volumeAmplification"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/volume_amplifier"/>
+                                android:background="@drawable/volume_amplifier" />
 
                             <TextView
                                 android:id="@+id/txtView_volumeAmplification"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Volume Amplifier"
+                                android:textColor="@color/tab_down"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -260,35 +265,34 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
-                        app:cardBackgroundColor="#2D2D2D"
-                        app:cardCornerRadius="15dp">
+                        app:cardBackgroundColor="@color/lightGray"
+                        app:cardCornerRadius="20dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:orientation="vertical"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_height="wrap_content">
+                            android:orientation="vertical">
 
                             <ImageView
                                 android:id="@+id/img_setting"
                                 android:layout_width="35dp"
                                 android:layout_height="35dp"
                                 android:layout_gravity="center"
-                                android:background="@drawable/settings"/>
+                                android:background="@drawable/settings" />
 
                             <TextView
                                 android:id="@+id/txtView_setting"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Setting"
+                                android:textColor="@color/security"
                                 android:textSize="18sp"
-                                android:textColor="@color/white"/>
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
-
 
 
                 </LinearLayout>

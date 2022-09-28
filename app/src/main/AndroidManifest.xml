@@ -16,8 +16,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS" />
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
@@ -27,26 +25,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HearlAll"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".Splash_Activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="fullSensor"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".EditProfile_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignLanguage.SearchText_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignLanguage.Display_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignLanguage.First_SignLanguage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignLanguage.SignLanguage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SoundMeter.SoundMeter_Activity"
-            android:exported="false" />
+            android:exported="true" />
 
         <service
             android:name=".VolumeBoostService"
@@ -55,72 +66,67 @@
 
         <activity
             android:name=".VolumeAmplifier_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Call.ContactList_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.AdditionalResource.LegalNotice_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.SecurityAndPrivacy.PrivacyPolicy_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.Language.LanguageChoice_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.SecurityAndPrivacy.LocationInfo_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.SecurityAndPrivacy.DataSharing_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.SecurityAndPrivacy.Ad_Preference_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.AdditionalResource.AdditionalResources_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.AboutUs.AboutUs_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.Feedback.Feedback_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.Language.Language_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.TextSize.TextSize_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.SecurityAndPrivacy.SecurityNPrivacy_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Settings.Settings_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SpeechToText.SpeechToText_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainMenuPage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Registration.PersonalDecloration_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Registration.RegistrationPage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignIn.SignInPage_Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

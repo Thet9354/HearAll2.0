@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:backgroundTint="@color/black"
     android:background="@color/black">
 
     <TextView
         android:id="@+id/txtView_HearAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HearAll"
-        android:textColor="@color/white"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:textSize="30dp"/>
+        android:text="HearAll"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_SignIn"

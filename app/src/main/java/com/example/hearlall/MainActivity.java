@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         initWidget();
 
         pageDirectories();
-
     }
 
     private void pageDirectories() {
