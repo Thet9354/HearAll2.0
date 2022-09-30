@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/parentView"
-    android:background="@drawable/purple_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.Settings_Activity">
 
     <RelativeLayout
@@ -15,31 +15,10 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
-        <TextView
-            android:id="@+id/txtView_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Settings"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtView_done"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Done"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginEnd="10dp"/>
 
     </RelativeLayout>
 
@@ -67,21 +46,22 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Pinetree"
-                android:textColor="#FFFFFF"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_editProfile"
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/round_back_secondary_100"
                 android:paddingStart="30dp"
+                android:elevation="20dp"
                 android:paddingEnd="30dp"
                 android:text="Edit Profile"
                 android:textAllCaps="false"
-                android:textColor="@color/black"
+                android:textColor="#D31027"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <LinearLayout
@@ -91,6 +71,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="20dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -117,7 +98,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_nightMode"
                         android:text="Night Mode"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#4316DB"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -156,7 +137,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/notificationIcon"
                         android:text="Notifications"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/teal_200"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -193,7 +174,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/privateAccountIcon"
                         android:text="Private Account"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#4316DB"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -216,6 +197,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="20dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -242,17 +224,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/securityIcon"
                         android:text="Security &amp; Privacy"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#F4656D"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_Security"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -280,16 +261,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/textSizeIcon"
                         android:text="Text Size"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#4316DB"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_textSIze"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow5" />
 
 
                 </RelativeLayout>
@@ -317,16 +298,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/languageIcon"
                         android:text="Language"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/teal_200"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_language"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow" />
 
 
                 </RelativeLayout>
@@ -340,6 +321,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="20dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -366,16 +348,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/feedbackIcon"
                         android:text="Feedback"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FF8800"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_feedback"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow3" />
 
 
                 </RelativeLayout>
@@ -403,16 +385,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
                         android:text="About Us"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#E63535"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_aboutUs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow2" />
 
 
                 </RelativeLayout>
@@ -440,16 +422,16 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/additionalIcon"
                         android:text="Additional Resources"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/teal_200"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_additionalResources"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow" />
 
 
                 </RelativeLayout>
@@ -458,10 +440,12 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout_L"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:elevation="25dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/round_back_white10_20"
@@ -474,37 +458,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/logOutIcon"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/round_back_security"
-                        android:padding="12dp"
-                        android:src="@drawable/lockout_icon" />
 
                     <TextView
                         android:id="@+id/txtView_logOut"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginStart="20dp"
-                        android:layout_toEndOf="@+id/logOutIcon"
+                        android:textSize="15sp"
                         android:text="Log Out"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#D31027"
                         android:textStyle="bold" />
 
-                    <ImageView
-                        android:id="@+id/btn_logOut"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/right_arrow_icon" />
 
 
                 </RelativeLayout>
 
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

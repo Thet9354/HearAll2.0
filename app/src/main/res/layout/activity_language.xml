@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.Language.Language_Activity">
 
     <RelativeLayout
@@ -14,10 +14,9 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_languages"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Languages"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/fourth"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,11 +32,11 @@
             android:id="@+id/txtView_Done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_languages"
             android:text="Done"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/fourth"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -57,15 +56,16 @@
                 android:layout_height="wrap_content"
                 android:text="Manage which languages are used to personalize your app experience."
                 android:gravity="left"
+                android:textSize="15sp"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/fourth"/>
 
             <View
                 android:id="@+id/divider"
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,6 +73,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="25dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -88,7 +89,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Recommendations"
-                        android:textColor="@color/white"
+                        android:textColor="@color/fourth"
                         android:textStyle="bold" />
 
                     <TextView
@@ -97,17 +98,18 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_recommendation"
                         android:layout_marginTop="10dp"
+                        android:textColor="@color/sixth"
                         android:layout_toLeftOf="@id/btn_recommendations"
                         android:text="Select which languages are used to personalize your app experience."
                         android:textSize="12dp" />
 
                     <ImageView
                         android:id="@+id/btn_recommendations"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>

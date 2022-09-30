@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration.PersonalDecloration_Activity"
-    android:backgroundTint="@color/black"
-    android:backgroundTintMode="screen"
-    android:background="@color/black">
+    android:background="@drawable/starting">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -23,6 +21,7 @@
         android:fontFamily="sans-serif"
         android:text="Hello Username"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="25sp"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -36,7 +35,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/person_ic"
         android:drawablePadding="7dp"
-        android:background="@drawable/transparent_editbox"
+        android:background="@drawable/transparent_editbox2"
         android:ems="10"
         android:hint="Full name"
         android:inputType="textPersonName"
@@ -55,7 +54,7 @@
         android:hint="Mobile number"
         android:drawableLeft="@drawable/phone_icon"
         android:drawablePadding="7dp"
-        android:background="@drawable/transparent_editbox"
+        android:background="@drawable/transparent_editbox2"
         android:textColor="@color/white"
         android:textColorHint="#555555"
         android:inputType="textPersonName"

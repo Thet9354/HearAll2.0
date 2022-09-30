@@ -35,8 +35,6 @@ public class SpeechToText_Activity extends AppCompatActivity {
 
         initWidget();
 
-
-
         pageDirectories();
     }
 

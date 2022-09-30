@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration.RegistrationPage_Activity"
-    android:background="@color/black">
+    android:background="@drawable/starting">
 
     <TextView
         android:id="@+id/txtView_HearAll"
@@ -107,16 +107,16 @@
         android:id="@+id/img_facebook"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="40dp"
         android:layout_toLeftOf="@+id/img_google"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/textView"
         app:srcCompat="@drawable/facebook_icon" />
 
     <ImageView
         android:id="@+id/img_google"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.SecurityAndPrivacy.SecurityNPrivacy_Activity">
 
     <RelativeLayout
@@ -14,10 +14,10 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="20dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_privacy"
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Security &amp; Privacy"
-            android:textColor="#FFFFFF"
+            android:textColor="#AD00FF"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,11 +33,12 @@
             android:id="@+id/txtView_Done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_privacy"
+            android:elevation="20dp"
             android:text="Done"
-            android:textColor="#FFFFFF"
+            android:textColor="#FF3B3B"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -55,17 +56,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manage what information you see and share on HearAll."
-                android:gravity="left"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/white"/>
+                android:gravity="left"
+                android:text="Manage what information you see and share on HearAll."
+                android:textColor="@color/white" />
 
             <View
                 android:id="@+id/divider"
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -74,6 +75,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -99,17 +101,17 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_ad_preferences"
                         android:text="Ads preferences"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#F4656D"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_ad_preferences"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -137,17 +139,17 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_dataSharing"
                         android:text="Data sharing with business partners"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#AD00FF"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_dataSharing"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow5" />
 
 
                 </RelativeLayout>
@@ -175,17 +177,17 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_locationInfo"
                         android:text="Location Information"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/teal_200"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_locationInfo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow" />
 
                 </RelativeLayout>
 
@@ -196,18 +198,18 @@
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="100dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <TextView
                 android:id="@+id/txtView_privacyTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Learn more about privacy on HearAll"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginStart="20dp"/>
+                android:text="Learn more about privacy on HearAll"
+                android:textColor="#AD00FF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -216,6 +218,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -233,17 +236,17 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy center"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#AD00FF"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_privacyCenter"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow3" />
 
 
                 </RelativeLayout>
@@ -262,17 +265,17 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy policy"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#F4656D"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_privacyPolicy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow2" />
 
 
                 </RelativeLayout>
@@ -291,17 +294,17 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Contact us"
-                        android:textColor="#FFFFFF"
+                        android:textColor="#FF00B8"
                         android:textStyle="bold" />
 
                     <ImageView
                         android:id="@+id/btn_contactUs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/right_arrow_icon" />
+                        android:src="@drawable/forwardarrow" />
 
                 </RelativeLayout>
 

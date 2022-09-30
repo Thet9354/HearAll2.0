@@ -47,4 +47,18 @@
     <color name="needle2">#18e9eb</color>
     <color name="digital_number">#ffdcefff</color>
     <color name="fullblack">#111111</color>
+
+
+    <!--FIGMA GRADIENT COLORS-->
+    <color name="first">#00ADF6</color>
+    <color name="second">#FF00B8</color>
+    <color name="third">#FF00B8</color>
+
+    <color name="fourth">#FF3B3B</color>
+    <color name="fifth">#6600CC</color>
+    <color name="sixth">#F4656D</color>
+    <color name="seventh">#AD00FF</color>
+    <color name="eighth">#4316DB</color>
+    <color name="ninth">#9076E7</color>
+
 </resources>

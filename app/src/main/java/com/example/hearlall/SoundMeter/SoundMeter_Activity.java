@@ -2,6 +2,7 @@ package com.example.hearlall.SoundMeter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -58,6 +59,7 @@ public class SoundMeter_Activity extends AppCompatActivity {
     private MyMediaRecorder mRecorder ;
 
     final Handler handler = new Handler(){
+        @SuppressLint("HandlerLeak")
         @Override
         public void handleMessage(Message msg){
             super.handleMessage(msg);

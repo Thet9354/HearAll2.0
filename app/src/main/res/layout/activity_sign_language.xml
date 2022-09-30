@@ -4,21 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f0f0f0"
+    android:background="@drawable/about_us_bg"
     tools:context=".SignLanguage.SignLanguage_Activity">
 
     <GridView
-        android:background="@drawable/borderforlayout"
         android:id="@+id/gridView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/gradient2_bg"
         android:columnWidth="100dp"
+        android:drawSelectorOnTop="true"
         android:gravity="center"
         android:numColumns="auto_fit"
-        android:verticalSpacing="5dp"
-        android:drawSelectorOnTop="true"
-        android:stretchMode="columnWidth">
-    </GridView>
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"></GridView>
 
 </RelativeLayout>

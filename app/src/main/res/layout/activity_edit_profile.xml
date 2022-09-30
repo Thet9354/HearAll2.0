@@ -5,40 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditProfile_Activity"
-    android:background="@color/black">
+    android:background="@drawable/white_beautiful_bg">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_margin="15dp">
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/btn_back"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/back_btn" />
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bacu_ui_btn" />
 
             <TextView
                 android:id="@+id/txtView_done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Done"
-                android:textColor="@color/white"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="5dp"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold"/>
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:text="Done"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_PFP"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_below="@+id/btn_back"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/profileimg"
@@ -48,111 +49,197 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textColor="@color/white" />
 
-            <TextView
-                android:id="@+id/txtView_updateProfileName"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:id="@+id/linearLayout_1"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_PFP"
-                android:layout_marginTop="30dp"
-                android:padding="6dp"
-                android:text="New Full Name"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-            <EditText
-                android:id="@+id/editTxt_updateProfileName"
-                android:layout_width="match_parent"
+                <!--Dark Mode/ Light Mode-->
+                <RelativeLayout
+                    android:id="@+id/rel_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_updateProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:text="New Full Name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTxt_updateProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_updateProfileName"
+                        android:background="@drawable/transparent_editbox"
+                        android:elevation="20dp"
+                        android:hint="Enter your new full name"
+                        android:inputType="textPersonName"
+                        android:padding="6dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#555555"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_2"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtView_updateProfileName"
-                android:background="@drawable/transparent_editbox"
-                android:hint="Enter your new full name"
-                android:inputType="textPersonName"
-                android:padding="6dp"
-                android:textColor="@color/white"
-                android:textColorHint="#555555"
-                android:textSize="16sp" />
+                android:layout_below="@+id/linearLayout_1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-            <TextView
-                android:id="@+id/txtView_updateUsername"
-                android:layout_width="match_parent"
+                <!--Dark Mode/ Light Mode-->
+                <RelativeLayout
+                    android:id="@+id/rel_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_updateUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:text="New Username"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/editTxt_updateUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtView_updateUsername"
+                        android:background="@drawable/transparent_editbox2"
+                        android:hint="Enter your new username"
+                        android:inputType="textPersonName"
+                        android:padding="6dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#555555"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_3"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editTxt_updateProfileName"
-                android:layout_marginTop="30dp"
-                android:padding="6dp"
-                android:text="New Username"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                android:layout_below="@+id/linearLayout_2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-            <EditText
-                android:id="@+id/editTxt_updateUsername"
-                android:layout_width="match_parent"
+                <!--Dark Mode/ Light Mode-->
+                <RelativeLayout
+                    android:id="@+id/rel_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtView_updateEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:text="New Email address"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+
+                    <EditText
+                        android:id="@+id/editTxt_updateEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtView_updateEmail"
+                        android:background="@drawable/transparent_editbox"
+                        android:hint="Enter your new email address"
+                        android:inputType="textEmailAddress"
+                        android:padding="6dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="#555555"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_4"
+                android:layout_width="500dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txtView_updateUsername"
-                android:background="@drawable/transparent_editbox"
-                android:hint="Enter your new username"
-                android:inputType="textPersonName"
-                android:padding="6dp"
-                android:textColor="@color/white"
-                android:textColorHint="#555555"
-                android:textSize="16sp" />
+                android:layout_below="@+id/linearLayout_3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-            <TextView
-                android:id="@+id/txtView_updateEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/editTxt_updateUsername"
-                android:layout_marginTop="30dp"
-                android:padding="6dp"
-                android:text="New Email address"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                <!--Dark Mode/ Light Mode-->
+                <RelativeLayout
+                    android:id="@+id/rel_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
+                    <TextView
+                        android:id="@+id/txtView_updateProfileMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:text="New Mobile Number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
 
-            <EditText
-                android:id="@+id/editTxt_updateEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtView_updateEmail"
-                android:background="@drawable/transparent_editbox"
-                android:hint="Enter your new email address"
-                android:inputType="textEmailAddress"
-                android:padding="6dp"
-                android:textColor="@color/white"
-                android:textColorHint="#555555"
-                android:textSize="16sp" />
+                    <EditText
+                        android:id="@+id/editTxt_updateProfileMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtView_updateProfileMobile"
+                        android:background="@drawable/transparent_editbox2"
+                        android:hint="Enter your new mobile number"
+                        android:inputType="phone"
+                        android:padding="6dp"
+                        android:textColorHint="#555555"
+                        android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/txtView_updateProfileMobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/editTxt_updateEmail"
-                android:layout_marginTop="30dp"
-                android:padding="6dp"
-                android:text="New Mobile Number"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                </RelativeLayout>
 
-            <EditText
-                android:id="@+id/editTxt_updateProfileMobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtView_updateProfileMobile"
-                android:background="@drawable/transparent_editbox"
-                android:hint="Enter your new mobile number"
-                android:inputType="phone"
-                android:padding="6dp"
-                android:textColorHint="#555555"
-                android:textSize="16sp" />
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/txtView_updateProfileDOB"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editTxt_updateProfileMobile"
+                android:layout_below="@+id/linearLayout_4"
                 android:layout_marginTop="30dp"
                 android:padding="6dp"
                 android:text="New Date of Birth (dd/mm/yyyy)"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="16sp" />
 
             <DatePicker
@@ -178,7 +265,7 @@
                 android:layout_marginRight="70dp"
                 android:background="@drawable/transparent_btn"
                 android:text="Upload profile pic"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/btn_updateProfile"
@@ -191,7 +278,7 @@
                 android:layout_marginRight="70dp"
                 android:background="@drawable/transparent_btn"
                 android:text="Update Profile"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
         </RelativeLayout>
 

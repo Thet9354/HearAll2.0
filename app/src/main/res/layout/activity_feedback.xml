@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.Feedback.Feedback_Activity">
 
     <RelativeLayout
@@ -14,10 +14,9 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_languages"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Feedback"
-            android:textColor="#FFFFFF"
+            android:textColor="#6600CC"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -82,7 +81,7 @@
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -114,7 +113,7 @@
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -146,7 +145,7 @@
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="10dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <EditText
                 android:id="@+id/editTxt_message"

@@ -14,6 +14,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.hearlall.R;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class ContactList_Activity extends AppCompatActivity {
 
     private RecyclerView rc_contactList;
+    private ImageView btn_back;
     ArrayList<ContactModel> arrayList = new ArrayList<ContactModel>();
     MainAdapter adapter;
 
@@ -113,6 +115,8 @@ public class ContactList_Activity extends AppCompatActivity {
 
     private void initWidget() {
         rc_contactList = findViewById(R.id.rc_contactList);
+
+        btn_back = findViewById(R.id.btn_back);
     }
 
     @Override

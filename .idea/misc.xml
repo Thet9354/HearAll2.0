@@ -11,6 +11,14 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/bg_spinner_vocation.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/bg_spinner_vocation_up.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/borderforlayout.xml" value="0.237" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/forwardarrow.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/forwardarrow2.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/forwardarrow3.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/forwardarrow4.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/forwardarrow5.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/gradient2_bg.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/gradient_bg.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.206" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/profileimg.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/round_back_night_mode.xml" value="0.237" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/round_back_notifications.xml" value="0.237" />
@@ -21,11 +29,15 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/round_btn.xml" value="0.535" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_btn.xml" value="0.535" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_editbox.xml" value="0.237" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_editbox2.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_editbox3.xml" value="0.206" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/drawable/transparent_editbox4.xml" value="0.206" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/font/font.xml" value="1.3166666666666667" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/font/fonts.xml" value="0.4388888888888889" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_about_us.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_ad_preference.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_additional_resources.xml" value="0.5494791666666666" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_ai_sign_language_recognition.xml" value="0.5185185185185185" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_contact_list.xml" value="0.35958254269449713" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_data_sharing.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_display.xml" value="0.5458333333333333" />
@@ -44,7 +56,7 @@
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_registration_page.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_search_text.xml" value="0.5458333333333333" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_security_nprivacy.xml" value="0.5494791666666666" />
-        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_settings.xml" value="0.5494791666666666" />
+        <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_settings.xml" value="0.596045197740113" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_sign_in_page.xml" value="0.5354166666666667" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_sign_language.xml" value="0.5494791666666666" />
         <entry key="..\:/Users/Phoon Thet Pine/AndroidStudioProjects/HearlAll/app/src/main/res/layout/activity_sound_meter.xml" value="0.5494791666666666" />

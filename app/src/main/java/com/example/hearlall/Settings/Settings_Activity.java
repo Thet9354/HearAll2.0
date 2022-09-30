@@ -12,9 +12,12 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
+import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -58,7 +61,7 @@ import java.util.HashMap;
 public class Settings_Activity extends AppCompatActivity {
 
     private ImageView btn_back, securityIcon, btn_Security, textSizeIcon, btn_textSIze, languageIcon, btn_language,
-            feedbackIcon, btn_feedback, aboutUsIcon, btn_aboutUs, additionalIcon, btn_additionalResources, logOutIcon, btn_logOut;
+            feedbackIcon, btn_feedback, aboutUsIcon, btn_aboutUs, additionalIcon, btn_additionalResources;
 
     private RelativeLayout rel_security, rel_textSize, rel_language, rel_feedback, rel_aboutUs, rel_additionalResources, rel_logOut;
 
@@ -73,7 +76,7 @@ public class Settings_Activity extends AppCompatActivity {
     private androidx.appcompat.widget.SwitchCompat nightMode_switch, notifications_Switch, privateAcc_switch;
 
     private TextView txtView_security, txtView_textSize, txtView_languages, txtView_feedback, txtView_aboutUs, txtView_additionalResources, txtView_logOut,
-            txtView_nightMode, txtView_notification, txtView_privateAccount, txtView_settings, txtView_userName, txtView_done;
+            txtView_nightMode, txtView_notification, txtView_privateAccount, txtView_userName;
 
     FirebaseDatabase database = FirebaseDatabase.getInstance("https://hearall-3017f-default-rtdb.asia-southeast1.firebasedatabase.app");
     DatabaseReference databaseReference  = database.getReference().child("users");
@@ -127,11 +130,37 @@ public class Settings_Activity extends AppCompatActivity {
 
         initWidget();
 
+        setTextViewColor(txtView_userName,
+                ContextCompat.getColor(getApplicationContext(), R.color.first),
+                ContextCompat.getColor(getApplicationContext(), R.color.second),
+                ContextCompat.getColor(getApplicationContext(), R.color.third));
+
         setUpPFP();
 
-        loadSharedPreferences();
+//        loadSharedPreferences();
 
         pageDirectories();
+    }
+
+    private void setTextViewColor(TextView txtView_userName, int...color) {
+        TextPaint paint = txtView_userName.getPaint();
+        float width = paint.measureText(txtView_userName.getText().toString());
+
+        Shader shader = new LinearGradient(0, 0, width, txtView_userName.getTextSize(), color, null, Shader.TileMode.CLAMP);
+        txtView_userName.getPaint().setShader(shader);
+        txtView_userName.setTextColor(color[0]);
+    }
+
+    private void setUI() {
+        txtView_userName.setTextColor(Color.parseColor("#00ADF6"));
+        Shader textShader = new LinearGradient(0, 0, 0, 20,
+                new int[]{
+                        Color.parseColor("#00ADF6"),
+                        Color.parseColor("#FF00B8"),
+                        Color.parseColor("#FF00B8")
+                },
+                null, Shader.TileMode.CLAMP);
+        txtView_userName.getPaint().setShader(textShader);
     }
 
     private void setUpPFP() {
@@ -160,61 +189,6 @@ public class Settings_Activity extends AppCompatActivity {
 
     private void pageDirectories() {
 
-        txtView_done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //--->Updating data in firebase
-                HashMap user = new HashMap();
-                user.put("Night Mode", nightMode);
-                user.put("Notifications", notification);
-                user.put("Private Account", privateAcc);
-
-                databaseReference.child(mPhoneNumber)
-                        .child("User's Information")
-                        .child("User's Settings")
-                        .updateChildren(user).addOnCompleteListener(new OnCompleteListener() {
-                            @Override
-                            public void onComplete(@NonNull Task task) {
-
-                                if (task.isSuccessful())
-                                {
-                                    //--->Updating data in firestore
-                                    firestoreDB.collection("user")
-                                            .whereEqualTo("Phone Number", mPhoneNumber)
-                                            .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                                    if (task.isSuccessful() && !task.getResult().isEmpty())
-                                                    {
-                                                        DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
-                                                        String documentID = documentSnapshot.getId();
-                                                        firestoreDB.collection("user")
-                                                                .document(documentID)
-                                                                .update(user)
-                                                                .addOnSuccessListener(new OnSuccessListener() {
-                                                                    @Override
-                                                                    public void onSuccess(Object o) {
-                                                                        Toast.makeText(Settings_Activity.this, "Successfully updated in firestore", Toast.LENGTH_SHORT).show();
-                                                                        startActivity(new Intent(getApplicationContext(), MainMenuPage_Activity.class));
-                                                                    }
-                                                                }).addOnFailureListener(new OnFailureListener() {
-                                                                    @Override
-                                                                    public void onFailure(@NonNull Exception e) {
-                                                                        Toast.makeText(Settings_Activity.this, "An error occured while updating, please try again later", Toast.LENGTH_SHORT).show();
-                                                                    }
-                                                                });
-                                                    }
-                                                }
-                                            });
-                                }
-                                else
-                                {
-                                    Toast.makeText(Settings_Activity.this, "An error occured while updating, please try again later", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-            }
-        });
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -224,26 +198,26 @@ public class Settings_Activity extends AppCompatActivity {
         });
 
         /** OnCLickListener for Night Mode switch **/
-        nightMode_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                {
-                    nightMode = "ON";
-                    settingModel.setCustomTheme(userSettingModel.DARK_THEME);
-                }
-                else
-                {
-                    settingModel.setCustomTheme(userSettingModel.LIGHT_THEME);
-                    nightMode = "OFF";
-                }
-                editor = getSharedPreferences(userSettingModel.PREFERENCES, MODE_PRIVATE).edit();
-                editor.putString(userSettingModel.CUSTOM_THEME, settingModel.getCustomTheme());
-                editor.apply();
-                updateView();
-
-            }
-        });
+//        nightMode_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                if (b)
+//                {
+//                    nightMode = "ON";
+//                    settingModel.setCustomTheme(userSettingModel.DARK_THEME);
+//                }
+//                else
+//                {
+//                    settingModel.setCustomTheme(userSettingModel.LIGHT_THEME);
+//                    nightMode = "OFF";
+//                }
+//                editor = getSharedPreferences(userSettingModel.PREFERENCES, MODE_PRIVATE).edit();
+//                editor.putString(userSettingModel.CUSTOM_THEME, settingModel.getCustomTheme());
+//                editor.apply();
+//                updateView();
+//
+//            }
+//        });
 
         /** OnCheckedChangeListener for notification switch **/
         notifications_Switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -498,13 +472,6 @@ public class Settings_Activity extends AppCompatActivity {
         });
 
         /** OnCLickListener for Log Out **/
-        logOutIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: Add the intent leading to the Log Out page
-            }
-        });
-
         rel_logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -516,35 +483,6 @@ public class Settings_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TODO: Add the intent leading to the Log Out page
-            }
-        });
-
-        btn_logOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Settings_Activity.this);
-                builder.setTitle("HearAll");
-                builder.setMessage("Are you sure you want to log out?");
-                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                    }
-                });
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //--->Log out off everything here
-                        googleSignOut();
-                        mAuth.signOut();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class)
-                                .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                                        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
-                        finish();
-                    }
-                });
-                builder.create().show();
             }
         });
     }
@@ -608,7 +546,6 @@ public class Settings_Activity extends AppCompatActivity {
         btn_feedback.setImageResource(R.drawable.right_arrow_icon);
         btn_aboutUs.setImageResource(R.drawable.right_arrow_icon);
         btn_additionalResources.setImageResource(R.drawable.right_arrow_icon);
-        btn_logOut.setImageResource(R.drawable.right_arrow_icon);
 
         /** Color changes for switches **/
         notifications_Switch.setThumbTintList(AppCompatResources.getColorStateList(this, R.color.white));
@@ -667,7 +604,6 @@ public class Settings_Activity extends AppCompatActivity {
         btn_feedback.setImageResource(R.drawable.right_arrow_icon);
         btn_aboutUs.setImageResource(R.drawable.right_arrow_icon);
         btn_additionalResources.setImageResource(R.drawable.right_arrow_icon);
-        btn_logOut.setImageResource(R.drawable.right_arrow_icon);
 
         /** Color changes for switches **/
         notifications_Switch.setThumbTintList(AppCompatResources.getColorStateList(this, R.color.teal_200));
@@ -721,8 +657,7 @@ public class Settings_Activity extends AppCompatActivity {
         btn_aboutUs = findViewById(R.id.btn_aboutUs);
         additionalIcon = findViewById(R.id.additionalIcon);
         btn_additionalResources = findViewById(R.id.btn_additionalResources);
-        logOutIcon = findViewById(R.id.logOutIcon);
-        btn_logOut = findViewById(R.id.btn_logOut);
+
         btn_editProfile = findViewById(R.id.btn_editProfile);
         img_PFP = findViewById(R.id.img_PFP);
 
@@ -751,9 +686,7 @@ public class Settings_Activity extends AppCompatActivity {
         txtView_nightMode = findViewById(R.id.txtView_nightMode);
         txtView_notification = findViewById(R.id.txtView_notification);
         txtView_privateAccount = findViewById(R.id.txtView_privateAccount);
-        txtView_settings = findViewById(R.id.txtView_settings);
         txtView_userName = findViewById(R.id.txtView_userName);
-        txtView_done = findViewById(R.id.txtView_done);
 
         //--->LinearLayout
         linearLayout_NNP = findViewById(R.id.linearLayout_NNP);
@@ -765,5 +698,7 @@ public class Settings_Activity extends AppCompatActivity {
         parentView = findViewById(R.id.parentView);
 
         txtView_userName.setText(mUsername);
+
+
     }
 }

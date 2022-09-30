@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenuPage_Activity"
-    android:background="@drawable/second_bg">
+    android:background="@drawable/starting">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,13 +41,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pinetree@2.0"
-                        android:textColor="@color/white" />
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF3B3B" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Welcome Back!"
-                        android:textColor="@color/white" />
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#6600CC" />
 
                 </LinearLayout>
 
@@ -73,6 +77,7 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
+                        android:elevation="25dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">
 
@@ -107,6 +112,7 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
+                        android:elevation="25dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">
 
@@ -151,6 +157,7 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
+                        android:elevation="25dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">
 
@@ -186,6 +193,7 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
+                        android:elevation="25dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">
 
@@ -230,6 +238,7 @@
                         android:layout_width="170dp"
                         android:layout_height="170dp"
                         android:layout_margin="10dp"
+                        android:elevation="25dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">
 
@@ -264,6 +273,7 @@
                         android:id="@+id/cardView_setting"
                         android:layout_width="170dp"
                         android:layout_height="170dp"
+                        android:elevation="25dp"
                         android:layout_margin="10dp"
                         app:cardBackgroundColor="@color/lightGray"
                         app:cardCornerRadius="20dp">

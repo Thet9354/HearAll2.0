@@ -22,9 +22,9 @@ public class First_SignLanguage_Activity extends AppCompatActivity implements Vi
         Button btnalpha = (Button) findViewById(R.id.alphabets);
         Button btnnum = (Button) findViewById(R.id.numbers);
         Button btnfuw = (Button) findViewById(R.id.fuw);
+        Button btn_ai_signLanguage = (Button) findViewById(R.id.btn_ai_signLanguage);
         ImageView backbtn = (ImageView) findViewById(R.id.backbutton_sign);
         ImageView homebtn = (ImageView) findViewById(R.id.homebutton_sign);
-
 
 
         btnalpha.setOnClickListener(this);
@@ -64,6 +64,11 @@ public class First_SignLanguage_Activity extends AppCompatActivity implements Vi
 
             case R.id.homebutton_sign:
                 startActivity(new Intent(First_SignLanguage_Activity.this, SearchText_Activity.class));
+                finish();
+                break;
+
+            case R.id.btn_ai_signLanguage:
+                //TODO:Add sign recognition page
                 finish();
                 break;
         }

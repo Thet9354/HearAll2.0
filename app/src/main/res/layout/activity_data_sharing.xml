@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.SecurityAndPrivacy.DataSharing_Activity">
 
     <RelativeLayout
@@ -14,10 +14,9 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_ataSharing"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Data Sharing"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/eighth"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,13 +32,12 @@
             android:id="@+id/txtView_Done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="70dp"
-            android:layout_toRightOf="@id/txtView_ataSharing"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
             android:text="Done"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/eighth"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -59,15 +57,16 @@
                 android:layout_height="wrap_content"
                 android:text="Allow sharing of additional information with HearAll's business partners."
                 android:gravity="left"
+                android:textSize="15sp"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/eighth"/>
 
             <View
                 android:id="@+id/divider"
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,6 +74,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="25dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -89,16 +89,17 @@
                         android:id="@+id/txtView_dataSharing"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Allow additional information sharing with business partners"
                         android:layout_toLeftOf="@+id/dataSharing_switch"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:text="Allow additional information sharing with business partners"
+                        android:textColor="@color/eighth"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_dataSharing"
                         android:layout_marginTop="10dp"
+                        android:textColor="@color/fifth"
                         android:layout_toLeftOf="@id/dataSharing_switch"
                         android:text="HearAll always shares information with business partners as a way to run and improve its products. When enabled, this allows HearAll to share additional information with those partners to help support running HearAll's business, including making HearAll's marketing activities on their sites and apps more relevant for you."
                         android:textSize="12dp" />
@@ -110,7 +111,7 @@
                         android:layout_alignParentEnd="true"
                         android:checked="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/greenSwitch"
+                        android:theme="@style/nightModeSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
 

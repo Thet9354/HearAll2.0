@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     tools:context=".Settings.TextSize.TextSize_Activity">
 
     <RelativeLayout
@@ -14,10 +14,9 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_TextSize"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Text size"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/first"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,11 +32,11 @@
             android:id="@+id/txtView_Done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="105dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_TextSize"
             android:text="Done"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/first"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -56,16 +55,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Manage the text you see and share on HearAll."
-                android:gravity="center"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/white"/>
+                android:textSize="15sp"
+                android:textColor="@color/first"/>
 
             <View
                 android:id="@+id/divider"
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,6 +72,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="25dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -99,7 +99,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_defaultTextSize"
                         android:text="Default Text Size preference"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/notifications"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -139,7 +139,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_customizeTextSize"
                         android:text="Customize Text Size"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/night_mode"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -167,6 +167,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
                 android:visibility="gone"
+                android:elevation="25dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -183,17 +184,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Text Size"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/night_mode"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_textSizes"
-                        android:textSize="12dp"
-                        android:layout_toLeftOf="@+id/textSize_spinner"
                         android:layout_marginRight="10dp"
-                        android:text="Due to the apps functionality, there will be a limitation to the flexibility of the text size customization."/>
+                        android:textColor="@color/eighth"
+                        android:layout_toLeftOf="@+id/textSize_spinner"
+                        android:text="Due to the apps functionality, there will be a limitation to the flexibility of the text size customization."
+                        android:textSize="12dp" />
 
                     <com.example.hearlall.Country.CustomSpinner
                         android:id="@+id/textSize_spinner"

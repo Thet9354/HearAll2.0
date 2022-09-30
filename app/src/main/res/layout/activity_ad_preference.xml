@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/standard_background"
+    android:background="@drawable/white_beautiful_bg"
     android:orientation="vertical"
     tools:context=".Settings.SecurityAndPrivacy.Ad_Preference_Activity">
 
@@ -14,10 +14,9 @@
 
         <ImageView
             android:id="@+id/btn_back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="14dp"
-            android:src="@drawable/back_btn"/>
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_settings"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Ads preferences"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/second"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -33,11 +32,11 @@
             android:id="@+id/txtView_Done"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_settings"
             android:text="Done"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/second"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -58,14 +57,15 @@
                 android:text="Manage your ads experience on HearAll."
                 android:gravity="left"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/white"/>
+                android:textSize="15sp"
+                android:textColor="@color/second"/>
 
             <View
                 android:id="@+id/divider"
                 android:layout_width="409dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="5dp"
-                android:background="@color/darkGray" />
+                android:background="@color/lightGray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,6 +73,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="20dp"
+                android:elevation="25dp"
                 android:background="@drawable/round_back_white10_20"
                 android:orientation="vertical"
                 android:padding="15dp">
@@ -88,14 +89,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Personalized ads"
-                        android:textStyle="bold"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/fourth"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_ad_preferences"
                         android:layout_marginTop="10dp"
+                        android:textColor="@color/sixth"
                         android:layout_toLeftOf="@id/ad_preference_switch"
                         android:text="You will always see ads on HearAll based on your app activity. When this setting is enabled. HearAll may further personalize ads from HearAll advertisers, on and off HearAll, by combining your app activity with other online activity and information from our partners."
                         android:textSize="12dp" />
@@ -107,7 +109,7 @@
                         android:layout_alignParentEnd="true"
                         android:checked="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"
+                        android:theme="@style/AppTheme"
                         tools:ignore="TouchTargetSizeCheck" />
 
 
