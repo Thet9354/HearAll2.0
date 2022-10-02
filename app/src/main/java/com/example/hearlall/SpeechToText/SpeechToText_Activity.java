@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class SpeechToText_Activity extends AppCompatActivity {
 
     private TextView txtView_speechToText;
 
-    private ImageView img_mic;
+    private ImageView img_mic, btn_back;
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
 
@@ -61,6 +62,16 @@ public class SpeechToText_Activity extends AppCompatActivity {
                 launcher.launch(intent);
             }
         });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -84,5 +95,7 @@ public class SpeechToText_Activity extends AppCompatActivity {
         txtView_speechToText = findViewById(R.id.txtView_speechToText);
 
         img_mic = findViewById(R.id.img_mic);
+
+        btn_back = findViewById(R.id.btn_back);
     }
 }

@@ -16,8 +16,8 @@
             android:id="@+id/btn_back"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn"
-            android:elevation="25dp"/>
+            android:elevation="25dp"
+            android:src="@drawable/bacu_ui_btn" />
 
     </RelativeLayout>
 

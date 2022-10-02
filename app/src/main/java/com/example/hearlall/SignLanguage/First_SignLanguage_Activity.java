@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
 
 public class First_SignLanguage_Activity extends AppCompatActivity implements View.OnClickListener {
@@ -31,6 +32,7 @@ public class First_SignLanguage_Activity extends AppCompatActivity implements Vi
         btnnum.setOnClickListener(this);
         btnfuw.setOnClickListener(this);
         backbtn.setOnClickListener(this);
+        btn_ai_signLanguage.setOnClickListener(this);
         homebtn.setOnClickListener(this);
     }
 
@@ -58,7 +60,7 @@ public class First_SignLanguage_Activity extends AppCompatActivity implements Vi
                 break;
 
             case R.id.backbutton_sign:
-                startActivity(new Intent(First_SignLanguage_Activity.this, SearchText_Activity.class));
+                startActivity(new Intent(First_SignLanguage_Activity.this, MainMenuPage_Activity.class));
                 finish();
                 break;
 
@@ -68,7 +70,7 @@ public class First_SignLanguage_Activity extends AppCompatActivity implements Vi
                 break;
 
             case R.id.btn_ai_signLanguage:
-                //TODO:Add sign recognition page
+                startActivity(new Intent(getApplicationContext(), AI_signLanguage_recognition_Activity.class));
                 finish();
                 break;
         }

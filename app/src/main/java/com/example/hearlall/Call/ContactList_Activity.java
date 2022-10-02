@@ -9,14 +9,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
 
 import java.util.ArrayList;
@@ -36,6 +39,20 @@ public class ContactList_Activity extends AppCompatActivity {
         initWidget();
 
         checkPermission();
+
+        pageDirectories();
+    }
+
+    private void pageDirectories() {
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
     }
 
     private void checkPermission() {

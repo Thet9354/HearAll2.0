@@ -10,6 +10,7 @@ import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -119,6 +120,7 @@ public class AI_signLanguage_recognition_Activity extends AppCompatActivity {
                 s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100);
             }
             confidence.setText(s);
+            confidence.setMovementMethod(new ScrollingMovementMethod());
 
             // Releases model resources if no longer used.
             model.close();

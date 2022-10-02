@@ -120,7 +120,6 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
         {
             try {
                 userModel = new UserModel(-1, mUsername, mEmail, mPhoneNumber, mPassword, mFullname, mCountry, mDOB);
-                Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show();
             }
             catch (Exception e)
             {
@@ -189,6 +188,51 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
                         //--->Additional Resources
                         databaseReference.child(mPhoneNumber).child("User's Information").child("User's Settings").child("Additional Resources").child("Send crash reports").setValue("ON");
 
+
+
+                        //Implementing data into google firebase firestore
+                        Map<String, Object> user = new HashMap<>();
+                        user.put("Username", mUsername);
+                        user.put("Email", mEmail);
+                        user.put("Phone Number", mPhoneNumber);
+                        user.put("Password", mPassword);
+                        user.put("Full Name", mFullname);
+                        user.put("Country", mCountry);
+                        user.put("Date Of Birth", mDOB);
+
+                        user.put("Night Mode", "ON");
+                        user.put("Notifications", "OFF");
+                        user.put("Private Account", "OFF");
+
+                        user.put("Personalized Ads", "ON");
+                        user.put("Information Sharing", "ON");
+                        user.put("Personalized Place", "ON");
+                        user.put("Precised Location", "OFF");
+
+                        user.put("Default Text Size preference", "ON");
+                        user.put("Customize Text Size", "OFF");
+
+                        user.put("Language", "English");
+
+                        user.put("Send crash reports", "ON");
+
+                        firestoreDB.collection("user")
+                                .add(user)
+                                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference) {
+                                        Toast.makeText(PersonalDecloration_Activity.this, "Registration successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
+                                        intent.putExtra("editTxt_mobileNumber", mPhoneNumber);
+                                        intent.putExtra("Username", mUsername);
+                                        startActivity(intent);
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(PersonalDecloration_Activity.this, "Registration unsuccessful", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
                     }
                 }
 
@@ -198,49 +242,6 @@ public class PersonalDecloration_Activity extends AppCompatActivity {
                 }
             });
 
-            //Implementing data into google firebase firestore
-            Map<String, Object> user = new HashMap<>();
-            user.put("Username", mUsername);
-            user.put("Email", mEmail);
-            user.put("Phone Number", mPhoneNumber);
-            user.put("Password", mPassword);
-            user.put("Full Name", mFullname);
-            user.put("Country", mCountry);
-            user.put("Date Of Birth", mDOB);
-
-            user.put("Night Mode", "ON");
-            user.put("Notifications", "OFF");
-            user.put("Private Account", "OFF");
-
-            user.put("Personalized Ads", "ON");
-            user.put("Information Sharing", "ON");
-            user.put("Personalized Place", "ON");
-            user.put("Precised Location", "OFF");
-
-            user.put("Default Text Size preference", "ON");
-            user.put("Customize Text Size", "OFF");
-
-            user.put("Language", "English");
-
-            user.put("Send crash reports", "ON");
-
-            firestoreDB.collection("user")
-                    .add(user)
-                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                        @Override
-                        public void onSuccess(DocumentReference documentReference) {
-                            Toast.makeText(PersonalDecloration_Activity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
-                            intent.putExtra("editTxt_mobileNumber", mPhoneNumber);
-                            intent.putExtra("Username", mUsername);
-                            startActivity(intent);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(PersonalDecloration_Activity.this, "Registration unsuccessful", Toast.LENGTH_SHORT).show();
-                        }
-                    });
         }
     }
 
