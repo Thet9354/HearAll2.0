@@ -18,11 +18,11 @@
         android:id="@+id/txtView_features"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Brought to you by Thet, Yoonseo and Bryan..."
-        android:textColor="@color/white"
-        android:visibility="invisible"
         android:layout_below="@+id/img_logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:text="Brought to you by Thet, Yoonseo and Bryan..."
+        android:textColor="@color/white"
+        android:visibility="invisible" />
 
 </RelativeLayout>

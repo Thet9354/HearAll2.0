@@ -350,7 +350,6 @@ public class EditProfile_Activity extends AppCompatActivity {
     }
 
     private boolean validateMobileNumber() {
-
         if (newMobileNumber.isEmpty())
         {
             editTxt_updateProfileMobile.setError("Field cannot be empty");
