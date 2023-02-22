@@ -15,7 +15,7 @@
         android:text=""
         android:textAlignment="center"
         android:textSize="20sp"
-        android:textColor="#000"/>
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/bluetoothIv"
@@ -27,6 +27,11 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        app:cornerRadius="10dp"
+        android:padding="15sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="30sp"
         android:text="Turn On"/>
 
     <Button
@@ -34,6 +39,11 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:padding="15sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:text="Turn Off"/>
 
     <Button
@@ -41,6 +51,11 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:padding="15sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:text="Discoverable"/>
 
     <Button
@@ -48,6 +63,11 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cornerRadius="10dp"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:text="Get Paired Device"/>
 
     <TextView
@@ -55,6 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        android:layout_marginTop="20sp"
         android:textColor="#000"
         android:minWidth="200dp" />
 
@@ -63,7 +84,11 @@
         android:minWidth="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="180dp"
+        app:cornerRadius="10dp"
+        android:padding="15sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"
         android:text="Done"/>
 
 </LinearLayout>

@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30sp"
     tools:context=".Fragment.SignLanguage">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/btn_frequentlyUsed"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numbers"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="@color/green"
+        app:cornerRadius="15dp"
+        android:padding="15dp"
+        android:text="@string/fuw"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alphabets"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/Numbers"
+        app:cornerRadius="15dp"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_alphabets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtView_signLanguage"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/Alphabets"
+        app:cornerRadius="15dp"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_ai_signLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fuw"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        app:cornerRadius="15dp"
+        android:padding="15dp"
+        android:backgroundTint="@color/green"
+        android:text="AI sign recognition"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</LinearLayout>

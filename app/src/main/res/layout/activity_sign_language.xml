@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/about_us_bg"
+    android:background="@color/black"
     tools:context=".SignLanguage.SignLanguage_Activity">
 
     <GridView
@@ -15,7 +15,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/gradient2_bg"
+        android:background="@color/green"
         android:columnWidth="100dp"
         android:drawSelectorOnTop="true"
         android:gravity="center"
