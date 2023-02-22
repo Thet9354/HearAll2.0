@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Onboarding.MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/starting_second_bg">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/txtView_HearAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
         android:text="HearAll"
         android:textColor="@color/white"
         android:textSize="30dp"
@@ -22,24 +22,27 @@
     <Button
         android:id="@+id/btn_SignIn"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_below="@+id/txtView_HearAll"
-        android:layout_centerHorizontal="true"
+        app:cornerRadius="7dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="400dp"
-        android:background="@drawable/transparent_btn"
+        android:backgroundTint="@color/green"
         android:text="SIGN IN"
         android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btn_register"
         android:layout_width="250dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
+        app:cornerRadius="7dp"
         android:layout_below="@+id/btn_SignIn"
-        android:background="@drawable/transparent_btn"
+        android:layout_gravity="center_horizontal"
         android:textColor="@color/white"
         android:layout_marginTop="30dp"
+        android:backgroundTint="@color/green"
         android:layout_centerHorizontal="true"
         android:text="REGISTER"/>
 
 
-</RelativeLayout>
+</LinearLayout>

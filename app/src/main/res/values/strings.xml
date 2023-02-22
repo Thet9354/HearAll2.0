@@ -34,4 +34,6 @@
     <string name="speak">Speak..</string>
     <string name="message_processing">Processing text...please wait</string>
     <string name="message_empty">Enter some text in the search box!!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -111,8 +111,7 @@ public class AI_signLanguage_recognition_Activity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
-            String[] classes = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
-                    "W", "X", "Y"};
+            String[] classes = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"};
 
             String s = "";
             for (int i=0; i < classes.length; i++)

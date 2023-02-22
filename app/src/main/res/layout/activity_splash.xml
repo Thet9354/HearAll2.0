@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignIn.Splash_Activity"
-    android:background="@color/darkGray">
+    tools:context=".Onboarding.Splash_Activity"
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/img_logo"
@@ -21,7 +21,7 @@
         android:layout_below="@+id/img_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Brought to you by Thet, Yoonseo and Bryan..."
+        android:text="Brought to you by Thet, Abinav and Manoj..."
         android:textColor="@color/white"
         android:visibility="invisible" />
 

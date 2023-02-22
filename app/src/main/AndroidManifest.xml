@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.hearlall">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,8 +17,15 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="lineageos.permission.OBSERVE_AUDIO_SESSIONS" />
 
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
 
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -27,13 +35,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.NoActionBar"
+        android:theme="@style/Theme.MaterialComponents.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".Bluetooth_Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".SignLanguage.AI_signLanguage_recognition_Activity"
             android:exported="false" />
         <activity
-            android:name=".SignIn.Splash_Activity"
+            android:name=".Onboarding.Splash_Activity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
             android:launchMode="singleTop"
@@ -121,17 +136,14 @@
             android:name=".MainMenuPage_Activity"
             android:exported="true" />
         <activity
-            android:name=".Registration.PersonalDecloration_Activity"
+            android:name=".Onboarding.RegistrationPage_Activity"
             android:exported="true" />
         <activity
-            android:name=".Registration.RegistrationPage_Activity"
+            android:name=".Onboarding.SignInPage_Activity"
             android:exported="true" />
         <activity
-            android:name=".SignIn.SignInPage_Activity"
+            android:name=".Onboarding.MainActivity"
             android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

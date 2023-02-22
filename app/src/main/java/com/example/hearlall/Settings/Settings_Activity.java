@@ -1,12 +1,10 @@
 package com.example.hearlall.Settings;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -24,11 +22,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.hearlall.EditProfile_Activity;
-import com.example.hearlall.MainActivity;
-import com.example.hearlall.MainMenuPage_Activity;
+import com.example.hearlall.Onboarding.MainActivity;
 import com.example.hearlall.R;
 import com.example.hearlall.Settings.AboutUs.AboutUs_Activity;
 import com.example.hearlall.Settings.AdditionalResource.AdditionalResources_Activity;
@@ -47,16 +43,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.HashMap;
 
 public class Settings_Activity extends AppCompatActivity {
 
