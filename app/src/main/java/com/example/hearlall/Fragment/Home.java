@@ -50,7 +50,6 @@ public class Home extends Fragment {
         btn_bluetooth = v.findViewById(R.id.btn_bluetooth);
         btn_settings = v.findViewById(R.id.btn_settings);
 
-
         pageDirectories();
 
     }
