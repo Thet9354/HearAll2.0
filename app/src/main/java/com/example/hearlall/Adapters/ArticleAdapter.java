@@ -68,56 +68,56 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                 switch (pos)
                 {
                     case 0:
-                        String url = "https://medium.com/thrive-global/help-for-wrist-pain-feel-better-fast-with-these-exercises-dca01573d6d1";
+                        String url = "https://livingwithhearingloss.com/2023/01/31/shouldnt-medical-treatment-be-hearing-loss-friendly/";
                         Intent i = new Intent(Intent.ACTION_VIEW);
                         i.setData(Uri.parse(url));
                         mContext.startActivity(i);
                         break;
 
                     case 1:
-                        String url2 = "https://medium.com/better-humans/a-helpful-way-to-stretch-and-strengthen-the-wrists-3e99d8edfafd";
+                        String url2 = "https://livingwithhearingloss.com/2023/02/07/can-meditation-help-with-tinnitus/";
                         Intent i2 = new Intent(Intent.ACTION_VIEW);
                         i2.setData(Uri.parse(url2));
                         mContext.startActivity(i2);
                         break;
 
                     case 2:
-                        String url3 = "https://medium.com/@ggermanji24/hand-wrist-exercises-for-keyboard-users-e4d353dc20ec";
+                        String url3 = "https://livingwithhearingloss.com/2023/01/24/setting-your-2023-hearing-loss-goals/";
                         Intent i3 = new Intent(Intent.ACTION_VIEW);
                         i3.setData(Uri.parse(url3));
                         mContext.startActivity(i3);
                         break;
 
                     case 3:
-                        String url4 = "https://medium.com/in-fitness-and-in-health/easy-exercise-modifications-for-wrist-pain-37e19fff3b61";
+                        String url4 = "https://medium.com/an-injustice/deaf-culture-and-deaf-gain-4bf46db4fa0a";
                         Intent i4 = new Intent(Intent.ACTION_VIEW);
                         i4.setData(Uri.parse(url4));
                         mContext.startActivity(i4);
                         break;
 
                     case 4:
-                        String url5 = "https://medium.com/@jenna_77824/hey-moms-get-wrist-pain-when-you-exercise-try-this-730f7dac54d9";
+                        String url5 = "https://medium.com/publishous/how-a-hearing-loss-taught-me-a-better-way-to-listen-to-god-3097996d2645";
                         Intent i5 = new Intent(Intent.ACTION_VIEW);
                         i5.setData(Uri.parse(url5));
                         mContext.startActivity(i5);
                         break;
 
                     case 5:
-                        String url6 = "https://medium.com/@ggermanji24/hand-wrist-exercises-for-keyboard-users-e4d353dc20ec";
+                        String url6 = "https://medium.com/microbial-instincts/hearing-loss-an-odd-covid-19-symptom-we-overlooked-6cdf81a5e70";
                         Intent i6 = new Intent(Intent.ACTION_VIEW);
                         i6.setData(Uri.parse(url6));
                         mContext.startActivity(i6);
                         break;
 
                     case 6:
-                        String url7 = "https://medium.com/in-fitness-and-in-health/easy-exercise-modifications-for-wrist-pain-37e19fff3b61";
+                        String url7 = "https://medium.com/@caroliss88/the-ups-and-downs-of-living-with-hearing-loss-99b40f190533";
                         Intent i7 = new Intent(Intent.ACTION_VIEW);
                         i7.setData(Uri.parse(url7));
                         mContext.startActivity(i7);
                         break;
 
                     case 7:
-                        String url8 = "https://medium.com/@jenna_77824/hey-moms-get-wrist-pain-when-you-exercise-try-this-730f7dac54d9";
+                        String url8 = "https://medium.com/@karl.utermohlen/4-applications-of-artificial-intelligence-for-hearing-loss-64f3e189847e";
                         Intent i8 = new Intent(Intent.ACTION_VIEW);
                         i8.setData(Uri.parse(url8));
                         mContext.startActivity(i8);

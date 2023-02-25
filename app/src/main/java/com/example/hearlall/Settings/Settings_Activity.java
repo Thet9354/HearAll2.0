@@ -53,7 +53,7 @@ import java.io.IOException;
 
 public class Settings_Activity extends AppCompatActivity {
 
-    private ImageView btn_back, securityIcon, btn_Security, textSizeIcon, btn_textSIze, languageIcon, btn_language,
+    private ImageView securityIcon, btn_Security, textSizeIcon, btn_textSIze, languageIcon, btn_language,
             feedbackIcon, btn_feedback, aboutUsIcon, btn_aboutUs, additionalIcon, btn_additionalResources;
 
     private RelativeLayout rel_security, rel_textSize, rel_language, rel_feedback, rel_aboutUs, rel_additionalResources, rel_logOut;
@@ -182,13 +182,6 @@ public class Settings_Activity extends AppCompatActivity {
 
     private void pageDirectories() {
 
-
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         /** OnCLickListener for Night Mode switch **/
 //        nightMode_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -637,7 +630,6 @@ public class Settings_Activity extends AppCompatActivity {
 
     private void initWidget() {
         //--->ImageView
-        btn_back = findViewById(R.id.btn_back);
         securityIcon = findViewById(R.id.securityIcon);
         btn_Security = findViewById(R.id.btn_Security);
         textSizeIcon = findViewById(R.id.textSizeIcon);

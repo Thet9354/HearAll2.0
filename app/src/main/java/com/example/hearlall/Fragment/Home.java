@@ -48,8 +48,8 @@ public class Home extends Fragment {
     int[] eventHostPic = {R.drawable.safd, R.drawable.safd, R.drawable.safd,
             R.drawable.safd, R.drawable.safd,  R.drawable.safd,  R.drawable.safd,  R.drawable.safd};
 
-    int[] blogArticle = {R.drawable.article1, R.drawable.article1, R.drawable.article1,
-            R.drawable.article1, R.drawable.article1};
+    int[] blogArticle = {R.drawable.article1_logo, R.drawable.article2_logo, R.drawable.article3_logo,
+            R.drawable.article4_logo, R.drawable.article5_logo, R.drawable.article6_logo, R.drawable.article7_logo, R.drawable.article8_logo};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -66,14 +66,14 @@
     </string-array>
 
     <string-array name="article_link">
-        <item name="SADeaf">https://livingwithhearingloss.com</item>
-        <item name="SADeaf">https://www.signia.net/ru-ru/blog/</item>
-        <item name="SADeaf">https://limpingchicken.com</item>
-        <item name="SADeaf">https://katherinebouton.com</item>
-        <item name="SADeaf">https://www.starkey.com/blog/latest</item>
-        <item name="SADeaf">https://theinvisibledisabilityandme.wordpress.com</item>
-        <item name="SADeaf">https://www.hearinglikeme.com</item>
-        <item name="SADeaf">https://morethanabitdeaf.com</item>
+        <item name="SADeaf">https://livingwithhearingloss.com/2023/01/31/shouldnt-medical-treatment-be-hearing-loss-friendly/</item>
+        <item name="SADeaf">https://livingwithhearingloss.com/2023/02/07/can-meditation-help-with-tinnitus/</item>
+        <item name="SADeaf">https://livingwithhearingloss.com/2023/01/24/setting-your-2023-hearing-loss-goals/</item>
+        <item name="SADeaf">https://medium.com/an-injustice/deaf-culture-and-deaf-gain-4bf46db4fa0a</item>
+        <item name="SADeaf">https://medium.com/publishous/how-a-hearing-loss-taught-me-a-better-way-to-listen-to-god-3097996d2645</item>
+        <item name="SADeaf">https://medium.com/microbial-instincts/hearing-loss-an-odd-covid-19-symptom-we-overlooked-6cdf81a5e70</item>
+        <item name="SADeaf">https://medium.com/@caroliss88/the-ups-and-downs-of-living-with-hearing-loss-99b40f190533</item>
+        <item name="SADeaf">https://medium.com/@karl.utermohlen/4-applications-of-artificial-intelligence-for-hearing-loss-64f3e189847e</item>
     </string-array>
 
     <string-array name="event_organiser">
@@ -99,18 +99,14 @@
     </string-array>
 
     <string-array name="article_title">
-        <item name="Help for Wrist Pain. Feel Better Fast With These Exercises.">Help for Wrist Pain. Feel Better Fast With These Exercises.</item>
-        <item name="A Helpful Way to Stretch and Strengthen the Wrists">A Helpful Way to Stretch and Strengthen the Wrists</item>
-        <item name="Hand &amp; Wrist Exercises for keyboard users">Hand &amp; Wrist Exercises for keyboard users</item>
-        <item name="Easy Exercise Modifications for Wrist Pain">Easy Exercise Modifications for Wrist Pain</item>
-        <item name="Hey Moms, Get Wrist Pain When You Exercise? Try This.">Hey Moms, Get Wrist Pain When You Exercise? Try This.</item>
-        <item name="Hand &amp; Wrist Exercises for keyboard users">Hand &amp; Wrist Exercises for keyboard users</item>
-        <item name="Easy Exercise Modifications for Wrist Pain">Easy Exercise Modifications for Wrist Pain</item>
-        <item name="Hey Moms, Get Wrist Pain When You Exercise? Try This.">Hey Moms, Get Wrist Pain When You Exercise? Try This.</item>
+        <item name="Shouldn’t Medical Treatment Be Hearing Loss Friendly?">Shouldn’t Medical Treatment Be Hearing Loss Friendly?</item>
+        <item name="Can Meditation Help With Tinnitus?">Can Meditation Help With Tinnitus?</item>
+        <item name="setting your 2023 hearing loss goals">setting your 2023 hearing loss goals</item>
+        <item name="My Hearing Loss Is Also My Gain">My Hearing Loss Is Also My Gain</item>
+        <item name="How a hearing loss taught me a better way to listen to God?">How a hearing loss taught me a better way to listen to God?</item>
+        <item name="Hearing Loss: An Odd Covid-19 Symptom We Overlooked">Hearing Loss: An Odd Covid-19 Symptom We Overlooked</item>
+        <item name="The Ups and Downs of Living With Hearing Loss">The Ups and Downs of Living With Hearing Loss</item>
+        <item name="4 Applications of Artificial Intelligence for Hearing Loss">4 Applications of Artificial Intelligence for Hearing Loss</item>
     </string-array>
-
-
-
-
 
 </resources>

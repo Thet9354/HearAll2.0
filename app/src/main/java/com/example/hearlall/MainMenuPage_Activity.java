@@ -66,8 +66,6 @@ public class MainMenuPage_Activity extends AppCompatActivity {
         initUI();
 
         bottomMenu();
-
-
     }
 
     private void initUI() {
@@ -118,7 +116,7 @@ public class MainMenuPage_Activity extends AppCompatActivity {
         fab_faq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainMenuPage_Activity.this, "FAQ", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ChatBot_Activity.class));
             }
         });
 

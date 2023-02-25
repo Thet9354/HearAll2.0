@@ -124,7 +124,7 @@ public class SignInPage_Activity extends AppCompatActivity {
                 super.onAuthenticationSucceeded(result);
                 //Authentication successful
                 Toast.makeText(SignInPage_Activity.this, "Authentication successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainMenuPage_Activity.class));
             }
 
             @Override

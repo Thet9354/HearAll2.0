@@ -6,21 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/parentView"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.Settings_Activity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn" />
-
-
-    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"

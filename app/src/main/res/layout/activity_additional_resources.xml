@@ -5,18 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.AdditionalResource.AdditionalResources_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_additionalResources"
@@ -24,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Additional resources"
-            android:textColor="@color/ninth"
+            android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -36,7 +31,7 @@
             android:layout_marginLeft="65dp"
             android:layout_toRightOf="@id/txtView_additionalResources"
             android:text="Done"
-            android:textColor="@color/ninth"
+            android:textColor="@color/green"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -58,7 +53,7 @@
                 android:gravity="left"
                 android:textSize="15sp"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/ninth"/>
+                android:textColor="@color/green" />
 
             <View
                 android:id="@+id/divider"
@@ -89,7 +84,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Send crash reports"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <TextView
@@ -97,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_crashReport"
                         android:layout_marginTop="10dp"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/green"
                         android:layout_toLeftOf="@id/crashReport_switch"
                         android:text="Automatically send crash reports to HearAll's service provider to help improve this application."
                         android:textSize="12dp" />
@@ -128,7 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Legal"
-                android:textColor="@color/second"
+                android:textColor="@color/green"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
@@ -159,7 +154,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Terms of service"
-                        android:textColor="@color/third"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -169,7 +164,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow" />
+                        android:src="@drawable/forwardarrow5" />
 
 
                 </RelativeLayout>
@@ -188,7 +183,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy policy"
-                        android:textColor="@color/fourth"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -217,7 +212,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Cookie use"
-                        android:textColor="@color/seventh"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -244,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="Legal notices"
-                        android:textColor="@color/fifth"
+                        android:textColor="@color/green"
                         android:textStyle="bold" />
 
                     <ImageView
