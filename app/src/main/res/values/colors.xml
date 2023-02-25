@@ -12,6 +12,8 @@
     <color name="green">#2ec68f</color>
     <color name="trans">#00000000</color>
 
+    <color name="hint">#707070</color>
+
     <color name="gray">#888</color>
     <color name="blue">#0000FF</color>
 

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/eventParent"
+    tools:context=".EventDetailsActivity"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp">
+
+                <TextView
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"
+                    android:drawablePadding="5dp"
+                    android:text="  Back"
+                    android:textColor="@color/white"
+                    tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtView_eventTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/thin_poppins"
+                android:text="Citi-Foundation-SMU Financial Literacy Program for Young Adults"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/imgView_event"
+                android:background="@drawable/rounded_rect_10_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/event1_logo" />
+
+            <RelativeLayout
+                android:id="@+id/hoster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgView_event"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/imgView_host"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/smu_logo" />
+
+                <TextView
+                    android:id="@+id/txtView_eventHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toRightOf="@id/imgView_host"
+                    android:fontFamily="@font/thin_poppins"
+                    android:text="Smu name"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txtView_eventHostDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtView_eventHost"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toRightOf="@id/imgView_host"
+                    android:fontFamily="@font/thin_poppins"
+                    android:text="smu sub name"
+                    android:textColor="@color/hint"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thin_poppins"
+                android:text="Description"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_rect_10">
+
+                <TextView
+                    android:id="@+id/txtView_eventDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thin_poppins"
+                    android:padding="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="Designed to help people with hearing loss improve their communication skills and build confidence in social and professional settings. Participants will learn practical strategies for effective communication, such as speechreading and use of assistive technology, and explore the emotional and social impacts of hearing loss. This workshop aims to create an inclusive space for hearing-impaired individuals to connect, learn, and thrive."
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/txtView_seeMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEE MORE"
+                    android:gravity="center"
+                    android:fontFamily="@font/thin_poppins"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/blue"
+                    android:layout_below="@id/txtView_eventDesc"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_addToCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/thin_poppins"
+                    android:padding="6dp"
+                    app:backgroundTint="@color/green"
+                    android:text="Add to Calendar"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="5dp"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    app:cornerRadius="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_emailOrganizer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/thin_poppins"
+                    android:padding="6dp"
+                    android:textColor="@color/black"
+                    android:text="Email Organizers"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    app:cornerRadius="10dp" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_registerEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:backgroundTint="@color/green"
+                android:fontFamily="@font/thin_poppins"
+                android:padding="6dp"
+                android:text="Register for Event"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

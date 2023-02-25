@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_article"
+    android:layout_width="wrap_content"
+    android:layout_height="240dp"
+    android:background="#2C2C2C"
+    android:layout_gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rel_article"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:background="@drawable/rounded_rect_10">
+
+        <ImageView
+            android:id="@+id/imgView_article"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_rect_10_white"
+            android:src="@drawable/smu_citi_financial_literacy" />
+
+        <TextView
+            android:id="@+id/txtView_articleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smu"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/thin_poppins"
+            android:layout_below="@id/imgView_article"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

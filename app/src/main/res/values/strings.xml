@@ -42,4 +42,75 @@
     <string name="str_button_back">Back</string>
 
     <string name="txtvw_word"> </string>
+
+    <string-array name="event_Title">
+        <item name="Breaking Barriers: Communication Strategies for the Hearing Impaired">Breaking Barriers</item>
+        <item name="Beyond Sound: Living Your Best Life with Hearing Loss">Beyond Sound</item>
+        <item name="Hearing Loss 101: Understanding Your Diagnosis and Treatment Options">Hearing Loss 101</item>
+        <item name="Navigating the Workplace: Tips and Tools for Professionals with Hearing Loss">Navigating the Workplace</item>
+        <item name="Hear Me Out: Advocating for Yourself and Others with Hearing Impairments">Hear Me Out</item>
+        <item name="Living with Tinnitus: Coping Strategies and Support">Living with Tinnitus</item>
+        <item name="Hearing Aid 101: Everything You Need to Know Before You Buy">Hearing Aid 101</item>
+        <item name="Hearing Health and Wellness: Managing Stress and Anxiety with Hearing Loss">Hearing Health and Wellness</item>
+    </string-array>
+
+    <string-array name="event_link">
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+        <item name="SADeaf">https://sadeaf.org.sg/sgsl-course/</item>
+    </string-array>
+
+    <string-array name="article_link">
+        <item name="SADeaf">https://livingwithhearingloss.com</item>
+        <item name="SADeaf">https://www.signia.net/ru-ru/blog/</item>
+        <item name="SADeaf">https://limpingchicken.com</item>
+        <item name="SADeaf">https://katherinebouton.com</item>
+        <item name="SADeaf">https://www.starkey.com/blog/latest</item>
+        <item name="SADeaf">https://theinvisibledisabilityandme.wordpress.com</item>
+        <item name="SADeaf">https://www.hearinglikeme.com</item>
+        <item name="SADeaf">https://morethanabitdeaf.com</item>
+    </string-array>
+
+    <string-array name="event_organiser">
+        <item name="SADeaf">SADeaf</item>
+        <item name="SSD">SSD</item>
+        <item name="HCC">Finance Faculty</item>
+        <item name="H4G">H4G</item>
+        <item name="AHLS">Harmon Whittington Professor of Finance</item>
+        <item name="SSI">Associate Chair and Professor</item>
+        <item name="SAVH">Associate Professor of Operations, Information and Decisions</item>
+        <item name="LB">LB</item>
+    </string-array>
+
+    <string-array name="event_organiserDesc">
+        <item name="The Singapore Association for the Deaf">Singapore Association for the Deaf</item>
+        <item name="Singapore Society for the Deaf">Singapore Society for the Deaf</item>
+        <item name="Hearing Care Centre">Hearing Care Centre</item>
+        <item name="Hear for Good">Hear for Good</item>
+        <item name="Action for Hearing Loss Singapore">Action for Hearing Loss Singapore</item>
+        <item name="Social Service Institute">Social Service Institute</item>
+        <item name="Singapore Association of the Visually Handicapped">Singapore Association of the Visually Handicapped</item>
+        <item name="The Lions Befrienders">UCI Division of Continuing Education Instructor</item>
+    </string-array>
+
+    <string-array name="article_title">
+        <item name="Help for Wrist Pain. Feel Better Fast With These Exercises.">Help for Wrist Pain. Feel Better Fast With These Exercises.</item>
+        <item name="A Helpful Way to Stretch and Strengthen the Wrists">A Helpful Way to Stretch and Strengthen the Wrists</item>
+        <item name="Hand &amp; Wrist Exercises for keyboard users">Hand &amp; Wrist Exercises for keyboard users</item>
+        <item name="Easy Exercise Modifications for Wrist Pain">Easy Exercise Modifications for Wrist Pain</item>
+        <item name="Hey Moms, Get Wrist Pain When You Exercise? Try This.">Hey Moms, Get Wrist Pain When You Exercise? Try This.</item>
+        <item name="Hand &amp; Wrist Exercises for keyboard users">Hand &amp; Wrist Exercises for keyboard users</item>
+        <item name="Easy Exercise Modifications for Wrist Pain">Easy Exercise Modifications for Wrist Pain</item>
+        <item name="Hey Moms, Get Wrist Pain When You Exercise? Try This.">Hey Moms, Get Wrist Pain When You Exercise? Try This.</item>
+    </string-array>
+
+
+
+
+
 </resources>

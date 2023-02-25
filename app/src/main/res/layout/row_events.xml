@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_events"
+    android:layout_width="wrap_content"
+    android:layout_height="240dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#2C2C2C"
+    android:layout_gravity="center_horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rel_events"
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:background="@drawable/rounded_rect_10">
+
+        <ImageView
+            android:id="@+id/imgView_event"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_rect_10_white"
+            android:src="@drawable/smu_citi_financial_literacy" />
+
+        <TextView
+            android:id="@+id/txtView_eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Smu"
+            android:textSize="13dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/thin_poppins"
+            android:layout_below="@id/imgView_event"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <RelativeLayout
+            android:id="@+id/hoster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtView_eventTitle"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/imgView_host"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/smu_logo" />
+
+            <TextView
+                android:id="@+id/txtView_host"
+                android:layout_toRightOf="@id/imgView_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/thin_poppins"
+                android:text="Smu Name"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/txtView_hostDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgView_host"
+                android:layout_below="@id/txtView_host"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/thin_poppins"
+                android:text="SMu SUb name"
+                android:textColor="@color/hint"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtView_eventParticipants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,200+ Participants"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:fontFamily="@font/thin_poppins"
+            android:layout_below="@id/hoster"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/txtView_remindMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hoster"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/txtView_eventParticipants"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/ic_baseline_calendar_month_24"
+            android:fontFamily="@font/thin_poppins"
+            android:gravity="right|bottom"
+            android:text="Remind Me"
+            android:textColor="@color/green"
+            android:textSize="12dp"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -2,27 +2,54 @@ package com.example.hearlall.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.example.hearlall.Adapters.ArticleAdapter;
+import com.example.hearlall.Adapters.EventsAdapter;
 import com.example.hearlall.Bluetooth_Activity;
+import com.example.hearlall.Model.Article;
+import com.example.hearlall.Model.Events;
 import com.example.hearlall.R;
+import com.example.hearlall.SpaceItemDecoration;
+
+import java.util.ArrayList;
 
 
 public class Home extends Fragment {
 
-    private ImageView btn_bluetooth, btn_settings;
+    private ImageView btn_bluetooth;
+    private androidx.recyclerview.widget.RecyclerView rv_articles, rv_events;
 
     private Context mContext;
+
+    private EventsAdapter eventsAdapter;
+    private final ArrayList<Events> eventsArrayList = new ArrayList<>();
+
+    private ArticleAdapter articleAdapter;
+    private ArrayList<Article> articleArrayList = new ArrayList<>();
+
+
+    int[] eventPic = {R.drawable.event1_logo, R.drawable.event2_logo, R.drawable.event3_logo,
+            R.drawable.event4_logo, R.drawable.event5_logo,  R.drawable.event6_logo,  R.drawable.event7_logo,  R.drawable.event8_logo};
+
+    int[] eventHostPic = {R.drawable.safd, R.drawable.safd, R.drawable.safd,
+            R.drawable.safd, R.drawable.safd,  R.drawable.safd,  R.drawable.safd,  R.drawable.safd};
+
+    int[] blogArticle = {R.drawable.article1, R.drawable.article1, R.drawable.article1,
+            R.drawable.article1, R.drawable.article1};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,10 +75,170 @@ public class Home extends Fragment {
 
         //ImageView
         btn_bluetooth = v.findViewById(R.id.btn_bluetooth);
-        btn_settings = v.findViewById(R.id.btn_settings);
+
+        //RecyclerView
+        rv_articles = v.findViewById(R.id.rv_articles);
+        rv_events = v.findViewById(R.id.rv_events);
+
+        initUI();
 
         pageDirectories();
 
+    }
+
+    private void initUI() {
+
+        initEventRecView();
+
+        initArticleRecView();
+    }
+
+    private void initArticleRecView() {
+
+        //for better performance of recyclerview.
+
+        int spaceInPixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics());
+        rv_articles.addItemDecoration(new SpaceItemDecoration(spaceInPixels));
+
+        rv_articles.setHasFixedSize(true);
+
+        articleAdapter = new ArticleAdapter(getContext(), articleArrayList);
+        rv_articles.setAdapter(articleAdapter);
+
+        //layout to contain recyclerview
+        LinearLayoutManager llm = new LinearLayoutManager(mContext);
+        llm.setSmoothScrollbarEnabled(true);
+        // orientation of linearlayoutmanager.
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
+        llm.setAutoMeasureEnabled(true);
+
+        //set layoutmanager for recyclerview.
+        rv_articles.setLayoutManager(llm);
+
+        new loadArticle().execute();
+    }
+
+    private void initEventRecView() {
+
+        //for better performance of recyclerview.
+
+        int spaceInPixels = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16, getResources().getDisplayMetrics());
+        rv_events.addItemDecoration(new SpaceItemDecoration(spaceInPixels));
+
+        rv_events.setHasFixedSize(true);
+
+        eventsAdapter = new EventsAdapter(getContext(), eventsArrayList);
+        rv_events.setAdapter(eventsAdapter);
+
+        //layout to contain recyclerview
+        LinearLayoutManager llm = new LinearLayoutManager(mContext);
+        llm.setSmoothScrollbarEnabled(true);
+        // orientation of linearlayoutmanager.
+        llm.setOrientation(LinearLayoutManager.HORIZONTAL);
+        llm.setAutoMeasureEnabled(true);
+
+        //set layoutmanager for recyclerview.
+        rv_events.setLayoutManager(llm);
+
+        new loadEvents().execute();
+    }
+
+    Events events;
+    Article article;
+
+    class loadArticle extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... args) {
+            try {
+
+                String[] articleTitle = getResources().getStringArray(R.array.article_title);
+
+                for (int i = 0 ; i < articleTitle.length; i++)
+                {
+                    article = new Article();
+
+                    article.setArticle(articleTitle[i]);
+                    article.setArticlePic(blogArticle[i]);
+
+                    articleArrayList.add(article);
+                    article = null;
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+
+            return null;
+        }
+
+        protected void onPostExecute(String file_url) {
+
+            if (articleArrayList != null && articleArrayList.size() > 0) {
+                articleAdapter = new ArticleAdapter(mContext, articleArrayList);
+                rv_articles.setAdapter(articleAdapter);
+                articleAdapter.notifyDataSetChanged();
+            }
+        }
+    }
+
+    class loadEvents extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        protected String doInBackground(String... args) {
+            try {
+
+                String[] eventTitle = getResources().getStringArray(R.array.event_Title);
+                String[] eventOrganiser = getResources().getStringArray(R.array.event_organiser);
+                String[] eventOrganiserDesc = getResources().getStringArray(R.array.event_organiserDesc);
+                String[] eventLink = getResources().getStringArray(R.array.event_link);
+
+
+                for (int i = 0 ; i < eventTitle.length; i++)
+                {
+                    events = new Events();
+
+                    events.setEventImage(eventPic[i]);
+                    events.setHostImage(eventHostPic[i]);
+
+                    events.setEventTitle(eventTitle[i]);
+                    events.setEventHost(eventOrganiser[i]);
+                    events.setHostDesc(eventOrganiserDesc[i]);
+                    events.setEventLink(eventLink[i]);
+
+                    eventsArrayList.add(events);
+                    events = null;
+                }
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+
+            return null;
+        }
+
+        protected void onPostExecute(String file_url) {
+
+//            pgbPopulardestination.setVisibility(View.GONE);
+
+            if (eventsArrayList != null && eventsArrayList.size() > 0) {
+                eventsAdapter = new EventsAdapter(mContext, eventsArrayList);
+                rv_events.setAdapter(eventsAdapter);
+                eventsAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
     private void pageDirectories() {
