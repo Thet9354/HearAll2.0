@@ -20,6 +20,7 @@ import com.example.hearlall.SignLanguage.AI_signLanguage_recognition_Activity;
 import com.example.hearlall.SignLanguage.First_SignLanguage_Activity;
 import com.example.hearlall.SignLanguage.SearchText_Activity;
 import com.example.hearlall.SignLanguage.SignLanguage_Activity;
+import com.example.hearlall.SignLanguageAI_Activity;
 
 public class SignLanguage extends Fragment {
 
@@ -92,7 +93,7 @@ public class SignLanguage extends Fragment {
         btn_ai_signLanguage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(mContext, AI_signLanguage_recognition_Activity.class));
+                startActivity(new Intent(mContext, SignLanguageAI_Activity.class));
             }
         });
     }

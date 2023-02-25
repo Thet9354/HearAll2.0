@@ -15,6 +15,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "HearlAll"
-include ':app'
+include ':app', ':opencv343'
 
-include ':opencv343'
