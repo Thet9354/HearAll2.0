@@ -95,7 +95,7 @@ public class Settings_Activity extends AppCompatActivity {
 
     private String uri;
 
-    private String mPhoneNumber, nightMode, notification, privateAcc, mUsername;
+    private String mPhoneNumber = "93542856", nightMode, notification, privateAcc, mUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -247,142 +247,34 @@ public class Settings_Activity extends AppCompatActivity {
         });
 
         /** OnCLickListener for Security & Privacy **/
-        securityIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SecurityNPrivacy_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
         rel_security.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SecurityNPrivacy_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
                 startActivity(intent);
             }
         });
-
-        txtView_security.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SecurityNPrivacy_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
-        btn_Security.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SecurityNPrivacy_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
 
         /** OnCLickListener for Text Size **/
-        textSizeIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TextSize_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
         rel_textSize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TextSize_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
                 startActivity(intent);
             }
         });
-
-        txtView_textSize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TextSize_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
-        btn_textSIze.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), TextSize_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
 
         /** OnCLickListener for Language **/
-        languageIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Language_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
         rel_language.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Language_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
                 startActivity(intent);
             }
         });
-
-        txtView_languages.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Language_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
-        btn_language.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Language_Activity.class);
-                intent.putExtra("PhoneNumber", mPhoneNumber);
-                startActivity(intent);
-            }
-        });
-
 
         /** OnCLickListener for Feedback **/
-        feedbackIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Feedback_Activity.class));
-            }
-        });
-
         rel_feedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Feedback_Activity.class));
-            }
-        });
-
-        txtView_feedback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Feedback_Activity.class));
-            }
-        });
-
-        btn_feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Feedback_Activity.class));
@@ -461,15 +353,7 @@ public class Settings_Activity extends AppCompatActivity {
         rel_logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //TODO: Add the intent leading to the Log Out page
-            }
-        });
-
-        txtView_logOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TODO: Add the intent leading to the Log Out page
-            }
+                System.exit(0);            }
         });
     }
 

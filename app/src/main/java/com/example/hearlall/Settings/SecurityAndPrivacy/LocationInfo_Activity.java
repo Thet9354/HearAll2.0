@@ -32,13 +32,6 @@ public class LocationInfo_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        /* onClickListener of back and done btn */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override

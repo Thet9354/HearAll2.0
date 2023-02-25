@@ -5,18 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.TextSize.TextSize_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_TextSize"
@@ -24,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Text size"
-            android:textColor="@color/first"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -36,7 +30,8 @@
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_TextSize"
             android:text="Done"
-            android:textColor="@color/first"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -57,7 +52,7 @@
                 android:text="Manage the text you see and share on HearAll."
                 android:layout_marginTop="80dp"
                 android:textSize="15sp"
-                android:textColor="@color/first"/>
+                android:textColor="@color/white"/>
 
             <View
                 android:id="@+id/divider"
@@ -99,7 +94,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_defaultTextSize"
                         android:text="Default Text Size preference"
-                        android:textColor="@color/notifications"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -110,7 +105,7 @@
                         android:layout_centerVertical="true"
                         android:checked="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/notificationsSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
 
@@ -139,7 +134,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_customizeTextSize"
                         android:text="Customize Text Size"
-                        android:textColor="@color/night_mode"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -150,7 +145,7 @@
                         android:layout_centerVertical="true"
                         android:checked="false"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
 

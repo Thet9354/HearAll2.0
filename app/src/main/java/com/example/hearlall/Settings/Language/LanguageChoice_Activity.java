@@ -14,8 +14,6 @@ import com.example.hearlall.Settings.Settings_Activity;
 
 public class LanguageChoice_Activity extends AppCompatActivity {
 
-    private ImageView btn_back;
-
     private TextView txtView_Done, txtView_languages, question;
 
     private androidx.appcompat.widget.SwitchCompat english_switch, chinese_Switch, malay_Switch, tamil_Switch;
@@ -31,13 +29,6 @@ public class LanguageChoice_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        /* onClickListener of back and done */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,7 +113,6 @@ public class LanguageChoice_Activity extends AppCompatActivity {
     }
 
     private void initWidget() {
-        btn_back = findViewById(R.id.btn_back);
         txtView_Done = findViewById(R.id.txtView_Done);
         english_switch = findViewById(R.id.english_switch);
         chinese_Switch = findViewById(R.id.chinese_Switch);

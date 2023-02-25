@@ -55,8 +55,9 @@
             <ImageView
                 android:id="@+id/imgView_event"
                 android:background="@drawable/rounded_rect_10_white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
                 android:src="@drawable/event1_logo" />
 
             <RelativeLayout
@@ -189,7 +190,7 @@
                 android:padding="6dp"
                 android:text="Register for Event"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 app:cornerRadius="10dp" />
 

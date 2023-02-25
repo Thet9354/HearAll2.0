@@ -19,8 +19,6 @@ import com.example.hearlall.Settings.Settings_Activity;
 
 public class TextSize_Activity extends AppCompatActivity implements CustomSpinner.OnSpinnerEventsListener {
 
-    private ImageView btn_back;
-
     private TextView txtView_Done;
 
     private androidx.appcompat.widget.SwitchCompat defaultTextSize_switch, customizeTextSize_switch;
@@ -46,13 +44,6 @@ public class TextSize_Activity extends AppCompatActivity implements CustomSpinne
     }
 
     private void pageDirectories() {
-        /* onClickListener for back and done btn */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,8 +110,6 @@ public class TextSize_Activity extends AppCompatActivity implements CustomSpinne
     }
 
     private void initWidget() {
-        //--->Button
-        btn_back = findViewById(R.id.btn_back);
 
         //--->TextView
         txtView_Done = findViewById(R.id.txtView_Done);

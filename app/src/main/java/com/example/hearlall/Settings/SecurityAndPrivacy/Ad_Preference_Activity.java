@@ -32,13 +32,6 @@ public class Ad_Preference_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        /* onClickListener for back and done btn */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override

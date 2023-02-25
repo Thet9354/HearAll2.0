@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditProfile_Activity"
-    android:background="@drawable/white_beautiful_bg">
+    android:background="@color/black">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,12 +17,6 @@
             android:layout_gravity="center"
             android:gravity="center">
 
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/bacu_ui_btn" />
-
             <TextView
                 android:id="@+id/txtView_done"
                 android:layout_width="wrap_content"
@@ -31,7 +25,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="15dp"
                 android:text="Done"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -74,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:padding="6dp"
                         android:text="New Full Name"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="16sp" />
 
                     <EditText
@@ -115,22 +109,21 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:id="@+id/txtView_updateUsername"
+                        android:id="@+id/txtView_updatePassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="6dp"
-                        android:text="New Username"
-                        android:textColor="@color/black"
+                        android:text="New Password"
+                        android:textColor="@color/white"
                         android:textSize="16sp" />
 
                     <EditText
-                        android:id="@+id/editTxt_updateUsername"
+                        android:id="@+id/editTxt_updatePassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/txtView_updateUsername"
+                        android:layout_below="@+id/txtView_updatePassword"
                         android:background="@drawable/transparent_editbox2"
-                        android:hint="Enter your new username"
-                        android:inputType="textPersonName"
+                        android:hint="Enter your new password"
                         android:padding="6dp"
                         android:textColor="@color/white"
                         android:textColorHint="#555555"
@@ -165,7 +158,7 @@
                         android:layout_height="wrap_content"
                         android:padding="6dp"
                         android:text="New Email address"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="16sp" />
 
 
@@ -211,7 +204,7 @@
                         android:layout_height="wrap_content"
                         android:padding="6dp"
                         android:text="New Mobile Number"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textSize="16sp" />
 
                     <EditText
@@ -242,32 +235,22 @@
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
-            <DatePicker
-                android:id="@+id/datePicker_DOB"
-                style="@style/datepicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/txtView_updateProfileDOB"
-                android:background="@drawable/transparent_btn"
-                android:calendarTextColor="@color/white"
-                android:calendarViewShown="false"
-                android:datePickerMode="spinner"
-                android:spinnersShown="true" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_uploadPFP"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/datePicker_DOB"
+                android:layout_below="@+id/txtView_updateProfileDOB"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="70dp"
-                android:background="@drawable/transparent_btn"
+                android:backgroundTint="@color/green"
+                android:background="@drawable/round_back_secondary_100"
                 android:text="Upload profile pic"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_updateProfile"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -275,10 +258,11 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="70dp"
                 android:layout_marginTop="30dp"
+                android:backgroundTint="@color/green"
                 android:layout_marginRight="70dp"
-                android:background="@drawable/transparent_btn"
+                android:background="@drawable/round_back_secondary_100"
                 android:text="Update Profile"
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
         </RelativeLayout>
 

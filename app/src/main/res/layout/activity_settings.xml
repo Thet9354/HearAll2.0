@@ -34,7 +34,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="Pinetree"
-                android:textColor="@color/gray"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
                 android:paddingEnd="30dp"
                 android:text="Edit Profile"
                 android:textAllCaps="false"
-                android:textColor="#D31027"
+                android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <LinearLayout
@@ -87,7 +87,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_nightMode"
                         android:text="Night Mode"
-                        android:textColor="#4316DB"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -98,7 +98,7 @@
                         android:layout_centerVertical="true"
                         android:checked="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/nightModeSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
@@ -126,7 +126,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/notificationIcon"
                         android:text="Notifications"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -136,7 +136,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/notificationsSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
@@ -163,7 +163,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/privateAccountIcon"
                         android:text="Private Account"
-                        android:textColor="#4316DB"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -173,7 +173,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/privateAccountSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
@@ -213,7 +213,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/securityIcon"
                         android:text="Security &amp; Privacy"
-                        android:textColor="#F4656D"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -250,7 +250,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/textSizeIcon"
                         android:text="Text Size"
-                        android:textColor="#4316DB"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -259,7 +259,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/forwardarrow5" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -287,7 +287,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/languageIcon"
                         android:text="Language"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -296,7 +296,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/forwardarrow" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -337,7 +337,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/feedbackIcon"
                         android:text="Feedback"
-                        android:textColor="#FF8800"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -346,7 +346,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/forwardarrow3" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -374,7 +374,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/aboutUsIcon"
                         android:text="About Us"
-                        android:textColor="#E63535"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -383,7 +383,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/forwardarrow2" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -411,7 +411,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/additionalIcon"
                         android:text="Additional Resources"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -420,7 +420,7 @@
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/forwardarrow" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -437,7 +437,7 @@
                 android:elevation="25dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/round_back_white10_20"
+                android:background="@drawable/round_back_secondary_100"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -456,7 +456,7 @@
                         android:layout_marginStart="20dp"
                         android:textSize="15sp"
                         android:text="Log Out"
-                        android:textColor="#D31027"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
 

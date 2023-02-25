@@ -79,11 +79,11 @@
     <string-array name="event_organiser">
         <item name="SADeaf">SADeaf</item>
         <item name="SSD">SSD</item>
-        <item name="HCC">Finance Faculty</item>
+        <item name="HCC">HCC</item>
         <item name="H4G">H4G</item>
-        <item name="AHLS">Harmon Whittington Professor of Finance</item>
-        <item name="SSI">Associate Chair and Professor</item>
-        <item name="SAVH">Associate Professor of Operations, Information and Decisions</item>
+        <item name="AHLS">AHLS</item>
+        <item name="SSI">SSI</item>
+        <item name="SAVH">SAVH</item>
         <item name="LB">LB</item>
     </string-array>
 

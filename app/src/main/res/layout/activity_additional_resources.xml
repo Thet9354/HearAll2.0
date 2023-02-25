@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Additional resources"
-            android:textColor="@color/green"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -31,7 +31,7 @@
             android:layout_marginLeft="65dp"
             android:layout_toRightOf="@id/txtView_additionalResources"
             android:text="Done"
-            android:textColor="@color/green"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
                 android:gravity="left"
                 android:textSize="15sp"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/green" />
+                android:textColor="@color/white" />
 
             <View
                 android:id="@+id/divider"
@@ -84,7 +84,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Send crash reports"
-                        android:textColor="@color/green"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <TextView
@@ -92,7 +92,6 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtView_crashReport"
                         android:layout_marginTop="10dp"
-                        android:textColor="@color/green"
                         android:layout_toLeftOf="@id/crashReport_switch"
                         android:text="Automatically send crash reports to HearAll's service provider to help improve this application."
                         android:textSize="12dp" />
@@ -104,7 +103,7 @@
                         android:layout_alignParentEnd="true"
                         android:checked="true"
                         android:switchMinWidth="50dp"
-                        android:theme="@style/notificationsSwitch"
+                        android:theme="@style/greenSwitch"
                         tools:ignore="TouchTargetSizeCheck" />
 
                 </RelativeLayout>
@@ -123,7 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Legal"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
@@ -154,7 +153,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Terms of service"
-                        android:textColor="@color/green"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -164,7 +163,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow5" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -183,7 +182,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy policy"
-                        android:textColor="@color/green"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -212,7 +211,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Cookie use"
-                        android:textColor="@color/green"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -222,7 +221,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow3" />
+                        android:src="@drawable/forwardarrow4" />
 
                 </RelativeLayout>
 
@@ -239,7 +238,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:text="Legal notices"
-                        android:textColor="@color/green"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -249,7 +248,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow5" />
+                        android:src="@drawable/forwardarrow4" />
 
                 </RelativeLayout>
 

@@ -14,7 +14,7 @@ import com.example.hearlall.Settings.Settings_Activity;
 
 public class Language_Activity extends AppCompatActivity {
 
-    private ImageView btn_back, btn_recommendations;
+    private ImageView btn_recommendations;
 
     private TextView txtView_Done, txtView_recommendation, txtView_recommendationText;
 
@@ -31,13 +31,6 @@ public class Language_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        /* onCLickListener for back and done btn */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +63,6 @@ public class Language_Activity extends AppCompatActivity {
 
     private void initWidget() {
         //--->Button
-        btn_back = findViewById(R.id.btn_back);
         btn_recommendations = findViewById(R.id.btn_recommendations);
 
         //--->TextView

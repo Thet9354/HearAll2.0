@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="About Us"
-            android:textColor="@color/green"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -35,7 +35,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:text="      Welcome to \n      HearAll"
-        android:textColor="@color/green"
+        android:textColor="@color/white"
         android:textSize="45dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/img_minimalDesign"
                 android:text="Minimal Design"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -91,7 +91,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/img_minimalDesign"
                 android:text="Visual and functional way to enhance your experience."
-                android:textColor="@color/green"
                 android:textSize="12sp" />
         </RelativeLayout>
 
@@ -118,7 +117,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/img_productivity"
                 android:text="Productivity"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -129,7 +128,6 @@
                 android:layout_below="@+id/txtView_productivity"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/green"
                 android:layout_toRightOf="@+id/img_productivity"
                 android:text="Multiple features implemented to increase your overall productivity."
                 android:textSize="12sp" />
@@ -158,7 +156,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/img_personalAcc"
                 android:text="Personal Account"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -171,7 +169,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/img_personalAcc"
                 android:text="Personalize your experience with the app to your preference."
-                android:textColor="@color/green"
                 android:textSize="12sp" />
         </RelativeLayout>
 
@@ -197,7 +194,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/img_cloud"
                 android:text="Secure Database"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
@@ -210,7 +207,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_toRightOf="@+id/img_cloud"
                 android:text="Rest easy knowing your personal information is stored securely."
-                android:textColor="@color/green"
                 android:textSize="12sp" />
         </RelativeLayout>
 

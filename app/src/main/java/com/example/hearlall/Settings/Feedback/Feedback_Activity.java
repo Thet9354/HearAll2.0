@@ -16,7 +16,7 @@ import com.example.hearlall.R;
 
 public class Feedback_Activity extends AppCompatActivity {
 
-    private ImageView btn_back, btn_send;
+    private ImageView btn_send;
 
     private TextView txtView_ownEmail;
 
@@ -35,12 +35,6 @@ public class Feedback_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         btn_send.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,7 +129,6 @@ public class Feedback_Activity extends AppCompatActivity {
 
     private void initWidget() {
         //--->Button
-        btn_back = findViewById(R.id.btn_back);
         btn_send = findViewById(R.id.btn_send);
 
         //--->TextView

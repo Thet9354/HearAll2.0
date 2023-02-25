@@ -5,18 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.Language.LanguageChoice_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_languages"
@@ -24,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Languages"
-            android:textColor="@color/tab_down"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -36,7 +30,8 @@
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@id/txtView_languages"
             android:text="Done"
-            android:textColor="@color/tab_down"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -60,7 +55,7 @@
                 android:textSize="20dp"
                 android:gravity="left"
                 android:layout_marginTop="80dp"
-                android:textColor="@color/tab_down"/>
+                android:textColor="@color/white"/>
 
             <View
                 android:id="@+id/divider"
@@ -92,7 +87,7 @@
                         android:layout_height="wrap_content"
                         android:text="English"
                         android:layout_centerVertical="true"
-                        android:textColor="@color/tab_down"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
 
@@ -122,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Chinese - 中文"
-                        android:textColor="@color/tab_down"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -150,7 +145,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Malay - Melayu"
-                        android:textColor="@color/tab_down"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -178,7 +173,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:text="Tamil - தமிழ்"
-                        android:textColor="@color/tab_down"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.SwitchCompat

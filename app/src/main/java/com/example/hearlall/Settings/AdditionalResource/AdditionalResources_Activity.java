@@ -17,7 +17,7 @@ import com.example.hearlall.Settings.Settings_Activity;
 
 public class AdditionalResources_Activity extends AppCompatActivity {
 
-    private ImageView btn_back, btn_termsOfService, btn_privacyPolicy, btn_cookiesUsed, btn_legalNotices;
+    private ImageView btn_termsOfService, btn_privacyPolicy, btn_cookiesUsed, btn_legalNotices;
 
     private TextView txtView_Done, txtView_termsOfService, txtView_privacyPolicy, txtView_cookiesUsed, txtView_legalNotices;
 
@@ -36,13 +36,6 @@ public class AdditionalResources_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        /* onClickListener for back and done btn */
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         txtView_Done.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +163,6 @@ public class AdditionalResources_Activity extends AppCompatActivity {
 
     private void initWidget() {
         //--->Button
-        btn_back = findViewById(R.id.btn_back);
         btn_termsOfService = findViewById(R.id.btn_termsOfService);
         btn_privacyPolicy = findViewById(R.id.btn_privacyPolicy);
         btn_cookiesUsed = findViewById(R.id.btn_cookiesUsed);

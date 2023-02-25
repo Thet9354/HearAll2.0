@@ -38,6 +38,7 @@ import com.google.firebase.storage.UploadTask;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class EditProfile_Activity extends AppCompatActivity {
@@ -46,15 +47,13 @@ public class EditProfile_Activity extends AppCompatActivity {
 
     private de.hdodenhof.circleimageview.CircleImageView img_PFP;
 
-    private EditText editTxt_updateProfileName, editTxt_updateEmail, editTxt_updateProfileMobile, editTxt_updateUsername;
+    private EditText editTxt_updateProfileName, editTxt_updateEmail, editTxt_updateProfileMobile, editTxt_updatePassword;
 
     private TextView txtView_done;
 
-    private DatePicker datePicker_DOB;
+    private androidx.appcompat.widget.AppCompatButton btn_uploadPFP, btn_updateProfile;
 
-    private Button btn_uploadPFP, btn_updateProfile;
-
-    private String newFullName, newEmail, newDOB, newMobileNumber, newUsername;
+    private String newFullName, newEmail, newDOB, newMobileNumber, newPassword;
 
     private Uri imageUri;
 
@@ -195,13 +194,12 @@ public class EditProfile_Activity extends AppCompatActivity {
 
                         newFullName = editTxt_updateProfileName.getText().toString();
                         newEmail = editTxt_updateEmail.getText().toString();
-                        newUsername = editTxt_updateUsername.getText().toString();
+                        newPassword = editTxt_updatePassword.getText().toString();
                         newMobileNumber = editTxt_updateProfileMobile.getText().toString();
 
                         validateFullName();
-                        validateUsername();
+                        validatePassword();
                         validateEmail();
-                        validateDOB();
                         validateMobileNumber();
                         addData();
                     }
@@ -216,7 +214,7 @@ public class EditProfile_Activity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Settings_Activity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                        .putExtra("Username", newUsername)
+                        .putExtra("Password", newPassword)
                                 .putExtra("PFP", myUri);
                 startActivity(intent);
                 finish();
@@ -224,36 +222,9 @@ public class EditProfile_Activity extends AppCompatActivity {
         });
     }
 
-    private boolean validateUsername() {
-        // defining our own username pattern
-        final Pattern USERNAME_PATTERN2 =
-                Pattern.compile("^" +
-                        "(?=.*[@#$%^&+=])" +     // at least 1 special character
-                        "(?=\\S+$)" +            // no white spaces
-                        ".{5,}" +                // at least 4 characters
-                        "$");
-
-        if (newUsername.isEmpty())
-        {
-            editTxt_updateUsername.setError("Field can not be empty");
-            return false;
-        }
-
-        // Matching the input email to a predefined email pattern
-        else if (!USERNAME_PATTERN2.matcher(newUsername).matches())
-        {
-            editTxt_updateUsername.setError("Please enter a valid username");
-            return false;
-        }
-        else
-        {
-            editTxt_updateUsername.setError(null);
-            return true;
-        }
-    }
 
     private void addData() {
-        if (!validateFullName() | !validateEmail() | !validateMobileNumber() | !validateDOB() | !validateUsername())
+        if (!validateFullName() | !validateEmail() | !validateMobileNumber() | !validatePassword())
         {
             System.out.println("Shitttttt");
         }
@@ -288,7 +259,7 @@ public class EditProfile_Activity extends AppCompatActivity {
                         //--->Updating data in firebase
                         HashMap user = new HashMap();
                         user.put("Phone Number", newMobileNumber);
-                        user.put("Username", newUsername);
+                        user.put("Password", newPassword);
                         user.put("Email", newEmail);
                         user.put("Full Name", newFullName);
                         user.put("Date Of Birth", newDOB);
@@ -343,6 +314,25 @@ public class EditProfile_Activity extends AppCompatActivity {
         }
     }
 
+    private boolean validatePassword() {
+        //Regex pattern to require alphanumeric and special characters
+        Pattern regexPassword = Pattern.compile("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
+        Matcher matcher = regexPassword.matcher(newPassword);
+
+        if (newPassword.isEmpty())
+        {
+            editTxt_updatePassword.setError("Required");
+            return false;
+        }
+        else if (!matcher.matches())
+        {
+            editTxt_updatePassword.setError("Your password's not strong enough");
+            return false;
+        }
+        else
+            return true;
+    }
+
     private boolean validateMobileNumber() {
         if (newMobileNumber.isEmpty())
         {
@@ -362,27 +352,6 @@ public class EditProfile_Activity extends AppCompatActivity {
         }
     }
 
-    private boolean validateDOB() {
-        currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        userAge = datePicker_DOB.getYear();
-        isAgeValid = currentYear - userAge;
-
-        if (isAgeValid < 18)
-        {
-            Toast.makeText(this, "You have not meet the minimum age requirement", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        else
-        {
-            String userDate = String.valueOf(datePicker_DOB.getDayOfMonth());
-            String userMonth = String.valueOf(datePicker_DOB.getMonth());
-            String userYear = String.valueOf(datePicker_DOB.getYear());
-
-            newDOB = userDate + "/" + userMonth + "/" + userYear;
-
-            return true;
-        }
-    }
 
     private boolean validateEmail() {
         if (newEmail.isEmpty())
@@ -440,13 +409,10 @@ public class EditProfile_Activity extends AppCompatActivity {
         editTxt_updateProfileName = findViewById(R.id.editTxt_updateProfileName);
         editTxt_updateEmail = findViewById(R.id.editTxt_updateEmail);
         editTxt_updateProfileMobile = findViewById(R.id.editTxt_updateProfileMobile);
-        editTxt_updateUsername = findViewById(R.id.editTxt_updateUsername);
+        editTxt_updatePassword = findViewById(R.id.editTxt_updatePassword);
 
         //TextView
         txtView_done = findViewById(R.id.txtView_done);
-
-        //DatePicker
-        datePicker_DOB = findViewById(R.id.datePicker_DOB);
 
         //Button
         btn_uploadPFP = findViewById(R.id.btn_uploadPFP);

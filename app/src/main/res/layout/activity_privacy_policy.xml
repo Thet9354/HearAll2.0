@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.SecurityAndPrivacy.PrivacyPolicy_Activity">
 
     <ScrollView
@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Privacy Policy"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/guideline51"
@@ -48,7 +48,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/txtView_privacyPolicy"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/txtView_privacyPolicy"
-                app:srcCompat="@drawable/back_btn" />
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
             <RelativeLayout
                 android:id="@+id/relLayout_privacyPolicy"
@@ -62,8 +62,8 @@
                     android:id="@+id/txtView_privacyPolicy_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="Last update: 4/9/22 \n\n
+                    android:textColor="@color/white"
+                    android:text="Last update: 26/2/2023 \n\n
 This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the app.\n\n
 We use your Personal Information only for providing and improving the Site. By using the Site, you agree to the collection and use of information
 in accordance with this policy."
@@ -85,7 +85,7 @@ in accordance with this policy."
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Information Collection And Use"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -93,7 +93,7 @@ in accordance with this policy."
                     android:id="@+id/txtView_infoCollection_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_below="@+id/txtView_infoCollection"
                     android:layout_marginTop="10dp"
                     android:text="While using our Site, we may ask you to provide us with certain personally identifiable information that can be used to
@@ -115,7 +115,7 @@ in accordance with this policy."
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Log Data"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -125,7 +125,7 @@ in accordance with this policy."
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtView_logData"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="Like many app operators, we collect information that your browser sends whenever you visit our App.\n\nThis
 Log Data may include information such as your computer's Internet Protocol (IP) address, browser type,
 browser version, the pages of our app that you visit, the time and date of your visit, the time spent on
@@ -147,7 +147,7 @@ those pages and other statistics." />
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Communication"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -157,7 +157,7 @@ those pages and other statistics." />
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtView_communications"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="We will not use your Personal Information to contact you with newsletter, marketing or promotional materials
 and other information. We will only be contacting you through email with regards to new updates of the app and replies to our user's feedback." />
             </RelativeLayout>
@@ -176,7 +176,7 @@ and other information. We will only be contacting you through email with regards
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Security"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -186,7 +186,7 @@ and other information. We will only be contacting you through email with regards
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtView_security"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="The security of your Personal Information is important to us, but remember that no method of transmission over the Internet,
 or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee
 its absolute security." />
@@ -207,7 +207,7 @@ its absolute security." />
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Changes To This Privacy Policy"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -217,7 +217,7 @@ its absolute security." />
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtView_privacyPolicy_changes"
                     android:layout_marginTop="10dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:text="This Privacy Policy is effective as of (add date) and will remain in effect except with respect to any changes in its
 provisions in the future, which will be in effect immediately after being posted on this page.\n\nWe reserve the right to update or change our Privacy
 Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy
@@ -249,6 +249,7 @@ Policy on this page will constitute your acknowledgment of the modifications and
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtView_contactUs"
                     android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
                     android:text="If you have any questions about this Privacy Policy, please contact us." />
             </RelativeLayout>
 

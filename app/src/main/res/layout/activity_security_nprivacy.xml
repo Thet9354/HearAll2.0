@@ -5,19 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/white_beautiful_bg"
+    android:background="@color/black"
     tools:context=".Settings.SecurityAndPrivacy.SecurityNPrivacy_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:elevation="20dp"
-            android:src="@drawable/bacu_ui_btn" />
 
         <TextView
             android:id="@+id/txtView_privacy"
@@ -25,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="Security &amp; Privacy"
-            android:textColor="#AD00FF"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -38,7 +31,8 @@
             android:layout_toRightOf="@id/txtView_privacy"
             android:elevation="20dp"
             android:text="Done"
-            android:textColor="#FF3B3B"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -101,7 +95,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_ad_preferences"
                         android:text="Ads preferences"
-                        android:textColor="#F4656D"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -139,7 +133,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_dataSharing"
                         android:text="Data sharing with business partners"
-                        android:textColor="#AD00FF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -149,7 +143,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow5" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -177,7 +171,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_toEndOf="@+id/img_locationInfo"
                         android:text="Location Information"
-                        android:textColor="@color/teal_200"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -187,7 +181,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow" />
+                        android:src="@drawable/forwardarrow4" />
 
                 </RelativeLayout>
 
@@ -207,7 +201,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:text="Learn more about privacy on HearAll"
-                android:textColor="#AD00FF"
+                android:textColor="@color/white"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -236,7 +230,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy center"
-                        android:textColor="#AD00FF"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -246,7 +240,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow3" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -265,7 +259,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Privacy policy"
-                        android:textColor="#F4656D"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -275,7 +269,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow2" />
+                        android:src="@drawable/forwardarrow4" />
 
 
                 </RelativeLayout>
@@ -294,7 +288,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="20dp"
                         android:text="Contact us"
-                        android:textColor="#FF00B8"
+                        android:textColor="@color/white"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -304,7 +298,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="@color/black"
-                        android:src="@drawable/forwardarrow" />
+                        android:src="@drawable/forwardarrow4" />
 
                 </RelativeLayout>
 

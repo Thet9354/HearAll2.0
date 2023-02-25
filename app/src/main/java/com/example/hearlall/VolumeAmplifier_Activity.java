@@ -82,7 +82,7 @@ public class VolumeAmplifier_Activity extends AppCompatActivity {
                     int intLoudness = (int) (loudness * 10);
                     sharedPreferences.edit().putInt(GlobalVars.SP_LOUDNESS, intLoudness).commit();
                     EventBus.getDefault().post(ServiceCommand.UPDATE);
-                    Toast.makeText(this, " ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "DB has been set", Toast.LENGTH_SHORT).show();
                 } catch (NumberFormatException ignored) {
                     Toast.makeText(this, "Invalid loudness number", Toast.LENGTH_SHORT).show();
                 }   

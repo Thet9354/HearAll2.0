@@ -36,7 +36,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/txtView_legalNotice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtView_legalNotice"
-        app:srcCompat="@drawable/back_btn" />
+        app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24" />
 
     <RelativeLayout
         android:id="@+id/relLayout_legalNotice"
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtView_copyRight"
             android:layout_marginTop="15dp"
-            android:text="Copyright (c) 2022-2031 P. Thet Pine. All rights reserved.\n\nCreated and based partly on code by P. Thet Pine on 26/6/22. \n\nPermission
+            android:text="Copyright (c) 2022-2031 P. Thet Pine. All rights reserved.\n\nCreated and based partly on code by P. Thet Pine on 26/2/23. \n\nPermission
 is hereby granted,
 free of charge, to any person obtaining a copy of this software and associated documentation files(the 'software'),
 to deal in the Software without restriction,including without limitation the rights to use, copy, modify, merge, publish,

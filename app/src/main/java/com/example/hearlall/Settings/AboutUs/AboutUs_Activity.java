@@ -13,8 +13,6 @@ import com.example.hearlall.R;
 
 public class AboutUs_Activity extends AppCompatActivity {
 
-    private ImageView btn_back;
-
     private Button btn_getStarted;
 
     @Override
@@ -29,12 +27,6 @@ public class AboutUs_Activity extends AppCompatActivity {
     }
 
     private void pageDirectories() {
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
 
         btn_getStarted.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +38,5 @@ public class AboutUs_Activity extends AppCompatActivity {
 
     private void initWidget() {
         btn_getStarted = findViewById(R.id.btn_getStarted);
-        btn_back = findViewById(R.id.btn_back);
     }
 }

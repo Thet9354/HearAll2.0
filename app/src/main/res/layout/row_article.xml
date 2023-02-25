@@ -15,11 +15,12 @@
 
         <ImageView
             android:id="@+id/imgView_article"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="100dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_rect_10_white"
             android:src="@drawable/smu_citi_financial_literacy" />
