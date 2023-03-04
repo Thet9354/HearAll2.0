@@ -57,7 +57,7 @@ public class EditProfile_Activity extends AppCompatActivity {
 
     private Uri imageUri;
 
-    private String myUri = "a";
+    private final String myUri = "a";
 
     private StorageTask uploadTask;
 

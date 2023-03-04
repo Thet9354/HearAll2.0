@@ -26,7 +26,7 @@ public class SignLanguage_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_language);
 
         final int choice = getIntent().getExtras().getInt("Userchoice");
-        gridView = (GridView) findViewById(R.id.gridView);
+        gridView = findViewById(R.id.gridView);
         customGridAdapter = new GridViewAdapter(this, R.layout.row_grid, getData(choice));
         gridView.setAdapter(customGridAdapter);
 

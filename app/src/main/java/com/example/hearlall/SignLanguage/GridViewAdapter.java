@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class GridViewAdapter extends ArrayAdapter<ImageItem> {
 
-    private Context context;
-    private int layoutResourceId;
+    private final Context context;
+    private final int layoutResourceId;
     private ArrayList<ImageItem> data = new ArrayList<ImageItem>();
 
     public GridViewAdapter(Context context, int layoutResourceId, ArrayList<ImageItem> data) {
@@ -35,8 +35,8 @@ public class GridViewAdapter extends ArrayAdapter<ImageItem> {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
-            holder.imageTitle = (TextView) row.findViewById(R.id.text);
-            holder.image = (ImageView) row.findViewById(R.id.image);
+            holder.imageTitle = row.findViewById(R.id.text);
+            holder.image = row.findViewById(R.id.image);
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();

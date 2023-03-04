@@ -53,6 +53,8 @@ public class VolumeAmplifier extends Fragment {
 
     LoudnessEnhancer enhancer = new LoudnessEnhancer(27721);
 
+    private int audioSessionId; // set this to the audio session ID of the MediaPlayer or AudioTrack
+
     Context mContext;
 
 
@@ -118,23 +120,31 @@ public class VolumeAmplifier extends Fragment {
                 try {
 
                     double loudness = Double.parseDouble(editTxt_volumeAmplifier.getText().toString());
+                    String gainString = editTxt_volumeAmplifier.getText().toString();
                     int intLoudness = (int) (loudness * 10);
+                    float gain = Float.parseFloat(gainString);
                     sharedPreferences.edit().putInt(GlobalVars.SP_LOUDNESS, intLoudness).commit();
                     EventBus.getDefault().post(ServiceCommand.UPDATE);
                     Toast.makeText(mContext, "Loudness has been set", Toast.LENGTH_SHORT).show();
+
+                    float targetGain = enhancer.getTargetGain() + gain;
+
+                    enhancer.setTargetGain((int) targetGain);
+                    enhancer.setEnabled(true);
+                    enhancer.release();
+
                 } catch (NumberFormatException ignored) {
                     Toast.makeText(mContext, "Invalid loudness number", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        enhancer.setEnabled(true);
+
 
 
     }
 
     private void initUI() {
         enableService.setChecked(false);
-        editTxt_volumeAmplifier.setText(Objects.toString(sharedPreferences.getInt(GlobalVars.SP_LOUDNESS, 0) / 10.0));
     }
 
     private boolean dbValidation() {

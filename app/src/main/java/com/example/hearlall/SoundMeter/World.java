@@ -6,7 +6,7 @@ public class World {
     public static float minDB =100;
     public static float maxDB =0;
     public static float lastDbCount = dbCount;
-    private static float min = 0.5f;  //Set the minimum sound change
+    private static final float min = 0.5f;  //Set the minimum sound change
     private static float value = 0;   // Sound decibel value
     public static void setDbCount(float dbValue) {
         if (dbValue > lastDbCount) {

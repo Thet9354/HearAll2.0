@@ -13,8 +13,8 @@ import com.example.hearlall.R;
 import java.util.List;
 
 public class CountryAdapter extends BaseAdapter {
-    private Context context;
-    private List<Country> countryList;
+    private final Context context;
+    private final List<Country> countryList;
 
     public CountryAdapter(Context context, List<Country> countryList)
     {

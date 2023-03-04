@@ -13,9 +13,8 @@ import android.widget.ImageView;
 
 import com.example.hearlall.R;
 
-public class Display_Activity extends AppCompatActivity implements View.OnClickListener {
+public class Display_Activity extends AppCompatActivity{
 
-    private ImageButton finishbtn, previousbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +24,7 @@ public class Display_Activity extends AppCompatActivity implements View.OnClickL
 
         int position = getIntent().getExtras().getInt("Image Int");
         choice = getIntent().getExtras().getInt("Choice");
-        ImageView imagev = (ImageView) findViewById(R.id.imagedisplay);
-
-        finishbtn = (ImageButton) findViewById(R.id.Exit_button);
-        previousbtn = (ImageButton) findViewById(R.id.Gobackbutton);
-
-        finishbtn.setOnClickListener(this);
-        previousbtn.setOnClickListener(this);
+        ImageView imagev = findViewById(R.id.imagedisplay);
 
         /* Compute index based on choice(Alphabets/Numbers/Frequently Used words) */
         if (choice == 2)
@@ -96,27 +89,5 @@ public class Display_Activity extends AppCompatActivity implements View.OnClickL
         };
         int cImage = bLogos[position];
         imagev.setImageResource(cImage);
-    }
-
-    public void onClick(View v) {
-        // TODO Auto-generated method stub
-        if (v.getId() == R.id.Gobackbutton) {
-            Intent intent = new Intent(getApplicationContext(), First_SignLanguage_Activity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        }
-
-        if (v.getId() == R.id.Exit_button) {
-            Intent intent = new Intent(getApplicationContext(), SearchText_Activity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        }
     }
 }

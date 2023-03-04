@@ -4,63 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/starting"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".SpeechToText.SpeechToText_Activity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/btn_back"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bacu_ui_btn" />
-
-    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout_NNP"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/round_back_white10_20"
-            android:elevation="25dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/rel_nightMode"
+            <LinearLayout
+                android:id="@+id/linearLayout_NNP"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_back_white10_20"
+                android:elevation="25dp"
+                android:orientation="vertical"
+                android:padding="15dp">
 
-                <ImageView
-                    android:id="@+id/img_mic"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ic_baseline_mic_24" />
+                <RelativeLayout
+                    android:id="@+id/rel_nightMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txtView_speechToText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/img_mic"
-                    android:layout_marginTop="40dp"
-                    android:padding="10dp"
-                    android:text="Tap mic and speak away"
-                    android:textColor="@color/night_mode"
-                    android:textSize="30sp" />
+                    <ImageView
+                        android:id="@+id/img_mic"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_mic_24" />
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txtView_speechToText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_mic"
+                        android:layout_marginTop="40dp"
+                        android:padding="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:text="Tap mic and speak away"
+                        android:textColor="@color/green"
+                        android:textSize="25sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

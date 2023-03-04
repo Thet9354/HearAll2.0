@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MainRenderer implements IRenderer {
 
-    private ArrayList<IRenderer> renderers = new ArrayList<>();
+    private final ArrayList<IRenderer> renderers = new ArrayList<>();
 
     public MainRenderer(DetectionMethod method) {
         setRenderers(method);

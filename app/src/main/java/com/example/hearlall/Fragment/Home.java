@@ -39,7 +39,7 @@ public class Home extends Fragment {
     private final ArrayList<Events> eventsArrayList = new ArrayList<>();
 
     private ArticleAdapter articleAdapter;
-    private ArrayList<Article> articleArrayList = new ArrayList<>();
+    private final ArrayList<Article> articleArrayList = new ArrayList<>();
 
 
     int[] eventPic = {R.drawable.event1_logo, R.drawable.event2_logo, R.drawable.event3_logo,

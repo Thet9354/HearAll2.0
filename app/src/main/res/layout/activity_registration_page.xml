@@ -165,15 +165,15 @@
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Register"
-                app:cornerRadius="10dp"
-                android:padding="15sp"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="40dp"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/green"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/green"
+                android:padding="15sp"
+                android:text="Register"
+                android:textColor="@color/white"
+                app:cornerRadius="10dp" />
 
             <TextView
                 android:id="@+id/textView"

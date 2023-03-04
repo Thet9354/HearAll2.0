@@ -9,9 +9,9 @@ import org.opencv.imgproc.Imgproc;
 
 public class NormalisingFrameProcessor implements IFrameProcessor {
 
-    private int target_width = 100;
+    private final int target_width = 100;
 
-    private DetectionMethod detectionMethod;
+    private final DetectionMethod detectionMethod;
 
     public NormalisingFrameProcessor (DetectionMethod inputDetectionMethod){
         detectionMethod = inputDetectionMethod;

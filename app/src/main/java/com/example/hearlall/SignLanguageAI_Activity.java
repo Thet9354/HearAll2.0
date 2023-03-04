@@ -65,7 +65,7 @@ public class SignLanguageAI_Activity extends Activity implements CameraBridgeVie
 
     private DetectionMethod detectionMethod;
 
-    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
+    private final BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
             switch (status) {
@@ -103,10 +103,10 @@ public class SignLanguageAI_Activity extends Activity implements CameraBridgeVie
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, 1);
         }
 
-        btnAdd = (Button) findViewById(R.id.button_add);
-        btnClear = (Button) findViewById(R.id.button_clear);
-        btnBack = (Button) findViewById(R.id.button_back);
-        txtView = (TextView) findViewById(R.id.textView);
+        btnAdd = findViewById(R.id.button_add);
+        btnClear = findViewById(R.id.button_clear);
+        btnBack = findViewById(R.id.button_back);
+        txtView = findViewById(R.id.textView);
 
 
         btnAdd.setOnClickListener(new View.OnClickListener()
@@ -194,7 +194,7 @@ public class SignLanguageAI_Activity extends Activity implements CameraBridgeVie
 
         File xmlFile = initialiseXMLTrainingData();
 
-        frameClassifier = (IFrameProcessor) new FrameClassifier(xmlFile);
+        frameClassifier = new FrameClassifier(xmlFile);
 
     }
 

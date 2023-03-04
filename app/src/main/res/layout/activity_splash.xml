@@ -21,7 +21,7 @@
         android:layout_below="@+id/img_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Brought to you by Thet, Abinav and Manoj..."
+        android:text="Brought to you by Thet, Adrian and Manoj..."
         android:textColor="@color/white"
         android:visibility="invisible" />
 

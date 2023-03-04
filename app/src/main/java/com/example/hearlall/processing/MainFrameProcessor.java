@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class MainFrameProcessor implements IFrameProcessor {
 
-    private ArrayList<IFrameProcessor> processors = new ArrayList<>();
+    private final ArrayList<IFrameProcessor> processors = new ArrayList<>();
 
     public MainFrameProcessor(DetectionMethod method) {
         setProcessors(method);

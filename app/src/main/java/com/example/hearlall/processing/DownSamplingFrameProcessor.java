@@ -9,7 +9,7 @@ import org.opencv.imgproc.Imgproc;
 
 public class DownSamplingFrameProcessor implements IFrameProcessor {
 
-    private Mat downSampledInputMat;
+    private final Mat downSampledInputMat;
 
     public DownSamplingFrameProcessor() {
         downSampledInputMat = new Mat();

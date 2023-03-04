@@ -21,8 +21,8 @@ import java.util.ArrayList;
 
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.CardViewHolder>{
 
-    private ArrayList<Events> eventsArrayList;
-    private Context mContext;
+    private final ArrayList<Events> eventsArrayList;
+    private final Context mContext;
 
     public EventsAdapter(Context mContext, ArrayList<Events> eventsArrayList) {
         this.eventsArrayList = eventsArrayList;
@@ -91,10 +91,15 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.CardViewHo
     }
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
-        private CardView cv_events;
-        private RelativeLayout rel_events;
-        private ImageView imgView_event, imgView_host;
-        private TextView txtView_eventTitle, txtView_host, txtView_hostDesc, txtView_eventParticipants, txtView_remindMe;
+        private final CardView cv_events;
+        private final RelativeLayout rel_events;
+        private final ImageView imgView_event;
+        private final ImageView imgView_host;
+        private final TextView txtView_eventTitle;
+        private final TextView txtView_host;
+        private final TextView txtView_hostDesc;
+        private final TextView txtView_eventParticipants;
+        private final TextView txtView_remindMe;
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);

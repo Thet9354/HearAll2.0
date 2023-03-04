@@ -15,15 +15,15 @@ import java.util.List;
 public class CroppingFrameProcessor implements IFrameProcessor {
 
     private Mat resizedImage = new Mat();
-    private int targetWidth = 100;
+    private final int targetWidth = 100;
     double scaleFactor;
 
-    private Mat testyTest = new Mat();
-    private Mat thresh = new Mat();
-    private Mat hier = new Mat();
-    private List<MatOfPoint> contours = new ArrayList<>();
+    private final Mat testyTest = new Mat();
+    private final Mat thresh = new Mat();
+    private final Mat hier = new Mat();
+    private final List<MatOfPoint> contours = new ArrayList<>();
 
-    private DetectionMethod detectionMethod;
+    private final DetectionMethod detectionMethod;
 
     public CroppingFrameProcessor (DetectionMethod inputDetectionMethod){
         detectionMethod = inputDetectionMethod;

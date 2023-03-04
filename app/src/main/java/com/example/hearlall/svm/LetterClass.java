@@ -32,9 +32,9 @@ public enum LetterClass {
     SPACE(90),
     ERROR(99);
 
-    private int letterIndex;
+    private final int letterIndex;
 
-    private LetterClass(int letterIndex) {
+    LetterClass(int letterIndex) {
         this.letterIndex = letterIndex;
     }
 

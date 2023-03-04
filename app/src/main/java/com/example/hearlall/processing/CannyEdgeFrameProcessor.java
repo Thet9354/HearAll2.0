@@ -14,9 +14,9 @@ import java.util.List;
 public class CannyEdgeFrameProcessor implements IFrameProcessor {
 
     private Mat croppedMask = new Mat();
-    private Mat cannyEdgeMask = new Mat();
-    private Mat hierarchy = new Mat();
-    private List<MatOfPoint> cannyEdges = new ArrayList<>();
+    private final Mat cannyEdgeMask = new Mat();
+    private final Mat hierarchy = new Mat();
+    private final List<MatOfPoint> cannyEdges = new ArrayList<>();
 
     @Override
     public IFrame process(IFrame inputFrame) {

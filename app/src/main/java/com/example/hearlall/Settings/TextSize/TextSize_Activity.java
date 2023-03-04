@@ -56,14 +56,7 @@ public class TextSize_Activity extends AppCompatActivity implements CustomSpinne
         defaultTextSize_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
-                {
-                    customizeTextSize_switch.setChecked(false);
-                }
-                else
-                {
-                    customizeTextSize_switch.setChecked(true);
-                }
+                customizeTextSize_switch.setChecked(!b);
             }
         });
 

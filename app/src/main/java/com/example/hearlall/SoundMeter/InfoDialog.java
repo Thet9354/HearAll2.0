@@ -21,7 +21,7 @@ public class InfoDialog extends Dialog {
     }
 
     public static class Builder {
-        private Context context;
+        private final Context context;
         private String title;
         private String message;
         private String negativeButtonText;
@@ -106,7 +106,7 @@ public class InfoDialog extends Dialog {
                 ((Button) layout.findViewById(R.id.negativeButton))
                         .setText(negativeButtonText);
                 if (negativeButtonClickListener != null) {
-                    ((Button) layout.findViewById(R.id.negativeButton))
+                    layout.findViewById(R.id.negativeButton)
                             .setOnClickListener(new View.OnClickListener() {
                                 public void onClick(View v) {
                                     negativeButtonClickListener.onClick(dialog,

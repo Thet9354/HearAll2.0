@@ -39,8 +39,8 @@ public class EventDetailsActivity extends AppCompatActivity {
     private String eventTitle, hostName, hostDesc, eventParticipants, eventLink;
     private int eventImage, hostImage;
 
-    private String mEmail = "thetpine254@gmail.com";
-    private String mPhoneNumber = "93542856";
+    private final String mEmail = "thetpine254@gmail.com";
+    private final String mPhoneNumber = "93542856";
 
 
     private Intent intent;

@@ -15,21 +15,21 @@ import java.util.List;
 
 public class ColourThresholdFrameProcessor implements IFrameProcessor {
 
-    private static double minContourArea = 0.1;
-    private static double minChildContourAreaMod = 0.025;
+    private static final double minContourArea = 0.1;
+    private static final double minChildContourAreaMod = 0.025;
 
-    private List<MatOfPoint> tempContours = new ArrayList<>();
-    private List<MatOfPoint> outerContours = new ArrayList<>();
+    private final List<MatOfPoint> tempContours = new ArrayList<>();
+    private final List<MatOfPoint> outerContours = new ArrayList<>();
 
-    private SkinColourProfile skinColourProfile;
-    private DetectionMethod detectionMethod;
+    private final SkinColourProfile skinColourProfile;
+    private final DetectionMethod detectionMethod;
 
-    private Mat mHsvMat = new Mat();
-    private Mat mMask = new Mat();
-    private Mat mDilatedMask = new Mat();
-    private Mat mHierarchy = new Mat();
-    private Mat mErodedMask = new Mat();
-    private Mat mBlurredMask = new Mat();
+    private final Mat mHsvMat = new Mat();
+    private final Mat mMask = new Mat();
+    private final Mat mDilatedMask = new Mat();
+    private final Mat mHierarchy = new Mat();
+    private final Mat mErodedMask = new Mat();
+    private final Mat mBlurredMask = new Mat();
 
     public ColourThresholdFrameProcessor(DetectionMethod inputDetectionMethod){
         skinColourProfile = SkinColourProfile.getInstance();

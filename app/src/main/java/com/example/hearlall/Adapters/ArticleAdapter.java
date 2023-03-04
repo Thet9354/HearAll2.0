@@ -136,9 +136,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
 
     public class CardViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtView_articleTitle;
-        private androidx.cardview.widget.CardView cv_article;
-        private ImageView imgView_article;
+        private final TextView txtView_articleTitle;
+        private final androidx.cardview.widget.CardView cv_article;
+        private final ImageView imgView_article;
 
 
         public CardViewHolder(@NonNull View itemView) {

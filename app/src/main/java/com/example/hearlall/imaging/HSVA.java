@@ -9,7 +9,7 @@ public enum HSVA {
 
     private final int scalarPosition;
 
-    private HSVA(int inputScalarPosition){
+    HSVA(int inputScalarPosition){
         this.scalarPosition = inputScalarPosition;
     }
 

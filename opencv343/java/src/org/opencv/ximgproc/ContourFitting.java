@@ -53,7 +53,7 @@ public class ContourFitting extends Algorithm {
     {
         double[] dist_out = new double[1];
         estimateTransformation_0(nativeObj, src.nativeObj, dst.nativeObj, alphaPhiST.nativeObj, dist_out, fdContour);
-        if(dist!=null) dist[0] = (double)dist_out[0];
+        if(dist!=null) dist[0] = dist_out[0];
         return;
     }
 
@@ -62,7 +62,7 @@ public class ContourFitting extends Algorithm {
     {
         double[] dist_out = new double[1];
         estimateTransformation_1(nativeObj, src.nativeObj, dst.nativeObj, alphaPhiST.nativeObj, dist_out);
-        if(dist!=null) dist[0] = (double)dist_out[0];
+        if(dist!=null) dist[0] = dist_out[0];
         return;
     }
 

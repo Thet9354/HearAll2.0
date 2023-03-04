@@ -14,11 +14,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.example.hearlall.MainMenuPage_Activity;
 import com.example.hearlall.R;
-import com.example.hearlall.SignLanguage.AI_signLanguage_recognition_Activity;
-import com.example.hearlall.SignLanguage.First_SignLanguage_Activity;
-import com.example.hearlall.SignLanguage.SearchText_Activity;
 import com.example.hearlall.SignLanguage.SignLanguage_Activity;
 import com.example.hearlall.SignLanguageAI_Activity;
 

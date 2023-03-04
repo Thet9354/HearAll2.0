@@ -14,28 +14,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="50dp" >
-
-            <ImageButton
-                android:id="@+id/Gobackbutton"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:src="@drawable/back_btn" />
-
-            <ImageButton
-                android:id="@+id/Exit_button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/home_icon" />
-
-        </RelativeLayout>
-
         <ImageView
             android:id="@+id/imagedisplay"
             android:layout_width="wrap_content"

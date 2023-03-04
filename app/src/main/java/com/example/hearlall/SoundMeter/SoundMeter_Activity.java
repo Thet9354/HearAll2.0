@@ -145,17 +145,17 @@ public class SoundMeter_Activity extends AppCompatActivity {
 
     private void initWidget() {
         //TextView
-        minVal=(TextView)findViewById(R.id.minval);
-        mmVal=(TextView)findViewById(R.id.mmval);
-        maxVal=(TextView)findViewById(R.id.maxval);
-        curVal=(TextView)findViewById(R.id.curval);
+        minVal= findViewById(R.id.minval);
+        mmVal= findViewById(R.id.mmval);
+        maxVal= findViewById(R.id.maxval);
+        curVal= findViewById(R.id.curval);
 
         //ImageButton
-        infoButton=(ImageButton)findViewById(R.id.infobutton);
-        refreshButton=(ImageButton)findViewById(R.id.refreshbutton);
+        infoButton= findViewById(R.id.infobutton);
+        refreshButton= findViewById(R.id.refreshbutton);
 
         //Speedometer
-        speedometer=(Speedometer)findViewById(R.id.speed);
+        speedometer= findViewById(R.id.speed);
     }
 
     private void updateData(float val, long time) {
@@ -188,7 +188,7 @@ public class SoundMeter_Activity extends AppCompatActivity {
             }
         }else{
             currentTime=new Date().getTime();
-            mChart = (LineChart) findViewById(R.id.chart1);
+            mChart = findViewById(R.id.chart1);
             mChart.setViewPortOffsets(50, 20, 5, 60);
             // no description text
             mChart.setDescription(null);

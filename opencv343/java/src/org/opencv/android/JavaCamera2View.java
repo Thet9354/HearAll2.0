@@ -42,7 +42,7 @@ public class JavaCamera2View extends CameraBridgeViewBase {
     private static final String LOGTAG = "JavaCamera2View";
 
     private ImageReader mImageReader;
-    private int mPreviewFormat = ImageFormat.YUV_420_888;
+    private final int mPreviewFormat = ImageFormat.YUV_420_888;
 
     private CameraDevice mCameraDevice;
     private CameraCaptureSession mCaptureSession;
@@ -87,7 +87,7 @@ public class JavaCamera2View extends CameraBridgeViewBase {
         Log.i(LOGTAG, "initializeCamera");
         CameraManager manager = (CameraManager) getContext().getSystemService(Context.CAMERA_SERVICE);
         try {
-            String camList[] = manager.getCameraIdList();
+            String[] camList = manager.getCameraIdList();
             if (camList.length == 0) {
                 Log.e(LOGTAG, "Error: camera isn't detected.");
                 return false;
@@ -365,10 +365,10 @@ public class JavaCamera2View extends CameraBridgeViewBase {
             mRgba.release();
         }
 
-        private Mat mYuvFrameData;
-        private Mat mUVFrameData;
-        private Mat mRgba;
-        private int mWidth;
-        private int mHeight;
-    };
+        private final Mat mYuvFrameData;
+        private final Mat mUVFrameData;
+        private final Mat mRgba;
+        private final int mWidth;
+        private final int mHeight;
+    }
 }

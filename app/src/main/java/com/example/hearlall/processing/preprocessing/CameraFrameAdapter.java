@@ -10,7 +10,8 @@ import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
 
 public class CameraFrameAdapter implements IFramePreProcessor {
 
-    private IFrameProcessor downSampler, resizer;
+    private final IFrameProcessor downSampler;
+    private final IFrameProcessor resizer;
     private IFrame outputFrame;
 
     public CameraFrameAdapter(IFrameProcessor downSamplingFrameProcessor,

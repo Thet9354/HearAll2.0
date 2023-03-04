@@ -25,7 +25,7 @@ public class SpeechToText_Activity extends AppCompatActivity {
 
     private TextView txtView_speechToText;
 
-    private ImageView img_mic, btn_back;
+    private ImageView img_mic;
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
 
@@ -63,15 +63,7 @@ public class SpeechToText_Activity extends AppCompatActivity {
             }
         });
 
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainMenuPage_Activity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-            }
-        });
+
     }
 
     @Override
@@ -96,6 +88,5 @@ public class SpeechToText_Activity extends AppCompatActivity {
 
         img_mic = findViewById(R.id.img_mic);
 
-        btn_back = findViewById(R.id.btn_back);
     }
 }

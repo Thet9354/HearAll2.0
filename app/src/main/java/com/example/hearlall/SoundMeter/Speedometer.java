@@ -15,7 +15,7 @@ import com.example.hearlall.R;
 public class Speedometer extends androidx.appcompat.widget.AppCompatImageView {
     private float scaleWidth, scaleHeight;
     private int newWidth, newHeight;
-    private Matrix mMatrix = new Matrix();
+    private final Matrix mMatrix = new Matrix();
     private Bitmap indicatorBitmap;
     private Paint paint = new Paint();
     static final long  ANIMATION_INTERVAL = 20;

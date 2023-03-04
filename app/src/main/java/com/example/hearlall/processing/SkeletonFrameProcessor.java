@@ -13,9 +13,9 @@ import java.util.List;
 
 public class SkeletonFrameProcessor implements IFrameProcessor {
 
-    private Mat skeletonMask = new Mat();
-    private Mat hierarchy = new Mat();
-    private List<MatOfPoint> skeletonContours = new ArrayList<>();
+    private final Mat skeletonMask = new Mat();
+    private final Mat hierarchy = new Mat();
+    private final List<MatOfPoint> skeletonContours = new ArrayList<>();
 
     @Override
     public IFrame process(IFrame inputFrame) {

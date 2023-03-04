@@ -10,7 +10,7 @@ import org.opencv.imgproc.Imgproc;
 
 public class ContourMaskProcessor implements IFrameProcessor {
 
-    private Mat greyScale =  new Mat();
+    private final Mat greyScale =  new Mat();
     private Mat blankMask =  new Mat();
     private Mat croppedMask =  new Mat();
     private Mat initialImage =  new Mat();

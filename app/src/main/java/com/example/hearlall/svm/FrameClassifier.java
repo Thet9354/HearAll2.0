@@ -21,7 +21,8 @@ public class FrameClassifier implements IFrameProcessor {
     private IFrame workingFrame;
     private MatOfPoint features;
     private LetterClass result;
-    private Mat flatFeatures, results;
+    private Mat flatFeatures;
+    private final Mat results;
 
     public FrameClassifier(File xmlFile){
 

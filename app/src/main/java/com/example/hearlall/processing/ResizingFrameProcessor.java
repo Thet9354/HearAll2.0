@@ -9,12 +9,12 @@ import org.opencv.imgproc.Imgproc;
 
 public class ResizingFrameProcessor implements IFrameProcessor {
 
-    private Mat resizedImage = new Mat();
+    private final Mat resizedImage = new Mat();
     private Size scaledSize, originalSize;
-    private int targetWidth = 100;
-    private Size defaultSize = new Size(100, 100);
+    private final int targetWidth = 100;
+    private final Size defaultSize = new Size(100, 100);
     double scaleFactor;
-    private SizeOperation operation;
+    private final SizeOperation operation;
 
     public ResizingFrameProcessor(SizeOperation inputOperation) {
         operation = inputOperation;

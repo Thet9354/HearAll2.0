@@ -6,8 +6,8 @@ import com.example.hearlall.processing.IFrameProcessor;
 
 public class OutputFramePostProcessor implements IFramePostProcessor {
 
-    private IFramePostProcessor upScalingFramePostProcessor;
-    private IFrameProcessor resizer;
+    private final IFramePostProcessor upScalingFramePostProcessor;
+    private final IFrameProcessor resizer;
     private IFrame outputFrame;
 
     public OutputFramePostProcessor(IFramePostProcessor upScalingFramePostProcessor,

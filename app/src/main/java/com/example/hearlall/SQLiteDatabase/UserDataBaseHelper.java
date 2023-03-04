@@ -58,12 +58,7 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
 
 
         long insert = db.insert(USER_TABLE, null, cv);
-        if (insert == -1) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return insert != -1;
     }
 
     public boolean DeleteOneUser(UserModel userModel)
@@ -76,12 +71,7 @@ public class UserDataBaseHelper extends SQLiteOpenHelper {
 
         Cursor cursor = db.rawQuery(queryString, null);
 
-        if (cursor.moveToFirst()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return cursor.moveToFirst();
     }
 
     public List<UserModel> getEveryUser()

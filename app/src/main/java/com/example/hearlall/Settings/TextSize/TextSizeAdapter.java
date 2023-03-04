@@ -17,8 +17,8 @@ import java.util.List;
  ********************************************/
 
 public class TextSizeAdapter extends BaseAdapter {
-    private Context context;
-    private List<TextSize> textSizeList;
+    private final Context context;
+    private final List<TextSize> textSizeList;
 
     public TextSizeAdapter(Context context, List<TextSize> textSizeList) {
         this.context = context;

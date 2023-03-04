@@ -14,14 +14,14 @@ import java.util.List;
 
 public class FeatureFrameProcessor implements IFrameProcessor {
 
-    private List<MatOfPoint> featureList = new ArrayList<>();
+    private final List<MatOfPoint> featureList = new ArrayList<>();
     private Mat featureInput = new Mat();
     private DetectionMethod detectionMethod;
 
-    private MatOfFloat hogDesc = new MatOfFloat();
-    private MatOfPoint hogLoc = new MatOfPoint();
+    private final MatOfFloat hogDesc = new MatOfFloat();
+    private final MatOfPoint hogLoc = new MatOfPoint();
 
-    private HOGDescriptor hog;
+    private final HOGDescriptor hog;
 
     public FeatureFrameProcessor(DetectionMethod inputDetectionMethod) {
         detectionMethod = inputDetectionMethod;
