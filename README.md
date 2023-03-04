@@ -18,3 +18,6 @@ Please do take note: You will need an api key to run the assistance chatbot in t
 Please insert the API key in one of the activity called ChatBot_Activity, line 102 and replace the "INSERT_API_KEY" with the actual api key
 
 Google Drive containing the API key: https://docs.google.com/document/d/1RXxeeNkx6AN48LyrWtZb6Ik0JI1XDbet4MQsrcXcHR4/edit?usp=sharing
+
+Project pitching slides: https://docs.google.com/presentation/d/1me95LQy698oR7eGi8GmRk8gyuWjYpMJvhFFdrG_85oE/edit?usp=sharing
+
