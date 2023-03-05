@@ -9,7 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorEditText">#9FFFFFFF</color>
     <color name="purple">#6C63FF</color>
-    <color name="green">#2ec68f</color>
+    <color name="green">#20C520</color>
+    <color name="text_grey">#C6C6C8</color>
+
     <color name="trans">#00000000</color>
 
     <color name="hint">#707070</color>
