@@ -30,7 +30,7 @@
             android:id="@+id/txtView_eventTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Smu"
+            android:text="EVENT NAME"
             android:textSize="13dp"
             android:textColor="@color/white"
             android:fontFamily="@font/thin_poppins"
@@ -61,7 +61,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="15dp"
                 android:fontFamily="@font/thin_poppins"
-                android:text="Smu Name"
+                android:text="HOST SHORT NAME"
                 android:textColor="@color/white"
                 android:textSize="12dp" />
 
@@ -74,7 +74,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="15dp"
                 android:fontFamily="@font/thin_poppins"
-                android:text="SMu SUb name"
+                android:text="HOST FULL NAME"
                 android:textColor="@color/hint"
                 android:textSize="10dp" />
         </RelativeLayout>

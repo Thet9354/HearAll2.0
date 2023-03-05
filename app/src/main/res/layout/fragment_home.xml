@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,12 +16,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-
                 <ImageView
                     android:id="@+id/btn_bluetooth"
                     android:layout_width="35dp"
@@ -29,17 +24,44 @@
                     android:layout_marginStart="20sp"
                     android:src="@drawable/ic_baseline_bluetooth_24"/>
 
-            </RelativeLayout>
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/hearall_logo" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hey Adrian!"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How are you feeling today?"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                />
 
             <TextView
                 android:id="@+id/askAllowanceTV3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="40dp"
                 android:text="Events"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -47,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"/>
+                />
 
 
             <TextView
@@ -57,8 +79,9 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="40dp"
-                android:text="Blog Articles"
+                android:text="Articles &amp; Blogs"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -66,7 +89,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:layout_marginBottom="80dp"
+                >
 
             </androidx.recyclerview.widget.RecyclerView>
 

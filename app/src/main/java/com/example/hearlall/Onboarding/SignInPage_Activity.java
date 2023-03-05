@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -48,6 +49,7 @@ import java.util.regex.Pattern;
 
 public class SignInPage_Activity extends AppCompatActivity {
 
+    private TextView txtView_register;
     private EditText editTxt_PhoneNumber, editTxt_Password;
     private Button btn_signIn, btn_biometric;
     private androidx.appcompat.widget.AppCompatButton btn_facebook, btn_google;
@@ -218,6 +220,14 @@ public class SignInPage_Activity extends AppCompatActivity {
                 biometricPrompt.authenticate(promptInfo);
             }
         });
+
+        txtView_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),RegistrationPage_Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private boolean validatePassword() {
@@ -334,6 +344,9 @@ public class SignInPage_Activity extends AppCompatActivity {
     }
 
     private void initWidget() {
+        //---> TextView
+        txtView_register = findViewById(R.id.txtView_register);
+
         //---> EditText
         editTxt_PhoneNumber = findViewById(R.id.editTxt_PhoneNumber);
         editTxt_Password = findViewById(R.id.editTxt_Password);
