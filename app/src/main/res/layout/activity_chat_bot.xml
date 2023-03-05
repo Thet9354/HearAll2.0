@@ -19,8 +19,18 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="How may i assist you?"
-        android:textSize="28dp" />
+        android:text="How can we assist you?"
+        android:textColor="@color/text_grey"
+        android:textSize="28dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/welcome_text"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/hearall_logo" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -38,20 +48,21 @@
             android:layout_toLeftOf="@id/send_btn"
             android:background="@drawable/rounded_corner"
             android:hint="Write here "
+            android:textColorHint="@color/black"
             android:padding="16dp"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
+
         <ImageButton
+            android:id="@+id/send_btn"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:id="@+id/send_btn"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_baseline_send_24"
             android:background="?attr/selectableItemBackgroundBorderless"
 
-            />
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_send_24" />
 
 
     </RelativeLayout>
