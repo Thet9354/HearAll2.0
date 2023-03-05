@@ -17,27 +17,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/hearall_logo"/>
+
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HearAll"
-                android:textColor="@color/white"
+                android:text="Create an account"
+                android:textSize="30dp"
                 android:textStyle="bold"
-                android:textSize="30sp"
-                android:layout_marginTop="30sp"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="20dp"
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Full Name"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/text_grey"
                     android:layout_marginStart="45dp"/>
 
                 <EditText
@@ -70,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/text_grey"
                     android:layout_marginStart="45dp"/>
 
                 <EditText
@@ -103,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone Number"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/text_grey"
                     android:layout_marginStart="45dp"/>
 
                 <EditText
@@ -138,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Password"
-                    android:textColor="@color/gray"
+                    android:textColor="@color/text_grey"
                     android:layout_marginStart="45dp"/>
 
                 <EditText
@@ -194,7 +203,9 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_facebook"
-                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="Facebook"
                     android:textColor="@color/green"
@@ -207,9 +218,10 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_google"
-                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="40dp"
                     android:background="@drawable/rounded_rect_10_button"
                     android:drawableLeft="@drawable/google"
                     android:padding="15sp"
