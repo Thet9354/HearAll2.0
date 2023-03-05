@@ -9,10 +9,10 @@
 
     <ImageView
         android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/icon_transparent" />
+        android:src="@drawable/hearall_logo" />
 
     <TextView
         android:id="@+id/txtView_features"
@@ -21,7 +21,8 @@
         android:layout_below="@+id/img_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Brought to you by Thet, Adrian and Manoj..."
+        android:gravity="center"
+        android:text="Breaking down communication barriers\none conversation at a time."
         android:textColor="@color/white"
         android:visibility="invisible" />
 

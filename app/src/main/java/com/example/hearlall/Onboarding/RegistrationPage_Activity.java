@@ -12,6 +12,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hearlall.MainMenuPage_Activity;
@@ -46,6 +47,7 @@ import java.util.regex.Pattern;
 
 public class RegistrationPage_Activity extends AppCompatActivity {
 
+    private TextView txtView_signIn;
     private EditText editTxt_name, editTxt_email, editTxt_phoneNumber, editTxt_password;
     private Button btn_register;
     private androidx.appcompat.widget.AppCompatButton btn_facebook, btn_google;
@@ -153,6 +155,14 @@ public class RegistrationPage_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 LoginManager.getInstance().logInWithReadPermissions(RegistrationPage_Activity.this, Arrays.asList("public_profile"));
+            }
+        });
+
+        txtView_signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegistrationPage_Activity.this, SignInPage_Activity.class);
+                startActivity(intent);
             }
         });
     }
@@ -342,6 +352,8 @@ public class RegistrationPage_Activity extends AppCompatActivity {
     }
 
     private void initWidget() {
+        txtView_signIn = findViewById(R.id.txtView_signIn);
+
         editTxt_name = findViewById(R.id.editTxt_name);
         editTxt_email = findViewById(R.id.editTxt_email);
         editTxt_password = findViewById(R.id.editTxt_password);
