@@ -16,18 +16,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/btn_bluetooth"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="20sp"
-                    android:src="@drawable/ic_baseline_bluetooth_24"/>
 
                 <ImageView
                     android:id="@+id/imageView2"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
+                    android:layout_marginTop="20dp"
                     android:layout_gravity="center"
                     android:src="@drawable/hearall_logo" />
 
@@ -37,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hey Adrian!"
                 android:textSize="30dp"
-                android:textColor="@color/text_grey"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp"
@@ -53,6 +47,322 @@
                 android:layout_marginEnd="40dp"
                 />
 
+
+
+            <RelativeLayout
+                android:id="@+id/hearbot_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="10dp"
+                android:padding="10sp"
+                android:clickable="true"
+                android:background="@drawable/rounded_rect_10_green">
+d
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat with HearBot!"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Available anytime, anywhere."
+                    android:layout_below="@id/textView5"/>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="by"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/textView6"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/textView7"
+                    android:layout_below="@id/textView6"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/hearall_logo_black" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/hearbot" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_feature_message"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="40sp"
+                android:layout_marginEnd="40sp"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/btn_speechToText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/jacketCategory"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_speech_to_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jacketCategory"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Speech\nto Text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_textToSpeech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/poloCategory"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_text_to_speech" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/poloCategory"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Text to\nSpeech"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_textToSL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/officeCategory"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_text_to_sl" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/officeCategory"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Text to Sign\nLanguage"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_slToText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/seasonCategory"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_sl_to_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seasonCategory"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:text="Sign \ntoText"
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/btn_speechToSL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/jacketCategory1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_speech_to_sl" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/jacketCategory1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Speech to Sign\nLanguage"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_volumeAmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/poloCategory1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_volume_amp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/poloCategory1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Volume\nAmplifier"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_bluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/officeCategory1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_bluetooth" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/officeCategory1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="Bluetoot\n."
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/seasonCategory1"
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/home_sl_to_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seasonCategory1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10sp"
+                        android:text="Settings\n."
+                        android:gravity="center"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
             <TextView
                 android:id="@+id/askAllowanceTV3"
                 android:layout_width="match_parent"
@@ -63,7 +373,7 @@
                 android:text="Events"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="25sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_events"
@@ -83,7 +393,7 @@
                 android:text="Articles &amp; Blogs"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="20sp" />
+                android:textSize="25sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_articles"

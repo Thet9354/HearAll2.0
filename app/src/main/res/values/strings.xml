@@ -42,6 +42,7 @@
     <string name="str_button_back">Back</string>
 
     <string name="txtvw_word"> </string>
+    <string name="home_feature_message">Let\'s start breaking down the communication barriers!</string>
 
     <string-array name="event_Title">
         <item name="Breaking Barriers: Communication Strategies for the Hearing Impaired">Breaking Barriers</item>

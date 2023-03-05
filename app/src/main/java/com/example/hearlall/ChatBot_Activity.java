@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class ChatBot_Activity extends AppCompatActivity {
 
     RecyclerView recyclerView;
     TextView welcomeTextView;
+    ImageView hearAllLogoIV;
     EditText messageEditText;
     ImageButton sendButton;
     List<Message> messageList;
@@ -49,6 +51,7 @@ public class ChatBot_Activity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_view);
         welcomeTextView = findViewById(R.id.welcome_text);
+        hearAllLogoIV = findViewById(R.id.imageView4);
         messageEditText = findViewById(R.id.message_edit_text);
         sendButton = findViewById(R.id.send_btn);
 
@@ -72,6 +75,7 @@ public class ChatBot_Activity extends AppCompatActivity {
                 messageEditText.setText("");
                 callAPI(question);
                 welcomeTextView.setVisibility(View.GONE);
+                hearAllLogoIV.setVisibility(View.GONE);
             }
         });
     }
@@ -108,7 +112,7 @@ public class ChatBot_Activity extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonBody.toString(),JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization","Bearer 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")
+                .header("Authorization","Bearer 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")
                 .post(body)
                 .build();
 

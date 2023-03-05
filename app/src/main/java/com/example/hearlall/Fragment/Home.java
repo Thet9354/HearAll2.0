@@ -16,21 +16,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.example.hearlall.Adapters.ArticleAdapter;
 import com.example.hearlall.Adapters.EventsAdapter;
 import com.example.hearlall.Bluetooth_Activity;
+import com.example.hearlall.ChatBot_Activity;
+import com.example.hearlall.ComingSoonActivity;
 import com.example.hearlall.Model.Article;
 import com.example.hearlall.Model.Events;
 import com.example.hearlall.R;
+import com.example.hearlall.Settings.Settings_Activity;
+import com.example.hearlall.SignLanguage.SignLanguage_Activity;
 import com.example.hearlall.SpaceItemDecoration;
+import com.example.hearlall.SpeechToText.SpeechToText_Activity;
+import com.example.hearlall.TextToSpeech.TextToSpeech_Activity;
 
 import java.util.ArrayList;
 
 
 public class Home extends Fragment {
 
-    private ImageView btn_bluetooth;
+    private RelativeLayout hearbot_RL, btn_bluetooth, btn_speechToSL, btn_speechToText, btn_textToSpeech, btn_textToSL, btn_slToText, btn_volumeAmp, btn_settings;
     private androidx.recyclerview.widget.RecyclerView rv_articles, rv_events;
 
     private Context mContext;
@@ -73,8 +80,17 @@ public class Home extends Fragment {
 
     private void findViews(View v) {
 
-        //ImageView
+        //RelativeLayouts
+        hearbot_RL = v.findViewById(R.id.hearbot_RL);
+
         btn_bluetooth = v.findViewById(R.id.btn_bluetooth);
+        btn_speechToText = v.findViewById(R.id.btn_speechToText);
+        btn_textToSpeech = v.findViewById(R.id.btn_textToSpeech);
+        btn_textToSL = v.findViewById(R.id.btn_textToSL);
+        btn_slToText = v.findViewById(R.id.btn_slToText);
+        btn_speechToSL = v.findViewById(R.id.btn_speechToSL);
+        btn_volumeAmp = v.findViewById(R.id.btn_volumeAmp);
+        btn_settings = v.findViewById(R.id.btn_settings);
 
         //RecyclerView
         rv_articles = v.findViewById(R.id.rv_articles);
@@ -249,5 +265,70 @@ public class Home extends Fragment {
                 startActivity(new Intent(mContext, Bluetooth_Activity.class));
             }
         });
+
+        btn_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, Settings_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_speechToText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, SpeechToText_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_textToSpeech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, TextToSpeech_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Edit Activity -> Link the Text to Sign Language Activity
+
+        btn_textToSL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ComingSoonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_slToText.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, SignLanguage_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Edit Activity -> Link the Speech to Sign Language Activity
+
+        btn_speechToSL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ComingSoonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Edit Activity -> Link the Volume Amplifier Activity
+        btn_volumeAmp.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ComingSoonActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        hearbot_RL.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ChatBot_Activity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
