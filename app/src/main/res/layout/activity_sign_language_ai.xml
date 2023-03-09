@@ -36,9 +36,9 @@
                 android:layout_height="72dp"
                 android:layout_gravity="end"
                 android:layout_weight="20020"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/rounded_rect_10_green"
                 android:text="@string/str_button_add"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/white" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -81,28 +81,29 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="20" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_back"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_weight="20"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/rounded_rect_10_green"
+                android:backgroundTint="@color/green"
                 android:text="@string/str_button_back"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/white" />
 
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="20" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_clear"
                 android:layout_width="wrap_content"
                 android:layout_height="72dp"
                 android:layout_weight="20"
-                android:background="@color/colorPrimaryDark"
+                android:background="@drawable/rounded_rect_10_green"
                 android:text="@string/str_button_clear"
-                android:textColor="@color/colorAccent" />
+                android:textColor="@color/white" />
 
             <Space
                 android:layout_width="wrap_content"
