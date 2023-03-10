@@ -10,13 +10,15 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.text.TextPaint;
 
 import com.example.hearlall.Adapters.ArticleAdapter;
 import com.example.hearlall.Adapters.EventsAdapter;
@@ -36,6 +38,8 @@ import java.util.ArrayList;
 
 
 public class Home extends Fragment {
+
+    private TextView tv_organiserFullName;
 
     private RelativeLayout hearbot_RL, btn_bluetooth, btn_speechToSL, btn_speechToText, btn_textToSpeech, btn_textToSL, btn_slToText, btn_volumeAmp, btn_settings;
     private androidx.recyclerview.widget.RecyclerView rv_articles, rv_events;
@@ -82,6 +86,8 @@ public class Home extends Fragment {
 
         //RelativeLayouts
         hearbot_RL = v.findViewById(R.id.hearbot_RL);
+
+        // tv_organiserFullName = v.findViewById(R.id.txtView_hostDesc);
 
         btn_bluetooth = v.findViewById(R.id.btn_bluetooth);
         btn_speechToText = v.findViewById(R.id.btn_speechToText);
@@ -216,6 +222,9 @@ public class Home extends Fragment {
 
                 String[] eventTitle = getResources().getStringArray(R.array.event_Title);
                 String[] eventOrganiser = getResources().getStringArray(R.array.event_organiser);
+
+
+
                 String[] eventOrganiserDesc = getResources().getStringArray(R.array.event_organiserDesc);
                 String[] eventLink = getResources().getStringArray(R.array.event_link);
 
@@ -224,11 +233,16 @@ public class Home extends Fragment {
                 {
                     events = new Events();
 
+//                    String originalString = eventOrganiserDesc[i].toString();
+//                    CharSequence ellipsized = TextUtils.ellipsize(originalString, tv_organiserFullName.paint(), maxLength, TextUtils.TruncateAt.END);
+//                    textView.setText(ellipsized);
+
                     events.setEventImage(eventPic[i]);
                     events.setHostImage(eventHostPic[i]);
 
                     events.setEventTitle(eventTitle[i]);
                     events.setEventHost(eventOrganiser[i]);
+
                     events.setHostDesc(eventOrganiserDesc[i]);
                     events.setEventLink(eventLink[i]);
 
