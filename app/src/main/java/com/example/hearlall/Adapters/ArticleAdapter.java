@@ -23,8 +23,8 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
     private final Context mContext;
 
     public ArticleAdapter(Context mContext, ArrayList<Article> articleArrayList) {
-        this.articleArrayList = articleArrayList;
         this.mContext = mContext;
+        this.articleArrayList = articleArrayList;
     }
 
     public interface OnItemClickListener {
@@ -60,17 +60,18 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
         holder.txtView_articleTitle.setText(articleArrayList.get(position).getArticle());
         holder.imgView_article.setImageResource(articleArrayList.get(position).getArticlePic());
 
+        int pos = holder.getAdapterPosition();
+
         holder.cv_article.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int pos = holder.getAdapterPosition();
-
                 switch (pos)
                 {
                     case 0:
                         String url = "https://livingwithhearingloss.com/2023/01/31/shouldnt-medical-treatment-be-hearing-loss-friendly/";
                         Intent i = new Intent(Intent.ACTION_VIEW);
                         i.setData(Uri.parse(url));
+                        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i);
                         break;
 
@@ -78,6 +79,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url2 = "https://livingwithhearingloss.com/2023/02/07/can-meditation-help-with-tinnitus/";
                         Intent i2 = new Intent(Intent.ACTION_VIEW);
                         i2.setData(Uri.parse(url2));
+                        i2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i2);
                         break;
 
@@ -85,6 +87,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url3 = "https://livingwithhearingloss.com/2023/01/24/setting-your-2023-hearing-loss-goals/";
                         Intent i3 = new Intent(Intent.ACTION_VIEW);
                         i3.setData(Uri.parse(url3));
+                        i3.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i3);
                         break;
 
@@ -92,6 +95,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url4 = "https://medium.com/an-injustice/deaf-culture-and-deaf-gain-4bf46db4fa0a";
                         Intent i4 = new Intent(Intent.ACTION_VIEW);
                         i4.setData(Uri.parse(url4));
+                        i4.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i4);
                         break;
 
@@ -99,6 +103,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url5 = "https://medium.com/publishous/how-a-hearing-loss-taught-me-a-better-way-to-listen-to-god-3097996d2645";
                         Intent i5 = new Intent(Intent.ACTION_VIEW);
                         i5.setData(Uri.parse(url5));
+                        i5.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i5);
                         break;
 
@@ -106,6 +111,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url6 = "https://medium.com/microbial-instincts/hearing-loss-an-odd-covid-19-symptom-we-overlooked-6cdf81a5e70";
                         Intent i6 = new Intent(Intent.ACTION_VIEW);
                         i6.setData(Uri.parse(url6));
+                        i6.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i6);
                         break;
 
@@ -113,6 +119,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url7 = "https://medium.com/@caroliss88/the-ups-and-downs-of-living-with-hearing-loss-99b40f190533";
                         Intent i7 = new Intent(Intent.ACTION_VIEW);
                         i7.setData(Uri.parse(url7));
+                        i7.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i7);
                         break;
 
@@ -120,6 +127,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.CardView
                         String url8 = "https://medium.com/@karl.utermohlen/4-applications-of-artificial-intelligence-for-hearing-loss-64f3e189847e";
                         Intent i8 = new Intent(Intent.ACTION_VIEW);
                         i8.setData(Uri.parse(url8));
+                        i8.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(i8);
                         break;
 

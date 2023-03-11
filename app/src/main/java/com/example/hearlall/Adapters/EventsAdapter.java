@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hearlall.EventDetailsActivity;
 import com.example.hearlall.Model.Events;
+import com.example.hearlall.Model.Tutorial;
 import com.example.hearlall.R;
 
 import java.util.ArrayList;
@@ -66,11 +67,12 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.CardViewHo
         holder.imgView_event.setImageResource(eventsArrayList.get(position).getEventImage());
         holder.imgView_host.setImageResource(eventsArrayList.get(position).getHostImage());
 
+        int pos = holder.getAdapterPosition();
+
         holder.cv_events.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, EventDetailsActivity.class);
-                int pos = holder.getAdapterPosition();
                 intent.putExtra("Event Title", eventsArrayList.get(pos).getEventTitle());
                 intent.putExtra("Host Name", eventsArrayList.get(pos).getEventHost());
                 intent.putExtra("Host Desc", eventsArrayList.get(pos).getHostDesc());
@@ -80,6 +82,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.CardViewHo
                 intent.putExtra("Event Image", eventsArrayList.get(pos).getEventImage());
                 intent.putExtra("Host Image", eventsArrayList.get(pos).getHostImage());
 
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
         });

@@ -118,7 +118,7 @@ public class MainMenuPage_Activity extends AppCompatActivity {
 
         rv_tutorial.setHasFixedSize(true);
 
-        tutorialAdapter = new TutorialAdapter(getApplicationContext(), tutorialArrayList);
+        tutorialAdapter = new TutorialAdapter(MainMenuPage_Activity.this, tutorialArrayList);
         rv_tutorial.setAdapter(tutorialAdapter);
 
         //layout to contain recyclerview
@@ -143,7 +143,7 @@ public class MainMenuPage_Activity extends AppCompatActivity {
 
         rv_articles.setHasFixedSize(true);
 
-        articleAdapter = new ArticleAdapter(getApplicationContext(), articleArrayList);
+        articleAdapter = new ArticleAdapter(MainMenuPage_Activity.this, articleArrayList);
         rv_articles.setAdapter(articleAdapter);
 
         //layout to contain recyclerview
@@ -168,7 +168,7 @@ public class MainMenuPage_Activity extends AppCompatActivity {
 
         rv_events.setHasFixedSize(true);
 
-        eventsAdapter = new EventsAdapter(getApplicationContext(), eventsArrayList);
+        eventsAdapter = new EventsAdapter(MainMenuPage_Activity.this, eventsArrayList);
         rv_events.setAdapter(eventsAdapter);
 
         //layout to contain recyclerview
