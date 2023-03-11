@@ -282,6 +282,8 @@ public class RegistrationPage_Activity extends AppCompatActivity {
 
                         //--->Additional Resources
                         databaseReference.child(mPhoneNumber).child("User's Information").child("User's Settings").child("Additional Resources").child("Send crash reports").setValue("ON");
+
+                        startActivity(new Intent(getApplicationContext(), MainMenuPage_Activity.class));
                     }
                 }
 

@@ -1,4 +1,4 @@
-package com.example.hearlall;
+package com.example.hearlall.SignLanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.hearlall.R;
 import com.example.hearlall.imaging.IFrame;
 import com.example.hearlall.processing.DetectionMethod;
 import com.example.hearlall.processing.DownSamplingFrameProcessor;

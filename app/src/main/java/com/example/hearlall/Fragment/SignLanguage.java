@@ -16,7 +16,7 @@ import android.widget.Button;
 
 import com.example.hearlall.R;
 import com.example.hearlall.SignLanguage.SignLanguage_Activity;
-import com.example.hearlall.SignLanguageAI_Activity;
+import com.example.hearlall.SignLanguage.SignLanguageAI_Activity;
 
 public class SignLanguage extends Fragment {
 

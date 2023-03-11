@@ -110,4 +110,15 @@
         <item name="4 Applications of Artificial Intelligence for Hearing Loss">4 Applications of Artificial Intelligence for Hearing Loss</item>
     </string-array>
 
+    <string-array name="tutorial_title">
+        <item name="tutorial1">The science of hearing - Douglas L. Oliver</item>
+        <item name="tutorial2">A Silent World: A Hearing Impaired Life</item>
+        <item name="tutorial3">People With Disabilities Can Succeed Video</item>
+        <item name="tutorial4">A Story of Disability and Education</item>
+        <item name="tutorial5">Hearing Loss Commercial - The Sounds of Life</item>
+        <item name="tutorial6">Tools and techniques for communicating with people with hearing loss</item>
+        <item name="tutorial7">Hearing Aids vs Hearing Amplifiers</item>
+        <item name="tutorial8">Medical Professionals with Hearing Loss</item>
+    </string-array>
+
 </resources>
