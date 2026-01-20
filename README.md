@@ -12,7 +12,5 @@ Features include:
 ◉ AI Sign Language RealTime Recognition
 and more.
 
-Google Drive containing the API key: https://docs.google.com/document/d/1RXxeeNkx6AN48LyrWtZb6Ik0JI1XDbet4MQsrcXcHR4/edit?usp=sharing
-
 Project pitching slides: https://docs.google.com/presentation/d/1me95LQy698oR7eGi8GmRk8gyuWjYpMJvhFFdrG_85oE/edit?usp=sharing
 
